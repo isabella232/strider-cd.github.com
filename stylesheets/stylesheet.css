@@ -157,11 +157,10 @@ img {
   -ms-box-shadow: 0 0 5px #ebebeb;
 }
 
-img#mobile {
+#mobile {
   float: left,
   position: relative;
   margin: 0 auto;
-  max-width: 739px;
   padding: 5px;
   margin: 10px 0 10px 0;
 }
