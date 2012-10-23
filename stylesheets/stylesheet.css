@@ -158,7 +158,7 @@ img {
 }
 
 #mobile {
-  float: left,
+  float: left;
   position: relative;
   margin: 0 auto;
   padding: 5px;
