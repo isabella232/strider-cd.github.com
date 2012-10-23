@@ -290,7 +290,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 30px 10px 30px 10px;
+  padding: 30px 10px 0px 10px;
 }
 
 #project_title {
@@ -432,7 +432,7 @@ Small Device Styles
 	text-decoration:none;
 	text-shadow:1px 1px 0px #528ecc;
 }.pushy:hover {
-	color:#000000;
+	color:#ffffff;
 }.pushy:active {
 	position:relative;
 	top:1px;
