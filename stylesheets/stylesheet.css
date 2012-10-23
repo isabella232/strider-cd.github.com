@@ -158,6 +158,7 @@ strong {
 }
 
 #mobile {
+  vertical-align: middle;
   float: left;
   position: relative;
   margin: 0 auto;
