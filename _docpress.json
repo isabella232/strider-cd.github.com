@@ -4,6 +4,7 @@
       {
         "title": "Strider",
         "source": "README.md",
+        "expand": true,
         "url": "index.html",
         "slug": "index",
         "headings": [
