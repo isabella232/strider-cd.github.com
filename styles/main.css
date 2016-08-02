@@ -1,0 +1,53 @@
+/* helpers */
+.full-width {
+  width: 100%;
+}
+
+img {
+  float: left;
+  clear: left;
+  padding: 0.5em 1em 1em 0;
+}
+
+h2 {
+  padding-top: 1.2em;
+  clear: left;
+}
+
+hr {
+  height: 1px !important;
+  clear: left;
+}
+
+/* remove search icon */
+.toc-menu:before {
+  content: "";
+}
+
+/* increase font sizes for nav */
+.menu-item.-level-1 :not(.link-index) {
+  font-size: 1.2em;
+}
+
+.heading-item.-depth-2 {
+  font-size: 0.8em !important;
+}
+
+/* prevent spinner from blocking nav */
+.header-nav {
+  position: fixed;
+  left: auto;
+  width: 100px;
+}
+
+/* hide nav toggle on small screens */
+@media (max-width: 959px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* move github icon to right in desktop view */
+.-menu-visible .doc-layout .header-nav {
+  left: auto;
+}
