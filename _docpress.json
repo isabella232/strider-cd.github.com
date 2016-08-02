@@ -171,13 +171,13 @@
   },
   "sources": {
     "README.md": "index.html",
-    "docs/styles/main.css": "styles/main.css",
-    "docs/styles/rsc.css": "styles/rsc.css",
     "docs/screenshots/build-page.jpg": "screenshots/build-page.jpg",
     "docs/screenshots/dashboard.jpg": "screenshots/dashboard.jpg",
     "docs/screenshots/phone-build.jpg": "screenshots/phone-build.jpg",
     "docs/screenshots/phone-dashboard.jpg": "screenshots/phone-dashboard.jpg",
     "docs/screenshots/tablet-dashboard.jpg": "screenshots/tablet-dashboard.jpg",
-    "docs/screenshots/tty-colors.jpg": "screenshots/tty-colors.jpg"
+    "docs/screenshots/tty-colors.jpg": "screenshots/tty-colors.jpg",
+    "docs/styles/main.css": "styles/main.css",
+    "docs/styles/rsc.css": "styles/rsc.css"
   }
 }
