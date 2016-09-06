@@ -11,7 +11,7 @@
         "title": "Guides",
         "sections": [
           {
-            "title": "Platform Overview",
+            "title": "Overview",
             "source": "docs/guides/platform-overview.md",
             "url": "guides/platform-overview.html",
             "slug": "guidesplatform-overview",
@@ -88,7 +88,7 @@
             ]
           },
           {
-            "title": "How to Install",
+            "title": "Installation",
             "source": "docs/guides/how-to-install.md",
             "url": "guides/how-to-install.html",
             "slug": "guideshow-to-install",
@@ -178,7 +178,7 @@
     },
     "guides/platform-overview.html": {
       "source": "docs/guides/platform-overview.md",
-      "title": "Platform Overview",
+      "title": "Overview",
       "slug": "guidesplatform-overview",
       "headings": [
         {
@@ -254,7 +254,7 @@
     },
     "guides/how-to-install.html": {
       "source": "docs/guides/how-to-install.md",
-      "title": "How to Install",
+      "title": "Installation",
       "slug": "guideshow-to-install",
       "headings": [
         {
@@ -335,17 +335,17 @@
     "docs/introduction.md": "index.html",
     "docs/guides/platform-overview.md": "guides/platform-overview.html",
     "docs/guides/how-to-install.md": "guides/how-to-install.html",
-    "docs/screenshots/build-page.jpg": "screenshots/build-page.jpg",
     "docs/screenshots/dashboard.jpg": "screenshots/dashboard.jpg",
     "docs/screenshots/phone-build.jpg": "screenshots/phone-build.jpg",
+    "docs/screenshots/build-page.jpg": "screenshots/build-page.jpg",
     "docs/screenshots/phone-dashboard.jpg": "screenshots/phone-dashboard.jpg",
-    "docs/screenshots/tablet-dashboard.jpg": "screenshots/tablet-dashboard.jpg",
     "docs/screenshots/tty-colors.jpg": "screenshots/tty-colors.jpg",
-    "docs/styles/main.css": "styles/main.css",
+    "docs/screenshots/tablet-dashboard.jpg": "screenshots/tablet-dashboard.jpg",
     "docs/styles/rsc.css": "styles/rsc.css",
+    "docs/styles/main.css": "styles/main.css",
     "docs/guides/strider project email notifications settings.png": "guides/strider project email notifications settings.png",
-    "docs/guides/strider-logo.png": "guides/strider-logo.png",
     "docs/guides/strider-manual-add-repo-with-email-showing.png": "guides/strider-manual-add-repo-with-email-showing.png",
+    "docs/guides/strider-logo.png": "guides/strider-logo.png",
     "docs/guides/strider-manual-add-repo.png": "guides/strider-manual-add-repo.png",
     "docs/guides/strider_admin_plugins.png": "guides/strider_admin_plugins.png",
     "docs/guides/strider_email_notification.png": "guides/strider_email_notification.png",
@@ -366,8 +366,8 @@
     "docs/guides/heroku-deploy/heroku-9.png": "guides/heroku-deploy/heroku-9.png",
     "docs/guides/notifications-email/Thumbs.db": "guides/notifications-email/Thumbs.db",
     "docs/guides/notifications-email/email-1.png": "guides/notifications-email/email-1.png",
-    "docs/guides/notifications-email/email-2.png": "guides/notifications-email/email-2.png",
     "docs/guides/notifications-email/email-3.png": "guides/notifications-email/email-3.png",
+    "docs/guides/notifications-email/email-2.png": "guides/notifications-email/email-2.png",
     "docs/guides/notifications-email/email-4.png": "guides/notifications-email/email-4.png",
     "docs/guides/notifications-github-status/Thumbs.db": "guides/notifications-github-status/Thumbs.db",
     "docs/guides/notifications-github-status/github-status-1.png": "guides/notifications-github-status/github-status-1.png",
