@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="../styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="../styles/main.css?t=995a1369">
+    <script src="../assets/script.js?t=2bcc4b59"></script>
+    <title>Guides</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-guidesplatform-overview">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="strider-platform-overview">Strider &#x2014; Platform Overview</h1>
+<p>You&apos;re probably reading this article, because you want to keep ownership of your code, host and run your own continous integration and deployment tool. <a href="https://github.com/Strider-CD/strider">Strider</a> is an open source platform doing exactly this job.</p>
+<p><img src="http://futurestud.io/blog/content/images/2015/03/strider-logo.png" alt="Strider Open Source Continuous Integration &amp; Deployment Server"></p>
+<p>This is the first post in our series of blogposts about <strong>Strider</strong>. We&#x2019;ll look into various topics around the platform. Starting at how to install and configure Strider, going to service integrations with GitHub, GitLab, Bitbucket, Gogs, Heroku, Slack and HipChat. Additionally, we have you covered with the configuration and activation of email notification for build statuses, GitHub build status repoorts and how to configure Strider webhooks.</p>
+<hr>
+<h2 id="strider-series-overview">Strider Series Overview</h2>
+<ol>
+<li>Platform Overview and Getting Started</li>
+<li>How to Install Strider</li>
+<li>Configuration Guide and Available Options</li>
+<li>How to Connect with GitHub and Run Tests Automatically</li>
+<li>How to Connect with GitLab and Run Tests Automatically</li>
+<li>How to Connect with Bitbucket and Run Tests Automatically</li>
+<li>How to Connect with Gogs and Run Tests Automatically</li>
+<li>How to Manually Add a Git Repository</li>
+<li>Configure and Activate Email Notifications</li>
+<li>Continuous Deployment to Heroku</li>
+<li>Continuous Deployment to any Server via SSH</li>
+<li>Integrate and Notify with Slack</li>
+<li>Integrate and Notify with HipChat</li>
+<li>Report Build Status to GitHub</li>
+<li>Configure and Use Strider Webhooks</li>
+<li>Series Round-Up</li>
+</ol>
+<hr>
+<p>Strider is highly extensible and offers many plugins to enhance the platforms functionality. The platform integrates and is composed of plugins. You can find more information about the <a href="https://github.com/Strider-CD/strider-extension-loader">Strider Extension Loader</a> in the GitHub repository.</p>
+<h2 id="integration-with-services-via-plugins">Integration with Services via Plugins</h2>
+<p>Strider is build around a substantial extension loader. Strider integrates seamless with <strong>GitHub</strong>, <strong>GitHub Enterprise</strong>, <strong>Bitbucket</strong>, <strong>GitLab</strong>, <strong>Heroku</strong>, <strong>Slack</strong>, and many more. You can connect your GitHub and Bitbucket accounts to Strider and test your hosted repositories. Deploy your successfully tested code to Heroku and get notified in your Slack chat afterwards.</p>
+<p>Some plugins are <a href="https://github.com/Strider-CD">available on GitHub</a> and you can, of course, add your own. Strider plugins are NodeJS libraries and you can just install them via <code>npm install</code> in striders project repository. Actually, each plugin contains a <code>strider.json</code> metadata file to expose information about the plugin. And Strider knows how to handle the plugin and which JavaScript files should be initialized and loaded to work correctly.</p>
+<h2 id="mighty-plugins">Mighty Plugins</h2>
+<p>Strider is highly customizable through plugins. They provide many features and massively extend the platform.</p>
+<p><strong>Plugins can</strong></p>
+<ul>
+<li>register their own custom HTTP routes</li>
+<li>add hooks to execute arbitrary build actions</li>
+<li>extend the database schema with custom fields</li>
+<li>publish and subscribe to socket events</li>
+<li>create and modify Striders user interfaces</li>
+</ul>
+<h3 id="strider-environments-webapp-vs.-worker">Strider Environments &#x2014; Webapp vs. Worker</h3>
+<p>Strider separates plugins in two environments and loads them separately: webapp and worker.</p>
+<h3 id="webapp-environment">Webapp Environment</h3>
+<p>The webapp is Striders UI you can visit via Browser and configure the platform. Plugins expose options to manipulate via the webapp. You can define your templates, request manual configuration, serve files, listen to global Strider events and many more.</p>
+<h3 id="worker-environment">Worker Environment</h3>
+<p>The worker code is loaded for each job running with Strider. Using the <code>strider-simple-runner</code> plugin your code gets tested on the same process as your webapp. Worker plugins stick to the exposed extension loader methods to plug their functionality into Strider and make it available to the platform. Worker may load plugin specific configuration from the webapp like paths to SDKs, which branches should be tested or framework versions to test against.</p>
+<h2 id="supported-programming-languages">Supported Programming Languages</h2>
+<p>The default Strider deployment ships with support for the following programming languages</p>
+<ul>
+<li>NodeJS</li>
+<li>Ruby</li>
+<li>Python</li>
+</ul>
+<p>You probably know, we just want to be clear: testing code requires you to have the programming languages installed on the machine running Strider.</p>
+<p>You can add support for additional languages or framework by creating a new plugin.</p>
+<h2 id="create-your-own-plugin">Create Your Own Plugin</h2>
+<p>You can extend Strider with custom functionality via plugins. Strider provides (at least) two ways to create your own plugin. Fist: via template. Second: via command line.</p>
+<h3 id="create-a-plugin-from-template">Create a Plugin from Template</h3>
+<p>The <a href="https://github.com/bitwit/strider-template">strider-template</a> repository on GitHub illustrates the basic structure for a strider plugin. The required plugin metadata information is located the <code>package.json</code> file.</p>
+<p>Clone or fork this repository and add your desired functionality.</p>
+<h3 id="create-a-plugin-from-command-line">Create a Plugin from Command Line</h3>
+<p>Strider ships with a command line tool located in <code>bin/strider</code>. To create a new plugin, run <a href="https://github.com/Strider-CD/strider/wiki/Managing-Plugins#creating-new-plugins="><code>bin/strider init</code></a>.</p>
+<p>This will ask for the plugin name, description and author.</p>
+<pre><code>plugin: name:  strider-new-plugin
+plugin: description: This will be cool stuff!
+plugin: author: marcus
+Cloning into &#x2026;
+
+remote: Counting objects: 20, done.
+remote: Total 20 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (20/20), done.
+Checking connectivity... done.
+
+&#x2026;
+</code></pre>
+<p>Please note that all Strider plugins are named with <strong>strider-</strong> prepend. Of course you can use a name of your choice. It just would be good manner to lean on the official project style.</p>
+<h3 id="strider.json">Strider.json</h3>
+<p>Strider plugins require either a <a href="https://github.com/Strider-CD/strider-extension-loader#striderjson"><code>strider.json</code></a> file in the plugin base directory or a <code>strider</code> section in <code>package.json</code> file. The information defined is used by Strider to load the plugin code correctly and show users information about it.</p>
+<p>The schema looks like:</p>
+<pre><code>{
+  &quot;id&quot;: &quot;mycoolplugin&quot;, // must be unique.
+  &quot;title&quot;: &quot;Human Readable Title&quot;,
+  &quot;icon&quot;: &quot;icon.png&quot;, // relative to the plugin&apos;s `static` directory
+  &quot;type&quot;: &quot;runner | provider | job | basic&quot;, // defaults to basic
+  &quot;webapp&quot;: &quot;filename.js&quot;, // loaded in the webapp environment
+  &quot;worker&quot;: &quot;filename.js&quot;, // loaded in the worker environment
+  &quot;templates&quot;: {
+    &quot;tplname&quot;: &quot;&lt;div&gt;Hello {{ name }}&lt;/div&gt;&quot;, // either HTML or a path to HTML file
+    &quot;tplname&quot;: &quot;path/to/tpl.html&quot;
+  },
+  &quot;config&quot;: { // project-specific configuration
+    &quot;controller&quot;: // defaults to &quot;Config.JobController&quot; for job plugins, &quot;Config.ProviderController&quot;, etc.
+    &quot;script&quot;:     // path where the js should be loaded from. Path defaults to &quot;config/config.js&quot;
+    &quot;style&quot;:      // defaults to &quot;config/config.less&quot;. Can be less or css
+    &quot;template&quot;:   // defaults to &quot;config/config.html&quot;
+  }
+  // other configurations you need
+}
+</code></pre>
+<p>Static files located in a plugins <code>/static/</code> directory are available via url path <code>/ex/:pluginid</code>.</p>
+<h2 id="what-comes-next">What Comes Next</h2>
+<p>In our next post we&#x2019;ll guide you through the installation process of Strider. Further, we&#x2019;ll show you how to install plugins to extend the platforms feature set.</p>
+<h2 id="in-the-next-weeks-we&apos;re-going-to-walk-through-major-capabilities-and-integrations-of-strider.">In the next weeks, we&#x2019;re going to walk through major capabilities and integrations of Strider.</h2>
+<h4 id="additional-resources">Additional Resources</h4>
+<ul>
+<li><a href="https://github.com/Strider-CD/">Strider</a> on GitHub</li>
+<li><a href="https://github.com/Strider-CD/strider-extension-loader">Strider Extension Loader</a></li>
+<li><a href="https://github.com/bitwit/strider-template">Strider Plugin Template</a></li>
+</ul>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../getting-started.html"><span class="title">Getting Started</span></a></div>
+          <div class="right"><a href="../guides/how-to-install.html"><span class="label">Next: </span><span class="title">How to Install</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="../index.html" class="link title  link-index">Strider</a>
+            </li>
+            <li class="menu-item -level-1"><a href="../requirements.html" class="link title  link-requirements">Requirements</a>
+            </li>
+            <li class="menu-item -level-1"><a href="../getting-started.html" class="link title  link-getting-started">Getting Started</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><a href="../guides/platform-overview.html" class="link title -active link-guidesplatform-overview">Guides</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a href="#strider-series-overview" class="hlink link-strider-series-overview">Strider Series Overview</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#integration-with-services-via-plugins" class="hlink link-integration-with-services-via-plugins">Integration with Services via Plugins</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#mighty-plugins" class="hlink link-mighty-plugins">Mighty Plugins</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a href="#strider-environments-webapp-vs.-worker" class="hlink link-strider-environments-webapp-vs.-worker">Strider Environments — Webapp vs. Worker</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a href="#webapp-environment" class="hlink link-webapp-environment">Webapp Environment</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a href="#worker-environment" class="hlink link-worker-environment">Worker Environment</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="heading-item -depth-2"><a href="#supported-programming-languages" class="hlink link-supported-programming-languages">Supported Programming Languages</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#create-your-own-plugin" class="hlink link-create-your-own-plugin">Create Your Own Plugin</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a href="#create-a-plugin-from-template" class="hlink link-create-a-plugin-from-template">Create a Plugin from Template</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a href="#create-a-plugin-from-command-line" class="hlink link-create-a-plugin-from-command-line">Create a Plugin from Command Line</a>
+                    </li>
+                    <li class="heading-item -depth-3"><a href="#strider.json" class="hlink link-strider.json">Strider.json</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="heading-item -depth-2"><a href="#what-comes-next" class="hlink link-what-comes-next">What Comes Next</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#in-the-next-weeks-we're-going-to-walk-through-major-capabilities-and-integrations-of-strider." class="hlink link-in-the-next-weeks-we're-going-to-walk-through-major-capabilities-and-integrations-of-strider.">In the next weeks, we’re going to walk through major capabilities and integrations of Strider.</a>
+                </li>
+              </ul>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../guides/how-to-install.html" class="link title  link-guideshow-to-install">How to Install</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
