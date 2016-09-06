@@ -8,123 +8,85 @@
         "slug": "index"
       },
       {
-        "title": "Requirements",
-        "source": "docs/requirements.md",
-        "url": "requirements.html",
-        "slug": "requirements",
-        "headings": [
-          {
-            "title": "MongoDB",
-            "depth": 2,
-            "id": "mongodb"
-          }
-        ]
-      },
-      {
-        "title": "Getting Started",
-        "source": "docs/getting-started.md",
-        "url": "getting-started.html",
-        "slug": "getting-started",
-        "headings": [
-          {
-            "title": "Assumptions",
-            "depth": 2,
-            "id": "assumptions"
-          },
-          {
-            "title": "Installation",
-            "depth": 2,
-            "id": "installation"
-          },
-          {
-            "title": "Add Initial User",
-            "depth": 2,
-            "id": "add-initial-user"
-          },
-          {
-            "title": "Starting Strider",
-            "depth": 2,
-            "id": "starting-strider"
-          }
-        ]
-      },
-      {
         "title": "Guides",
-        "source": "docs/guides/platform-overview.md",
-        "url": "guides/platform-overview.html",
-        "slug": "guidesplatform-overview",
-        "headings": [
-          {
-            "title": "Strider Series Overview",
-            "depth": 2,
-            "id": "strider-series-overview"
-          },
-          {
-            "title": "Integration with Services via Plugins",
-            "depth": 2,
-            "id": "integration-with-services-via-plugins"
-          },
-          {
-            "title": "Mighty Plugins",
-            "depth": 2,
-            "id": "mighty-plugins",
-            "headings": [
-              {
-                "title": "Strider Environments — Webapp vs. Worker",
-                "depth": 3,
-                "id": "strider-environments-webapp-vs.-worker"
-              },
-              {
-                "title": "Webapp Environment",
-                "depth": 3,
-                "id": "webapp-environment"
-              },
-              {
-                "title": "Worker Environment",
-                "depth": 3,
-                "id": "worker-environment"
-              }
-            ]
-          },
-          {
-            "title": "Supported Programming Languages",
-            "depth": 2,
-            "id": "supported-programming-languages"
-          },
-          {
-            "title": "Create Your Own Plugin",
-            "depth": 2,
-            "id": "create-your-own-plugin",
-            "headings": [
-              {
-                "title": "Create a Plugin from Template",
-                "depth": 3,
-                "id": "create-a-plugin-from-template"
-              },
-              {
-                "title": "Create a Plugin from Command Line",
-                "depth": 3,
-                "id": "create-a-plugin-from-command-line"
-              },
-              {
-                "title": "Strider.json",
-                "depth": 3,
-                "id": "strider.json"
-              }
-            ]
-          },
-          {
-            "title": "What Comes Next",
-            "depth": 2,
-            "id": "what-comes-next"
-          },
-          {
-            "title": "In the next weeks, we’re going to walk through major capabilities and integrations of Strider.",
-            "depth": 2,
-            "id": "in-the-next-weeks-we're-going-to-walk-through-major-capabilities-and-integrations-of-strider."
-          }
-        ],
         "sections": [
+          {
+            "title": "Platform Overview",
+            "source": "docs/guides/platform-overview.md",
+            "url": "guides/platform-overview.html",
+            "slug": "guidesplatform-overview",
+            "headings": [
+              {
+                "title": "Strider Series Overview",
+                "depth": 2,
+                "id": "strider-series-overview"
+              },
+              {
+                "title": "Integration with Services via Plugins",
+                "depth": 2,
+                "id": "integration-with-services-via-plugins"
+              },
+              {
+                "title": "Mighty Plugins",
+                "depth": 2,
+                "id": "mighty-plugins",
+                "headings": [
+                  {
+                    "title": "Strider Environments — Webapp vs. Worker",
+                    "depth": 3,
+                    "id": "strider-environments-webapp-vs.-worker"
+                  },
+                  {
+                    "title": "Webapp Environment",
+                    "depth": 3,
+                    "id": "webapp-environment"
+                  },
+                  {
+                    "title": "Worker Environment",
+                    "depth": 3,
+                    "id": "worker-environment"
+                  }
+                ]
+              },
+              {
+                "title": "Supported Programming Languages",
+                "depth": 2,
+                "id": "supported-programming-languages"
+              },
+              {
+                "title": "Create Your Own Plugin",
+                "depth": 2,
+                "id": "create-your-own-plugin",
+                "headings": [
+                  {
+                    "title": "Create a Plugin from Template",
+                    "depth": 3,
+                    "id": "create-a-plugin-from-template"
+                  },
+                  {
+                    "title": "Create a Plugin from Command Line",
+                    "depth": 3,
+                    "id": "create-a-plugin-from-command-line"
+                  },
+                  {
+                    "title": "Strider.json",
+                    "depth": 3,
+                    "id": "strider.json"
+                  }
+                ]
+              },
+              {
+                "title": "What Comes Next",
+                "depth": 2,
+                "id": "what-comes-next"
+              },
+              {
+                "title": "In the next weeks, we’re going to walk through major capabilities and integrations of Strider.",
+                "depth": 2,
+                "id": "in-the-next-weeks-we're-going-to-walk-through-major-capabilities-and-integrations-of-strider."
+              }
+            ]
+          },
           {
             "title": "How to Install",
             "source": "docs/guides/how-to-install.md",
@@ -214,48 +176,9 @@
       "title": "Strider",
       "slug": "index"
     },
-    "requirements.html": {
-      "source": "docs/requirements.md",
-      "title": "Requirements",
-      "slug": "requirements",
-      "headings": [
-        {
-          "title": "MongoDB",
-          "depth": 2,
-          "id": "mongodb"
-        }
-      ]
-    },
-    "getting-started.html": {
-      "source": "docs/getting-started.md",
-      "title": "Getting Started",
-      "slug": "getting-started",
-      "headings": [
-        {
-          "title": "Assumptions",
-          "depth": 2,
-          "id": "assumptions"
-        },
-        {
-          "title": "Installation",
-          "depth": 2,
-          "id": "installation"
-        },
-        {
-          "title": "Add Initial User",
-          "depth": 2,
-          "id": "add-initial-user"
-        },
-        {
-          "title": "Starting Strider",
-          "depth": 2,
-          "id": "starting-strider"
-        }
-      ]
-    },
     "guides/platform-overview.html": {
       "source": "docs/guides/platform-overview.md",
-      "title": "Guides",
+      "title": "Platform Overview",
       "slug": "guidesplatform-overview",
       "headings": [
         {
@@ -410,8 +333,6 @@
   },
   "sources": {
     "docs/introduction.md": "index.html",
-    "docs/requirements.md": "requirements.html",
-    "docs/getting-started.md": "getting-started.html",
     "docs/guides/platform-overview.md": "guides/platform-overview.html",
     "docs/guides/how-to-install.md": "guides/how-to-install.html",
     "docs/screenshots/build-page.jpg": "screenshots/build-page.jpg",
@@ -444,8 +365,8 @@
     "docs/guides/heroku-deploy/heroku-8.png": "guides/heroku-deploy/heroku-8.png",
     "docs/guides/heroku-deploy/heroku-9.png": "guides/heroku-deploy/heroku-9.png",
     "docs/guides/notifications-email/Thumbs.db": "guides/notifications-email/Thumbs.db",
-    "docs/guides/notifications-email/email-2.png": "guides/notifications-email/email-2.png",
     "docs/guides/notifications-email/email-1.png": "guides/notifications-email/email-1.png",
+    "docs/guides/notifications-email/email-2.png": "guides/notifications-email/email-2.png",
     "docs/guides/notifications-email/email-3.png": "guides/notifications-email/email-3.png",
     "docs/guides/notifications-email/email-4.png": "guides/notifications-email/email-4.png",
     "docs/guides/notifications-github-status/Thumbs.db": "guides/notifications-github-status/Thumbs.db",
@@ -471,19 +392,19 @@
     "docs/guides/notifications-slack/slack-6.png": "guides/notifications-slack/slack-6.png",
     "docs/guides/notifications-slack/slack-7.png": "guides/notifications-slack/slack-7.png",
     "docs/guides/ssh-deploy/ssh-1.png": "guides/ssh-deploy/ssh-1.png",
-    "docs/guides/ssh-deploy/ssh-3.png": "guides/ssh-deploy/ssh-3.png",
     "docs/guides/ssh-deploy/ssh-2.png": "guides/ssh-deploy/ssh-2.png",
+    "docs/guides/ssh-deploy/ssh-3.png": "guides/ssh-deploy/ssh-3.png",
     "docs/guides/ssh-deploy/ssh-4.png": "guides/ssh-deploy/ssh-4.png",
     "docs/guides/ssh-deploy/ssh-5.png": "guides/ssh-deploy/ssh-5.png",
     "docs/guides/ssh-deploy/ssh-6.png": "guides/ssh-deploy/ssh-6.png",
     "docs/guides/ssh-deploy/ssh-7.png": "guides/ssh-deploy/ssh-7.png",
     "docs/guides/strider-bitbucket/strider-bitbucket-1.png": "guides/strider-bitbucket/strider-bitbucket-1.png",
     "docs/guides/strider-bitbucket/strider-bitbucket-2-1.png": "guides/strider-bitbucket/strider-bitbucket-2-1.png",
+    "docs/guides/strider-bitbucket/strider-bitbucket-2.png": "guides/strider-bitbucket/strider-bitbucket-2.png",
     "docs/guides/strider-bitbucket/strider-bitbucket-3.png": "guides/strider-bitbucket/strider-bitbucket-3.png",
     "docs/guides/strider-bitbucket/strider-bitbucket-4.png": "guides/strider-bitbucket/strider-bitbucket-4.png",
     "docs/guides/strider-bitbucket/strider-bitbucket-5-org.png": "guides/strider-bitbucket/strider-bitbucket-5-org.png",
     "docs/guides/strider-bitbucket/strider-bitbucket-5.png": "guides/strider-bitbucket/strider-bitbucket-5.png",
-    "docs/guides/strider-bitbucket/strider-bitbucket-2.png": "guides/strider-bitbucket/strider-bitbucket-2.png",
     "docs/guides/strider-git-gogs/git-gogs-1.png": "guides/strider-git-gogs/git-gogs-1.png",
     "docs/guides/strider-git-gogs/git-gogs-2.png": "guides/strider-git-gogs/git-gogs-2.png",
     "docs/guides/strider-git-gogs/git-gogs-3.png": "guides/strider-git-gogs/git-gogs-3.png",
@@ -499,18 +420,18 @@
     "docs/guides/strider-github/strider-github-8.png": "guides/strider-github/strider-github-8.png",
     "docs/guides/strider-github/strider-github-authorize-application.png": "guides/strider-github/strider-github-authorize-application.png",
     "docs/guides/strider-github/strider-github-register-app.png": "guides/strider-github/strider-github-register-app.png",
-    "docs/guides/strider-write-own-plugin/strider-plugin-1.png": "guides/strider-write-own-plugin/strider-plugin-1.png",
-    "docs/guides/strider-write-own-plugin/strider-plugin-2.png": "guides/strider-write-own-plugin/strider-plugin-2.png",
-    "docs/guides/strider-write-own-plugin/strider-plugin-3.png": "guides/strider-write-own-plugin/strider-plugin-3.png",
+    "docs/guides/strider-gitlab/strider-gitlab-1-old.png": "guides/strider-gitlab/strider-gitlab-1-old.png",
+    "docs/guides/strider-gitlab/strider-gitlab-1.png": "guides/strider-gitlab/strider-gitlab-1.png",
+    "docs/guides/strider-gitlab/strider-gitlab-2.png": "guides/strider-gitlab/strider-gitlab-2.png",
+    "docs/guides/strider-gitlab/strider-gitlab-3.png": "guides/strider-gitlab/strider-gitlab-3.png",
+    "docs/guides/strider-gitlab/strider-gitlab-4.png": "guides/strider-gitlab/strider-gitlab-4.png",
+    "docs/guides/strider-gitlab/strider-gitlab-5.png": "guides/strider-gitlab/strider-gitlab-5.png",
     "docs/guides/strider-webhooks/strider-webhooks-1.png": "guides/strider-webhooks/strider-webhooks-1.png",
     "docs/guides/strider-webhooks/strider-webhooks-2.png": "guides/strider-webhooks/strider-webhooks-2.png",
     "docs/guides/strider-webhooks/strider-webhooks-3.png": "guides/strider-webhooks/strider-webhooks-3.png",
     "docs/guides/strider-webhooks/strider-webhooks-4.png": "guides/strider-webhooks/strider-webhooks-4.png",
-    "docs/guides/strider-gitlab/strider-gitlab-1-old.png": "guides/strider-gitlab/strider-gitlab-1-old.png",
-    "docs/guides/strider-gitlab/strider-gitlab-1.png": "guides/strider-gitlab/strider-gitlab-1.png",
-    "docs/guides/strider-gitlab/strider-gitlab-2.png": "guides/strider-gitlab/strider-gitlab-2.png",
-    "docs/guides/strider-gitlab/strider-gitlab-4.png": "guides/strider-gitlab/strider-gitlab-4.png",
-    "docs/guides/strider-gitlab/strider-gitlab-3.png": "guides/strider-gitlab/strider-gitlab-3.png",
-    "docs/guides/strider-gitlab/strider-gitlab-5.png": "guides/strider-gitlab/strider-gitlab-5.png"
+    "docs/guides/strider-write-own-plugin/strider-plugin-1.png": "guides/strider-write-own-plugin/strider-plugin-1.png",
+    "docs/guides/strider-write-own-plugin/strider-plugin-2.png": "guides/strider-write-own-plugin/strider-plugin-2.png",
+    "docs/guides/strider-write-own-plugin/strider-plugin-3.png": "guides/strider-write-own-plugin/strider-plugin-3.png"
   }
 }
