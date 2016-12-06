@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../../styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="../../styles/main.css?t=995a1369">
+    <script src="../../assets/script.js?t=42463e55"></script>
+    <title>Gitlab - Strider</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../../index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../../guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../../guides/how-to-install.html">Installation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../../guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../../guides/providers/github.html">Github</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title -active link-guidesprovidersgitlab" href="../../guides/providers/gitlab.html">Gitlab</a>
+                      <ul class="headings heading-list">
+                        <li class="heading-item -depth-2"><a class="hlink link-introduction" href="#introduction">Introduction</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-install-strider-gitlab-plugin" href="#install-strider-gitlab-plugin">Install Strider-GitLab Plugin</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-configure-gitlab-in-your-strider-account" href="#configure-gitlab-in-your-strider-account">Configure GitLab in Your Strider Account</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-add-gitlab-repositories-to-strider" href="#add-gitlab-repositories-to-strider">Add GitLab Repositories to Strider</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-run-tests-automatically" href="#run-tests-automatically">Run Tests Automatically</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-conclusion" href="#conclusion">Conclusion</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../../guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-guidesprovidersgitlab">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="how-to-connect-with-gitlab-and-run-tests-automatically">How to Connect with GitLab and Run Tests Automatically</h1>
+<p>This week we guide you on how to connect Strider with GitLab. Doesn&#x2019;t matter if you&#x2019;re connecting to a self-hosted GitLab instance or official <a href="https://gitlab.com">GitLab</a> repositories.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Strider integrates with multiple services and one of them is GitLab. Since version 6.2, the GitLab API offers functionality to integrate seamless with other services. To connect both platforms, we need to install Striders GitLab plugin, configure your user account with your GitLab API key and then add repositories.</p>
+<p>Connecting Strider with GitLab requires the following minimum app versions:</p>
+<ul>
+<li>Strider 1.4</li>
+<li>GitLab 6.2</li>
+</ul>
+<h2 id="install-strider-gitlab-plugin">Install Strider-GitLab Plugin</h2>
+<p>The first thing to do is the installation of Strider&#x2019;s <a href="https://github.com/Strider-CD/strider-gitlab">GitLab plugin</a>. Head over to the plugin section in admin panel and click the <code>Install</code> button if the plugin isn&#x2019;t already installed.</p>
+<p><img src="" alt="Strider Plugin Overview"></p>
+<h2 id="configure-gitlab-in-your-strider-account">Configure GitLab in Your Strider Account</h2>
+<p>Strider doesn&#x2019;t offer GitLab as source for repositories in the projects overview by default. You have to configure GitLab access first in your Strider profile to enable this feature.</p>
+<p><img src="" alt="Strider GitLab Configuration"></p>
+<p>Navigate to your GitLab account settings and click the <strong>Add Account</strong> button. Provide a <strong>title</strong> and pass your GitLab API url. GitLabs API url is composed of your default url to access GitLab via browser and <code>/api/v3</code>. Hosting your repositories on <a href="https://gitlab.com">gitlab.com</a> results in the following API url</p>
+<pre><code>https://gitlab.com/api/v3
+</code></pre>
+<p>Your own GitLab deployment will look like</p>
+<pre><code>https://gitlab.my.url/api/v3
+</code></pre>
+<p>The <strong>private token</strong> is located in your GitLab profile. Go to <strong>Account</strong> and copy your private token.</p>
+<p><img src="" alt="GitLab Account Settings"></p>
+<p>Press <strong>save</strong> to add this account.</p>
+<p><strong>Attention:</strong> providing wrong credentials will result in misfunction of Strider. The projects overview won&#x2019;t work anymore. You can fix this issue by uninstalling Striders GitLab plugin via admin panel. If you can&#x2019;t access the admin panel anymore, uninstall and install the strider-gitlab plugin via command line (with the help of <code>npm</code>).</p>
+<h2 id="add-gitlab-repositories-to-strider">Add GitLab Repositories to Strider</h2>
+<p>If you finished the previously describes steps, your GitLab repositories will show in the projects overview.</p>
+<p><img src="" alt="Strider GitLab Project Overview"></p>
+<p>Select a project, click <strong>Add</strong> and specify the project type. Strider offers the options to directly test the project or configure it. You can test your code right away or make configuration changes :)</p>
+<h2 id="run-tests-automatically">Run Tests Automatically</h2>
+<p>Adding a GitLab repository to Strider doesn&#x2019;t automatically create any webhook to trigger notifications regarding repository changes automatically. To add the webhook navigate to Strider server and open the project detail view of the just added repository. Copy the url with looks like</p>
+<pre><code>https://my.strider.url/username/project-name
+</code></pre>
+<p>Now open another tab in your browser and navigate to your GitLab server. Go to the project settings of the repository you just added to Strider. Open <strong>Web Hooks</strong> and paste the Strider project url into the <code>URL</code> input field. Additionally, add <code>/api/gitlab/webhook</code> to the url to request the correct Strider webhook url for the specified project.</p>
+<p>Your final webhook url looks like</p>
+<pre><code>https://my.strider.url/username/project-name/api/gitlab/webhook
+</code></pre>
+<p>Check your desired <code>Trigger</code> types and click <strong>Add Web Hook</strong>.</p>
+<p><img src="" alt="GitLab Web Hook Overview"></p>
+<p>GitLab adds a box with provided webhook urls below the add webhook panel. You can test the hook right away by clicking <strong>Test Hook</strong>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>That&#x2019;s it. Your Strider deployment is connected with your GitLab profile. You can add GitLab repositories and test them automatically.</p>
+<p>Having trouble? Please don&#x2019;t hesitate to contact us via comments or <a href="https://twitter.com/futurestud_io">@futurestud_io</a>!</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../../guides/providers/github.html"><span class="title">Github</span></a></div>
+          <div class="right"><a href="../../guides/providers/bitbucket.html"><span class="label">Next: </span><span class="title">Bitbucket</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

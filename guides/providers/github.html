@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../../styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="../../styles/main.css?t=995a1369">
+    <script src="../../assets/script.js?t=42463e55"></script>
+    <title>Github - Strider</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../../index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../../guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../../guides/how-to-install.html">Installation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../../guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title -active link-guidesprovidersgithub" href="../../guides/providers/github.html">Github</a>
+                      <ul class="headings heading-list">
+                        <li class="heading-item -depth-2"><a class="hlink link-introduction" href="#introduction">Introduction</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-install-strider-github-plugin" href="#install-strider-github-plugin">Install Strider-GitHub Plugin</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-register-github-application" href="#register-github-application">Register GitHub Application</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-configure-strider-server" href="#configure-strider-server">Configure Strider Server</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-connect-strider-with-github" href="#connect-strider-with-github">Connect Strider With GitHub</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-add-github-repositories-to-strider" href="#add-github-repositories-to-strider">Add GitHub Repositories to Strider</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-run-tests-automatically" href="#run-tests-automatically">Run Tests Automatically</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-conclusion" href="#conclusion">Conclusion</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../../guides/providers/gitlab.html">Gitlab</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../../guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-guidesprovidersgithub">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="how-to-connect-with-github-and-run-tests-automatically">How to Connect with GitHub and Run Tests Automatically</h1>
+<p>This week we&#x2019; going to connect Strider with GitHub and let GitHub send push notifications to run tests automatically.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Connecting Strider with GitHub requires various steps and configurations for your Strider server. First, we need to install the GitHub plugin for Strider (if not already done). Afterwards, we add a GitHub application, configure the Strider server and connect both services.</p>
+<h2 id="install-strider-github-plugin">Install Strider-GitHub Plugin</h2>
+<p>The first thing to do is the installation of Strider&#x2019;s GitHub plugin. Head over to the plugin section in admin panel and click the <code>Install</code> button if the plugin isn&#x2019;t already installed.</p>
+<p><img src="strider-github/strider-github-1.png" alt="Strider Plugin Overview"></p>
+<h2 id="register-github-application">Register GitHub Application</h2>
+<p>Access to your repositories from third-party applications are restricted by GitHub. To connect Strider with GitHub you need to <a href="https://github.com/settings/applications/new">create a new GitHub application</a>.</p>
+<p><img src="strider-github/strider-github-register-app.png" alt="Create New GitHub Application"></p>
+<p>Fill the fields for your application. The <code>Authorization callback URL</code> is composed of your homepage url and <code>/auth/github/callback</code>.</p>
+<p>Of course you can use a local Strider deployment running on <code>localhost</code> and provide an authorization callback URL like <code>http://localhost:3000/auth/github/callback</code> for your GitHub app.</p>
+<p>After successful app creation, you&#x2019;re redirected to the application overview. You can update your GitHub app settings and more important, the <strong>Client ID</strong> and <strong>Client Secret</strong> are depicted in the top right corner. We need both values to configure your Strider server to access GitHub correctly.</p>
+<p><img src="strider-github/strider-github-3.png" alt="GitHub Application Details"></p>
+<p>That&#x2019;s the GitHub configuration part. Now we go back to Strider and configure the server.</p>
+<h2 id="configure-strider-server">Configure Strider Server</h2>
+<p>The previous post illustrates the options to configure Strider and how to pass your option values to the Strider deployment.</p>
+<p>Ok, the bad news first: the <a href="https://github.com/Strider-CD/strider-github">strider-github</a> plugin doesn&#x2019;t recognize configuration values passed through the <code>.striderrc</code> file. You have to pass config values via environment variables.</p>
+<p>The GitHub plugin for Strider requires at least 3 configuration options defined: <code>SERVER_NAME</code>, <code>PLUGIN_GITHUB_APP_ID</code> and <code>PLUGIN_GITHUB_APP_SECRET</code>.</p>
+<p>Stop your Strider server if currently running. Define the environment variables either system-wide via `export KEY=VALUE&#xB4; or just pass the variable values to the process.</p>
+<pre><code># export the values and start Strider afterwards
+export SERVER_NAME=&quot;https://your.strider.url&quot;
+export PLUGIN_GITHUB_APP_ID=&quot;yourclientid&quot;
+export PLUGIN_GITHUB_APP_SECRET=&quot;yourclientsecret&quot;
+export NODE_ENV=production
+
+# start strider
+npm start
+</code></pre>
+<p>Start your Strider server again. It will automatically configure with provided values.</p>
+<p>Server configuration is done. Now, we&#x2019;re going to connect Strider with GitHub.</p>
+<h2 id="connect-strider-with-github">Connect Strider With GitHub</h2>
+<p>Your Strider Dashboard will just show the hint to connect with GitLab, GitHub or add a project manually.</p>
+<p><img src="strider-github/strider-github-4.png" alt="Strider Dashboard"></p>
+<p>Clicking the <strong>GitHub</strong> button navigates to <code>github.com</code> and depicts the access overview. You need to authorize the application to access your public and private repositories. Additionally, Strider will access all repositories of companies you&#x2019;re a member.</p>
+<p><img src="strider-github/strider-github-authorize-application.png" alt="GitHub Application Access Overview"></p>
+<p>Granting access for your Strider app will redirect you to the provided <code>Authorization callback URL</code> in your GitHub application. Strider will navigate to the projects overview and shows your GitHub projects. You&#x2019;re able to add them to Strider and run provided tests in your project.</p>
+<h2 id="add-github-repositories-to-strider">Add GitHub Repositories to Strider</h2>
+<p>Now that Strider is connected to your GitHub account, you can add any of your project. Click the <strong>Add</strong> button to show a selection of project types.</p>
+<p><img src="strider-github/strider-github-5.png" alt="Strider Project Overview"></p>
+<p>Choose the type that fits your selected project. Afterwards, you&#x2019;re allowed to run the first test directly or head over to the project settings.</p>
+<h2 id="run-tests-automatically">Run Tests Automatically</h2>
+<p>Strider automatically creates a Webhook for the added project. With every push to the git repository, GitHub will send a <code>POST</code> request to your Strider server and trigger an automated build.</p>
+<p><img src="strider-github/strider-github-6.png" alt="GitHub Projects Webhook Overview"></p>
+<p>You notice the warning triangle. This triangle indicates an error delivering the hook correctly to provided webhook url. This is mostly an SSL certificate verification error. You can disable SSL verification for a Webhook to deliver the <code>POST</code> request even your certificate is not accepted by GitHub.</p>
+<p><img src="strider-github/strider-github-7.png" alt="GitHub Webhook SSL Verification"></p>
+<p>Just click the <strong>Disable SSL verification</strong> button and confirm the upcoming warning message.</p>
+<p><img src="strider-github/strider-github-8.png" alt="GitHub Webhook SSL Verification Turned Off"></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Strider integrates seamlessly with GitHub and provides APIs to get notified for repository changes to run code tests automatically.</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../../guides/configuration.html"><span class="title">Configuration</span></a></div>
+          <div class="right"><a href="../../guides/providers/gitlab.html"><span class="label">Next: </span><span class="title">Gitlab</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

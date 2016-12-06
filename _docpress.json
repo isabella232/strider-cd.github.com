@@ -165,6 +165,185 @@
                 ]
               }
             ]
+          },
+          {
+            "title": "Configuration",
+            "source": "docs/guides/configuration.md",
+            "url": "guides/configuration.html",
+            "slug": "guidesconfiguration",
+            "headings": [
+              {
+                "title": "Strider Series Overview",
+                "depth": 2,
+                "id": "strider-series-overview"
+              },
+              {
+                "title": "Configuration Options",
+                "depth": 2,
+                "id": "configuration-options"
+              },
+              {
+                "title": "Load Defined Strider Configuration",
+                "depth": 2,
+                "id": "load-defined-strider-configuration",
+                "headings": [
+                  {
+                    "title": "Configuration from Environment Variables",
+                    "depth": 3,
+                    "id": "configuration-from-environment-variables"
+                  },
+                  {
+                    "title": "Configuration from File",
+                    "depth": 3,
+                    "id": "configuration-from-file"
+                  },
+                  {
+                    "title": "Multiple Configuration Options Defined: What Happens?",
+                    "depth": 3,
+                    "id": "multiple-configuration-options-defined:-what-happens"
+                  }
+                ]
+              },
+              {
+                "title": "What Comes Next",
+                "depth": 2,
+                "id": "what-comes-next"
+              }
+            ]
+          },
+          {
+            "title": "Providers",
+            "sections": [
+              {
+                "title": "Github",
+                "source": "docs/guides/providers/github.md",
+                "url": "guides/providers/github.html",
+                "slug": "guidesprovidersgithub",
+                "headings": [
+                  {
+                    "title": "Introduction",
+                    "depth": 2,
+                    "id": "introduction"
+                  },
+                  {
+                    "title": "Install Strider-GitHub Plugin",
+                    "depth": 2,
+                    "id": "install-strider-github-plugin"
+                  },
+                  {
+                    "title": "Register GitHub Application",
+                    "depth": 2,
+                    "id": "register-github-application"
+                  },
+                  {
+                    "title": "Configure Strider Server",
+                    "depth": 2,
+                    "id": "configure-strider-server"
+                  },
+                  {
+                    "title": "Connect Strider With GitHub",
+                    "depth": 2,
+                    "id": "connect-strider-with-github"
+                  },
+                  {
+                    "title": "Add GitHub Repositories to Strider",
+                    "depth": 2,
+                    "id": "add-github-repositories-to-strider"
+                  },
+                  {
+                    "title": "Run Tests Automatically",
+                    "depth": 2,
+                    "id": "run-tests-automatically"
+                  },
+                  {
+                    "title": "Conclusion",
+                    "depth": 2,
+                    "id": "conclusion"
+                  }
+                ]
+              },
+              {
+                "title": "Gitlab",
+                "source": "docs/guides/providers/gitlab.md",
+                "url": "guides/providers/gitlab.html",
+                "slug": "guidesprovidersgitlab",
+                "headings": [
+                  {
+                    "title": "Introduction",
+                    "depth": 2,
+                    "id": "introduction"
+                  },
+                  {
+                    "title": "Install Strider-GitLab Plugin",
+                    "depth": 2,
+                    "id": "install-strider-gitlab-plugin"
+                  },
+                  {
+                    "title": "Configure GitLab in Your Strider Account",
+                    "depth": 2,
+                    "id": "configure-gitlab-in-your-strider-account"
+                  },
+                  {
+                    "title": "Add GitLab Repositories to Strider",
+                    "depth": 2,
+                    "id": "add-gitlab-repositories-to-strider"
+                  },
+                  {
+                    "title": "Run Tests Automatically",
+                    "depth": 2,
+                    "id": "run-tests-automatically"
+                  },
+                  {
+                    "title": "Conclusion",
+                    "depth": 2,
+                    "id": "conclusion"
+                  }
+                ]
+              },
+              {
+                "title": "Bitbucket",
+                "source": "docs/guides/providers/bitbucket.md",
+                "url": "guides/providers/bitbucket.html",
+                "slug": "guidesprovidersbitbucket",
+                "headings": [
+                  {
+                    "title": "Install Strider-Bitbucket Plugin",
+                    "depth": 2,
+                    "id": "install-strider-bitbucket-plugin"
+                  },
+                  {
+                    "title": "Register Bitbucket Application",
+                    "depth": 2,
+                    "id": "register-bitbucket-application"
+                  },
+                  {
+                    "title": "Configure Strider Server",
+                    "depth": 2,
+                    "id": "configure-strider-server"
+                  },
+                  {
+                    "title": "Connect Strider With Bitbucket",
+                    "depth": 2,
+                    "id": "connect-strider-with-bitbucket"
+                  },
+                  {
+                    "title": "Add Bitbucket Repositories to Strider",
+                    "depth": 2,
+                    "id": "add-bitbucket-repositories-to-strider"
+                  },
+                  {
+                    "title": "Run Tests Automatically",
+                    "depth": 2,
+                    "id": "run-tests-automatically"
+                  },
+                  {
+                    "title": "Conclusion",
+                    "depth": 2,
+                    "id": "conclusion"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -174,11 +353,13 @@
     "index.html": {
       "source": "docs/introduction.md",
       "title": "Strider",
+      "pageTitle": "Strider",
       "slug": "index"
     },
     "guides/platform-overview.html": {
       "source": "docs/guides/platform-overview.md",
-      "title": "Overview",
+      "title": "Overview - Strider",
+      "pageTitle": "Overview",
       "slug": "guidesplatform-overview",
       "headings": [
         {
@@ -254,7 +435,8 @@
     },
     "guides/how-to-install.html": {
       "source": "docs/guides/how-to-install.md",
-      "title": "Installation",
+      "title": "Installation - Strider",
+      "pageTitle": "Installation",
       "slug": "guideshow-to-install",
       "headings": [
         {
@@ -329,23 +511,201 @@
           ]
         }
       ]
+    },
+    "guides/configuration.html": {
+      "source": "docs/guides/configuration.md",
+      "title": "Configuration - Strider",
+      "pageTitle": "Configuration",
+      "slug": "guidesconfiguration",
+      "headings": [
+        {
+          "title": "Strider Series Overview",
+          "depth": 2,
+          "id": "strider-series-overview"
+        },
+        {
+          "title": "Configuration Options",
+          "depth": 2,
+          "id": "configuration-options"
+        },
+        {
+          "title": "Load Defined Strider Configuration",
+          "depth": 2,
+          "id": "load-defined-strider-configuration",
+          "headings": [
+            {
+              "title": "Configuration from Environment Variables",
+              "depth": 3,
+              "id": "configuration-from-environment-variables"
+            },
+            {
+              "title": "Configuration from File",
+              "depth": 3,
+              "id": "configuration-from-file"
+            },
+            {
+              "title": "Multiple Configuration Options Defined: What Happens?",
+              "depth": 3,
+              "id": "multiple-configuration-options-defined:-what-happens"
+            }
+          ]
+        },
+        {
+          "title": "What Comes Next",
+          "depth": 2,
+          "id": "what-comes-next"
+        }
+      ]
+    },
+    "guides/providers/github.html": {
+      "source": "docs/guides/providers/github.md",
+      "title": "Github - Strider",
+      "pageTitle": "Github",
+      "slug": "guidesprovidersgithub",
+      "headings": [
+        {
+          "title": "Introduction",
+          "depth": 2,
+          "id": "introduction"
+        },
+        {
+          "title": "Install Strider-GitHub Plugin",
+          "depth": 2,
+          "id": "install-strider-github-plugin"
+        },
+        {
+          "title": "Register GitHub Application",
+          "depth": 2,
+          "id": "register-github-application"
+        },
+        {
+          "title": "Configure Strider Server",
+          "depth": 2,
+          "id": "configure-strider-server"
+        },
+        {
+          "title": "Connect Strider With GitHub",
+          "depth": 2,
+          "id": "connect-strider-with-github"
+        },
+        {
+          "title": "Add GitHub Repositories to Strider",
+          "depth": 2,
+          "id": "add-github-repositories-to-strider"
+        },
+        {
+          "title": "Run Tests Automatically",
+          "depth": 2,
+          "id": "run-tests-automatically"
+        },
+        {
+          "title": "Conclusion",
+          "depth": 2,
+          "id": "conclusion"
+        }
+      ]
+    },
+    "guides/providers/gitlab.html": {
+      "source": "docs/guides/providers/gitlab.md",
+      "title": "Gitlab - Strider",
+      "pageTitle": "Gitlab",
+      "slug": "guidesprovidersgitlab",
+      "headings": [
+        {
+          "title": "Introduction",
+          "depth": 2,
+          "id": "introduction"
+        },
+        {
+          "title": "Install Strider-GitLab Plugin",
+          "depth": 2,
+          "id": "install-strider-gitlab-plugin"
+        },
+        {
+          "title": "Configure GitLab in Your Strider Account",
+          "depth": 2,
+          "id": "configure-gitlab-in-your-strider-account"
+        },
+        {
+          "title": "Add GitLab Repositories to Strider",
+          "depth": 2,
+          "id": "add-gitlab-repositories-to-strider"
+        },
+        {
+          "title": "Run Tests Automatically",
+          "depth": 2,
+          "id": "run-tests-automatically"
+        },
+        {
+          "title": "Conclusion",
+          "depth": 2,
+          "id": "conclusion"
+        }
+      ]
+    },
+    "guides/providers/bitbucket.html": {
+      "source": "docs/guides/providers/bitbucket.md",
+      "title": "Bitbucket - Strider",
+      "pageTitle": "Bitbucket",
+      "slug": "guidesprovidersbitbucket",
+      "headings": [
+        {
+          "title": "Install Strider-Bitbucket Plugin",
+          "depth": 2,
+          "id": "install-strider-bitbucket-plugin"
+        },
+        {
+          "title": "Register Bitbucket Application",
+          "depth": 2,
+          "id": "register-bitbucket-application"
+        },
+        {
+          "title": "Configure Strider Server",
+          "depth": 2,
+          "id": "configure-strider-server"
+        },
+        {
+          "title": "Connect Strider With Bitbucket",
+          "depth": 2,
+          "id": "connect-strider-with-bitbucket"
+        },
+        {
+          "title": "Add Bitbucket Repositories to Strider",
+          "depth": 2,
+          "id": "add-bitbucket-repositories-to-strider"
+        },
+        {
+          "title": "Run Tests Automatically",
+          "depth": 2,
+          "id": "run-tests-automatically"
+        },
+        {
+          "title": "Conclusion",
+          "depth": 2,
+          "id": "conclusion"
+        }
+      ]
     }
   },
   "sources": {
     "docs/introduction.md": "index.html",
     "docs/guides/platform-overview.md": "guides/platform-overview.html",
     "docs/guides/how-to-install.md": "guides/how-to-install.html",
+    "docs/guides/configuration.md": "guides/configuration.html",
+    "docs/guides/providers/github.md": "guides/providers/github.html",
+    "docs/guides/providers/gitlab.md": "guides/providers/gitlab.html",
+    "docs/guides/providers/bitbucket.md": "guides/providers/bitbucket.html",
+    "docs/styles/main.css": "styles/main.css",
+    "docs/styles/rsc.css": "styles/rsc.css",
+    "docs/screenshots/build-page.jpg": "screenshots/build-page.jpg",
     "docs/screenshots/dashboard.jpg": "screenshots/dashboard.jpg",
     "docs/screenshots/phone-build.jpg": "screenshots/phone-build.jpg",
-    "docs/screenshots/build-page.jpg": "screenshots/build-page.jpg",
     "docs/screenshots/phone-dashboard.jpg": "screenshots/phone-dashboard.jpg",
-    "docs/screenshots/tty-colors.jpg": "screenshots/tty-colors.jpg",
     "docs/screenshots/tablet-dashboard.jpg": "screenshots/tablet-dashboard.jpg",
-    "docs/styles/rsc.css": "styles/rsc.css",
-    "docs/styles/main.css": "styles/main.css",
+    "docs/screenshots/tty-colors.jpg": "screenshots/tty-colors.jpg",
     "docs/guides/strider project email notifications settings.png": "guides/strider project email notifications settings.png",
-    "docs/guides/strider-manual-add-repo-with-email-showing.png": "guides/strider-manual-add-repo-with-email-showing.png",
     "docs/guides/strider-logo.png": "guides/strider-logo.png",
+    "docs/guides/strider-manual-add-repo-with-email-showing.png": "guides/strider-manual-add-repo-with-email-showing.png",
     "docs/guides/strider-manual-add-repo.png": "guides/strider-manual-add-repo.png",
     "docs/guides/strider_admin_plugins.png": "guides/strider_admin_plugins.png",
     "docs/guides/strider_email_notification.png": "guides/strider_email_notification.png",
@@ -366,8 +726,8 @@
     "docs/guides/heroku-deploy/heroku-9.png": "guides/heroku-deploy/heroku-9.png",
     "docs/guides/notifications-email/Thumbs.db": "guides/notifications-email/Thumbs.db",
     "docs/guides/notifications-email/email-1.png": "guides/notifications-email/email-1.png",
-    "docs/guides/notifications-email/email-3.png": "guides/notifications-email/email-3.png",
     "docs/guides/notifications-email/email-2.png": "guides/notifications-email/email-2.png",
+    "docs/guides/notifications-email/email-3.png": "guides/notifications-email/email-3.png",
     "docs/guides/notifications-email/email-4.png": "guides/notifications-email/email-4.png",
     "docs/guides/notifications-github-status/Thumbs.db": "guides/notifications-github-status/Thumbs.db",
     "docs/guides/notifications-github-status/github-status-1.png": "guides/notifications-github-status/github-status-1.png",
@@ -381,8 +741,8 @@
     "docs/guides/notifications-hipchat/hipchat-3.png": "guides/notifications-hipchat/hipchat-3.png",
     "docs/guides/notifications-hipchat/hipchat-4.png": "guides/notifications-hipchat/hipchat-4.png",
     "docs/guides/notifications-hipchat/hipchat-5.png": "guides/notifications-hipchat/hipchat-5.png",
-    "docs/guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png": "guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png",
     "docs/guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.44.47.png": "guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.44.47.png",
+    "docs/guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png": "guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png",
     "docs/guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.45.23.png": "guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.45.23.png",
     "docs/guides/notifications-slack/slack-1.png": "guides/notifications-slack/slack-1.png",
     "docs/guides/notifications-slack/slack-2.png": "guides/notifications-slack/slack-2.png",
@@ -398,40 +758,40 @@
     "docs/guides/ssh-deploy/ssh-5.png": "guides/ssh-deploy/ssh-5.png",
     "docs/guides/ssh-deploy/ssh-6.png": "guides/ssh-deploy/ssh-6.png",
     "docs/guides/ssh-deploy/ssh-7.png": "guides/ssh-deploy/ssh-7.png",
-    "docs/guides/strider-bitbucket/strider-bitbucket-1.png": "guides/strider-bitbucket/strider-bitbucket-1.png",
-    "docs/guides/strider-bitbucket/strider-bitbucket-2-1.png": "guides/strider-bitbucket/strider-bitbucket-2-1.png",
-    "docs/guides/strider-bitbucket/strider-bitbucket-2.png": "guides/strider-bitbucket/strider-bitbucket-2.png",
-    "docs/guides/strider-bitbucket/strider-bitbucket-3.png": "guides/strider-bitbucket/strider-bitbucket-3.png",
-    "docs/guides/strider-bitbucket/strider-bitbucket-4.png": "guides/strider-bitbucket/strider-bitbucket-4.png",
-    "docs/guides/strider-bitbucket/strider-bitbucket-5-org.png": "guides/strider-bitbucket/strider-bitbucket-5-org.png",
-    "docs/guides/strider-bitbucket/strider-bitbucket-5.png": "guides/strider-bitbucket/strider-bitbucket-5.png",
     "docs/guides/strider-git-gogs/git-gogs-1.png": "guides/strider-git-gogs/git-gogs-1.png",
     "docs/guides/strider-git-gogs/git-gogs-2.png": "guides/strider-git-gogs/git-gogs-2.png",
     "docs/guides/strider-git-gogs/git-gogs-3.png": "guides/strider-git-gogs/git-gogs-3.png",
     "docs/guides/strider-git-gogs/git-gogs-4.png": "guides/strider-git-gogs/git-gogs-4.png",
     "docs/guides/strider-git-gogs/git-gogs-5.png": "guides/strider-git-gogs/git-gogs-5.png",
-    "docs/guides/strider-github/Bildschirmfoto 2015-04-09 um 16.02.35.png": "guides/strider-github/Bildschirmfoto 2015-04-09 um 16.02.35.png",
-    "docs/guides/strider-github/strider-github-1.png": "guides/strider-github/strider-github-1.png",
-    "docs/guides/strider-github/strider-github-3.png": "guides/strider-github/strider-github-3.png",
-    "docs/guides/strider-github/strider-github-4.png": "guides/strider-github/strider-github-4.png",
-    "docs/guides/strider-github/strider-github-5.png": "guides/strider-github/strider-github-5.png",
-    "docs/guides/strider-github/strider-github-6.png": "guides/strider-github/strider-github-6.png",
-    "docs/guides/strider-github/strider-github-7.png": "guides/strider-github/strider-github-7.png",
-    "docs/guides/strider-github/strider-github-8.png": "guides/strider-github/strider-github-8.png",
-    "docs/guides/strider-github/strider-github-authorize-application.png": "guides/strider-github/strider-github-authorize-application.png",
-    "docs/guides/strider-github/strider-github-register-app.png": "guides/strider-github/strider-github-register-app.png",
-    "docs/guides/strider-gitlab/strider-gitlab-1-old.png": "guides/strider-gitlab/strider-gitlab-1-old.png",
-    "docs/guides/strider-gitlab/strider-gitlab-1.png": "guides/strider-gitlab/strider-gitlab-1.png",
-    "docs/guides/strider-gitlab/strider-gitlab-2.png": "guides/strider-gitlab/strider-gitlab-2.png",
-    "docs/guides/strider-gitlab/strider-gitlab-3.png": "guides/strider-gitlab/strider-gitlab-3.png",
-    "docs/guides/strider-gitlab/strider-gitlab-4.png": "guides/strider-gitlab/strider-gitlab-4.png",
-    "docs/guides/strider-gitlab/strider-gitlab-5.png": "guides/strider-gitlab/strider-gitlab-5.png",
     "docs/guides/strider-webhooks/strider-webhooks-1.png": "guides/strider-webhooks/strider-webhooks-1.png",
     "docs/guides/strider-webhooks/strider-webhooks-2.png": "guides/strider-webhooks/strider-webhooks-2.png",
     "docs/guides/strider-webhooks/strider-webhooks-3.png": "guides/strider-webhooks/strider-webhooks-3.png",
     "docs/guides/strider-webhooks/strider-webhooks-4.png": "guides/strider-webhooks/strider-webhooks-4.png",
     "docs/guides/strider-write-own-plugin/strider-plugin-1.png": "guides/strider-write-own-plugin/strider-plugin-1.png",
     "docs/guides/strider-write-own-plugin/strider-plugin-2.png": "guides/strider-write-own-plugin/strider-plugin-2.png",
-    "docs/guides/strider-write-own-plugin/strider-plugin-3.png": "guides/strider-write-own-plugin/strider-plugin-3.png"
+    "docs/guides/strider-write-own-plugin/strider-plugin-3.png": "guides/strider-write-own-plugin/strider-plugin-3.png",
+    "docs/guides/providers/strider-bitbucket/strider-bitbucket-1.png": "guides/providers/strider-bitbucket/strider-bitbucket-1.png",
+    "docs/guides/providers/strider-bitbucket/strider-bitbucket-2-1.png": "guides/providers/strider-bitbucket/strider-bitbucket-2-1.png",
+    "docs/guides/providers/strider-bitbucket/strider-bitbucket-2.png": "guides/providers/strider-bitbucket/strider-bitbucket-2.png",
+    "docs/guides/providers/strider-bitbucket/strider-bitbucket-3.png": "guides/providers/strider-bitbucket/strider-bitbucket-3.png",
+    "docs/guides/providers/strider-bitbucket/strider-bitbucket-4.png": "guides/providers/strider-bitbucket/strider-bitbucket-4.png",
+    "docs/guides/providers/strider-bitbucket/strider-bitbucket-5-org.png": "guides/providers/strider-bitbucket/strider-bitbucket-5-org.png",
+    "docs/guides/providers/strider-bitbucket/strider-bitbucket-5.png": "guides/providers/strider-bitbucket/strider-bitbucket-5.png",
+    "docs/guides/providers/strider-github/github-webhook.png": "guides/providers/strider-github/github-webhook.png",
+    "docs/guides/providers/strider-github/strider-github-1.png": "guides/providers/strider-github/strider-github-1.png",
+    "docs/guides/providers/strider-github/strider-github-3.png": "guides/providers/strider-github/strider-github-3.png",
+    "docs/guides/providers/strider-github/strider-github-4.png": "guides/providers/strider-github/strider-github-4.png",
+    "docs/guides/providers/strider-github/strider-github-5.png": "guides/providers/strider-github/strider-github-5.png",
+    "docs/guides/providers/strider-github/strider-github-6.png": "guides/providers/strider-github/strider-github-6.png",
+    "docs/guides/providers/strider-github/strider-github-7.png": "guides/providers/strider-github/strider-github-7.png",
+    "docs/guides/providers/strider-github/strider-github-authorize-application.png": "guides/providers/strider-github/strider-github-authorize-application.png",
+    "docs/guides/providers/strider-github/strider-github-8.png": "guides/providers/strider-github/strider-github-8.png",
+    "docs/guides/providers/strider-github/strider-github-register-app.png": "guides/providers/strider-github/strider-github-register-app.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-1-old.png": "guides/providers/strider-gitlab/strider-gitlab-1-old.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-1.png": "guides/providers/strider-gitlab/strider-gitlab-1.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-2.png": "guides/providers/strider-gitlab/strider-gitlab-2.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-3.png": "guides/providers/strider-gitlab/strider-gitlab-3.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-4.png": "guides/providers/strider-gitlab/strider-gitlab-4.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-5.png": "guides/providers/strider-gitlab/strider-gitlab-5.png"
   }
 }

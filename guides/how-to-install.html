@@ -2,19 +2,81 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
     <link rel="stylesheet" href="../styles/rsc.css?t=b3b3e441">
     <link rel="stylesheet" href="../styles/main.css?t=995a1369">
-    <script src="../assets/script.js?t=2bcc4b59"></script>
-    <title>Installation</title>
+    <script src="../assets/script.js?t=42463e55"></script>
+    <title>Installation - Strider</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title -active link-guideshow-to-install" href="../guides/how-to-install.html">Installation</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-strider-installation" href="#strider-installation">Strider Installation</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-requirements" href="#requirements">Requirements</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-installation" href="#installation">Installation</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-create-a-strider-user" href="#create-a-strider-user">Create a Strider User</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-clone-strider-repository" href="#clone-strider-repository">Clone Strider Repository</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-install-strider" href="#install-strider">Install Strider</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-running-strider-with-activated-mongodb-authentication" href="#running-strider-with-activated-mongodb-authentication">Running Strider with Activated MongoDB Authentication</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-create-strider-user-in-mongodb" href="#create-strider-user-in-mongodb">Create Strider User in MongoDB</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-pass-database-uri-to-strider" href="#pass-database-uri-to-strider">Pass Database Uri to Strider</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-start-strider-in-production" href="#start-strider-in-production">Start Strider in Production</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-how-to-install-plugins" href="#how-to-install-plugins">How to Install Plugins</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-install-plugins-in-strider-admin-panel" href="#install-plugins-in-strider-admin-panel">Install Plugins in Strider Admin Panel</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-install-plugins-via-command-line" href="#install-plugins-via-command-line">Install Plugins via Command Line</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../guides/providers/github.html">Github</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../guides/providers/gitlab.html">Gitlab</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
       <div class="body page-guideshow-to-install">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider" class="iconlink">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
@@ -105,57 +167,8 @@ db.createUser({user: &quot;strider&quot;, pwd: &quot;striderpw&quot;, roles: [{r
         </div>
         <div class="footer-nav">
           <div class="left"><a href="../guides/platform-overview.html"><span class="title">Overview</span></a></div>
+          <div class="right"><a href="../guides/configuration.html"><span class="label">Next: </span><span class="title">Configuration</span></a></div>
         </div>
-      </div>
-      <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1"><a href="../index.html" class="link title  link-index">Strider</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../guides/platform-overview.html" class="link title  link-guidesplatform-overview">Overview</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../guides/how-to-install.html" class="link title -active link-guideshow-to-install">Installation</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#strider-installation" class="hlink link-strider-installation">Strider Installation</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#requirements" class="hlink link-requirements">Requirements</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#installation" class="hlink link-installation">Installation</a>
-                      <ul class="heading-list -depth-2">
-                        <li class="heading-item -depth-3"><a href="#create-a-strider-user" class="hlink link-create-a-strider-user">Create a Strider User</a>
-                        </li>
-                        <li class="heading-item -depth-3"><a href="#clone-strider-repository" class="hlink link-clone-strider-repository">Clone Strider Repository</a>
-                        </li>
-                        <li class="heading-item -depth-3"><a href="#install-strider" class="hlink link-install-strider">Install Strider</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#running-strider-with-activated-mongodb-authentication" class="hlink link-running-strider-with-activated-mongodb-authentication">Running Strider with Activated MongoDB Authentication</a>
-                      <ul class="heading-list -depth-2">
-                        <li class="heading-item -depth-3"><a href="#create-strider-user-in-mongodb" class="hlink link-create-strider-user-in-mongodb">Create Strider User in MongoDB</a>
-                        </li>
-                        <li class="heading-item -depth-3"><a href="#pass-database-uri-to-strider" class="hlink link-pass-database-uri-to-strider">Pass Database Uri to Strider</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#start-strider-in-production" class="hlink link-start-strider-in-production">Start Strider in Production</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#how-to-install-plugins" class="hlink link-how-to-install-plugins">How to Install Plugins</a>
-                      <ul class="heading-list -depth-2">
-                        <li class="heading-item -depth-3"><a href="#install-plugins-in-strider-admin-panel" class="hlink link-install-plugins-in-strider-admin-panel">Install Plugins in Strider Admin Panel</a>
-                        </li>
-                        <li class="heading-item -depth-3"><a href="#install-plugins-via-command-line" class="hlink link-install-plugins-via-command-line">Install Plugins via Command Line</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
       </div>
     </div>
   </body>
