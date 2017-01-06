@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../../styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="../../styles/main.css?t=995a1369">
+    <script src="../../assets/script.js?t=42463e55"></script>
+    <title>Email - Strider</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../../index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../../guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../../guides/how-to-install.html">Installation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../../guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../../guides/providers/github.html">Github</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../../guides/providers/gitlab.html">Gitlab</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../../guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersmanual" href="../../guides/providers/manual.html">Manual</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Continuous Deployment</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentheroku" href="../../guides/continuous-deployment/heroku.html">Heroku</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentssh" href="../../guides/continuous-deployment/ssh.html">SSH</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Notifications</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title -active link-guidesnotificationsemail" href="../../guides/notifications/email.html">Email</a>
+                      <ul class="headings heading-list">
+                        <li class="heading-item -depth-2"><a class="hlink link-configure-strider-server-for-email-notifications" href="#configure-strider-server-for-email-notifications">Configure Strider Server for Email Notifications</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-add-strider-email-notifications-to-your-project" href="#add-strider-email-notifications-to-your-project">Add Strider Email Notifications to Your Project</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-test-notifications" href="#test-notifications">Test Notifications</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsslack" href="../../guides/notifications/slack.html">Slack</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationshipchat" href="../../guides/notifications/hipchat.html">HipChat</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="../../guides/notifications/github.html">GitHub Status</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideswebhooks" href="../../guides/webhooks.html">Webhooks</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidescreate-plugin" href="../../guides/create-plugin.html">Create your own plugin</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-guidesnotificationsemail">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="strider-enable-email-notifications">Strider &#x2014; Enable Email Notifications</h1>
+<p>The previous blogpost was about the inital add of a git repository. This article illustrates the steps to configure Strider for Email Notifications. First, let&apos;s start with an overview of related Strider blogposts.</p>
+<hr>
+<p>Strider Post Overview</p>
+<ol>
+<li>Manual Add Repository</li>
+<li>Enable Email Notifications</li>
+<li>Configure Webhooks</li>
+<li>Test any Git Repository with SSH</li>
+</ol>
+<hr>
+<h2 id="configure-strider-server-for-email-notifications">Configure Strider Server for Email Notifications</h2>
+<p>Strider email notifications require a proper server setup with SMTP configuration. You can use services like <a href="http://www.mailgun.com/">Mailgun</a>, <a href="https://mandrill.com/">Mandrill</a>, <a href="https://postmarkapp.com/">Postmark</a> or whatever you want sending email notifications.</p>
+<p>You have to configure the Strider server and pass the SMTP credentials as environment variables to the server process. You can pass the SMTP configuration as parameters for the start command like <code>SMTP_PORT=587 SMTP_HOST=&quot;smtp.mailgun.org ./bin/strider</code> or set the environment variables using <code>export SMTP_HOST=&quot;my.smtp.server&quot;</code>.</p>
+<p>Required SMTP parameters are <code>SMTP_HOST</code>, <code>SMTP_USER</code> and <code>SMTP_PASS</code>. <code>SMTP_PORT</code> is set to 587 by default. <code>SMTP_FROM</code> has <code>noreply@stridercd.com</code> as standard address.</p>
+<ul>
+<li><strong><code>SMTP_HOST</code></strong>: SMTP server hostname (e.g <a href="http://smtp.mailgun.org">smtp.mailgun.org</a>)</li>
+<li><code>SMTP_PORT</code>: SMTP server port (default: 587)</li>
+<li><strong><code>SMTP_USER</code></strong>: SMTP server auth username</li>
+<li><strong><code>SMTP_PASS</code></strong>: SMTP server auth password</li>
+<li><code>SMTP_FROM</code>: emails from address (default: Strider <a href="mailto:noreply@stridercd.com">noreply@stridercd.com</a>)</li>
+</ul>
+<p>(Re)start your Strider server with SMTP configuration and proceed the following steps to activate email notifications for your builds.</p>
+<h2 id="add-strider-email-notifications-to-your-project">Add Strider Email Notifications to Your Project</h2>
+<p>The Strider platform is build around a powerful <a href="https://github.com/Strider-CD/strider-extension-loader">extension loader</a>. The Strider ecosystem provides many extensions for different services. Extensions are called: plugins.</p>
+<p>We use the <a href="https://github.com/Strider-CD/strider-email-notifier">strider-email-notifier</a> plugin to enable email notifications for successful or failed builds.</p>
+<p>First, you need to install the <strong>Email Notifier</strong> plugin in the Strider admin panel. Head over to <code>Admin -&gt; Plugins</code> and hit the install button if not already installed.</p>
+<p><img src="" alt="Strider Plugins Administration"></p>
+<p>Afterwards, go to the project settings of the project you want to have email notifications enabled.</p>
+<p>The Email Notifier plugin is now available in the Available Plugins box. Drag and drop the Email Notifier plugin from <strong>Available Plugins</strong> to <strong>Active Plugins</strong>.</p>
+<p><img src="" alt="Activate Email Notifier for your project"></p>
+<p>That&apos;s it. You&apos;ve activated email notifications for your project.</p>
+<h2 id="test-notifications">Test Notifications</h2>
+<p>By default, notifications are only send if the build status changes. In case your last build succeeded and you&apos;re building again, there won&apos;t be any notification. Change the plugin configuration to inform you on every build about the result.</p>
+<p><img src="" alt="Email Notifier Settings"></p>
+<p>This way, you can verify successful email notification configuration. If everything is fine, just uncheck the setting to send emails for every build.</p>
+<p><img src="" alt="Strider Email Notification &#x2014; Successful Build"></p>
+<p>Relax and test your code! Now you&apos;ll know if something broke.</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../../guides/continuous-deployment/ssh.html"><span class="title">SSH</span></a></div>
+          <div class="right"><a href="../../guides/notifications/slack.html"><span class="label">Next: </span><span class="title">Slack</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

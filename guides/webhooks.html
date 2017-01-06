@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="../styles/main.css?t=995a1369">
+    <script src="../assets/script.js?t=42463e55"></script>
+    <title>Webhooks - Strider</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../guides/how-to-install.html">Installation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../guides/providers/github.html">Github</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../guides/providers/gitlab.html">Gitlab</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersmanual" href="../guides/providers/manual.html">Manual</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Continuous Deployment</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentheroku" href="../guides/continuous-deployment/heroku.html">Heroku</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentssh" href="../guides/continuous-deployment/ssh.html">SSH</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Notifications</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsemail" href="../guides/notifications/email.html">Email</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsslack" href="../guides/notifications/slack.html">Slack</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationshipchat" href="../guides/notifications/hipchat.html">HipChat</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="../guides/notifications/github.html">GitHub Status</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title -active link-guideswebhooks" href="../guides/webhooks.html">Webhooks</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-install-strider-webhooks-plugin" href="#install-strider-webhooks-plugin">Install Strider-Webhooks Plugin</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-configure-strider-webhooks-for-strider-project" href="#configure-strider-webhooks-for-strider-project">Configure Strider-Webhooks for Strider Project</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-payload-data" href="#payload-data">Payload Data</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-default-request-payload" href="#default-request-payload">Default Request Payload</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-custom-payload-format" href="#custom-payload-format">Custom Payload Format</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-test-webhooks-integration" href="#test-webhooks-integration">Test Webhooks Integration</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidescreate-plugin" href="../guides/create-plugin.html">Create your own plugin</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-guideswebhooks">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="strider-configure-and-use-webhooks">Strider &#x2014; Configure and Use Webhooks</h1>
+<p>This series about Strider guides you through the setup process of various use cases to connect Strider and other software platforms like GitHub, GitLab, BitBucket, Slack, Heroku, HipChat, and so on.</p>
+<p>Besides the defined data flow between Strider and those apps, you can use webhooks to request a specific url once the build process finished. Additionally, you can define the data and format of your request&#x2019;s payload.</p>
+<hr>
+<p>Outline</p>
+<hr>
+<h2 id="install-strider-webhooks-plugin">Install Strider-Webhooks Plugin</h2>
+<p>Strider provides the <a href="https://github.com/Strider-CD/strider-webhooks">strider-webhooks</a> plugin within its ecosystem index. You can install the plugin straight from the admin panel&#x2019;s plugin overview.</p>
+<p><img src="" alt="Strider Admin Panel &#x2014; Plugin Overview"></p>
+<p>Search for <strong>Web Hooks</strong> and make sure the plugin is installed. If not, click the <strong>Install</strong> button.</p>
+<h2 id="configure-strider-webhooks-for-strider-project">Configure Strider-Webhooks for Strider Project</h2>
+<p>Head over to the project&#x2019;s settings page. Click the plugin link in the left sidebar. Now drag &amp; drop the <strong>Webhooks</strong> card from <strong>Available Plugins</strong> to <strong>Active Plugins</strong>. A new link called <strong>Webhooks</strong> will appear within the left sidebar once you dropped the card into the available plugins list.</p>
+<p><img src="" alt="Project Settings &#x2014; Plugin Overview"></p>
+<p>Click the newly created Webhooks link in the sidebar to open the detailed settings page for webhooks on this project.</p>
+<p>You need to fill at least the value for <strong>TargetURL for HTTP Post</strong> to make the plugin work. It will send a HTTP POST request to your defined url and by default add a request body in a given format.</p>
+<p><img src="" alt="Strider Webhooks &#x2014; Plugin Settings"></p>
+<p>Configuration options:</p>
+<ul>
+<li>Hook Title: identifier to distinct differnt web hooks</li>
+<li>TargetURL for HTTP Post: destination url for the POST request</li>
+<li>Shared secret for HMAC-SHA1 signature: add this for security. You don&#x2019;t need to add the <code>sha1=</code> prefix. The plugin handles it for you. Just provide your shared secret.</li>
+<li>Custom payload format: <strong>this doesn&#x2019;t work in plugin version 0.1.2</strong>. This issue will be fixed in later version (for sure), but currently you cannot specify your prefered format for the request payload.</li>
+</ul>
+<p>Once you provided your values, click <strong>Save Hooks</strong> to persist the branch specific information in the database.</p>
+<h3 id="payload-data">Payload Data</h3>
+<p>The payload data is based on a Strider job. You can find the job format within its <a href="https://github.com/Strider-CD/strider/blob/master/lib/models/job.js">Mongoose model definition</a>. Additionally, have a look at the <a href="https://github.com/Strider-CD/strider/blob/master/lib/models/project.js"><code>project</code></a> model, it integrates with the <code>job</code> model, too.</p>
+<p>The default format looks like this:</p>
+<pre><code>{
+  // job data
+  project: &#x201A;job.project.name&#x2018;,
+  commit_id: &#x201A;job.ref.id&#x2018;,
+  branch: &#x201A;job.ref.branch&#x2018;,
+  repo_url: &#x201A;job.project.provider.config.url&#x2018;,
+  // results
+  test_exitcode: &#x201A;data.exitCode&#x2018;,
+  finish_time: &#x201A;data.time&#x2018;
+}
+</code></pre>
+<p>While inspecting the values, you may think they look like object accessors. And you&#x2019;re right. The values are parsed and used to access the provided <code>job</code> data. This way, you can use access the provided information of any Strider job.</p>
+<h3 id="default-request-payload">Default Request Payload</h3>
+<p>The Strider Webhooks plugins adds a request payload by default. The payload data could look like this (based on the above shown default format):</p>
+<pre><code>{
+   payload: &apos;{
+    &quot;project&quot;:&quot;fs-opensource/hapi-rethinkdb-dash&quot;,
+    &quot;branch&quot;:&quot;master&quot;,
+    &quot;repo_url&quot;:&quot;git://github.com/fs-opensource/hapi-rethinkdb-dash.git&quot;,
+    &quot;test_exitcode&quot;:0,
+    &quot;finish_time&quot;:&quot;2015-05-18T08:06:04.824Z&quot;
+  }&apos; 
+}
+</code></pre>
+<p>The payload data is sent as query parameters with the POST request. You may need to parse it for further operations.</p>
+<h3 id="custom-payload-format">Custom Payload Format</h3>
+<p>You can define a different format of your payload data and use it insteand of the default one. You can use any job object property for your webhook data. Define the accessor as a value for your format property key. Have a look at the <strong>Payload Data</strong> paragraph for more information about the format configuration options.</p>
+<p><strong>Remember: the current version 0.1.2 doesn&#x2019;t support the definition of any custom payload format.</strong> This will be fixed in future versions.</p>
+<h2 id="test-webhooks-integration">Test Webhooks Integration</h2>
+<p>That&#x2019;s it. The configuration is done and we can use the webhook right away. Hit the Retest button and start the build run. Once the integration finishes, the webhook gets fired.</p>
+<p><img src="" alt="Strider Build Details &#x2014; Webhook Fired"></p>
+<p>The webhook plugin prints a line (colored purple) at the bottom of the <strong>test</strong> phase. It uses the provided hook title as and identifier.</p>
+<pre><code># Firing webhook &lt;hook-title&gt;
+</code></pre>
+<h2 id="what-comes-next">What Comes Next</h2>
+<p>We&#x2019;re heading towards the finish line for this Strider series. Within this post, we show you how to configure a webhook for Strider which is executed after the integration runs finshed (success or fail).</p>
+<p>The next post illustrates how to create your own plugin for Strider.</p>
+<p>Having problems creating your own webhook? Please don&#x2019;t hesitate to use the comments below or reach out <a href="https://twitter.com/futurestud_io">@futurestud_io</a>.</p>
+<hr>
+<h4 id="additional-ressources">Additional Ressources</h4>
+<ul>
+<li><a href="https://github.com/Strider-CD/strider-webhooks">Strider-Webhooks-Plugin</a></li>
+<li><a href="https://github.com/Strider-CD/strider/blob/master/lib/models/job.js">Strider Job Model</a></li>
+<li><a href="https://github.com/Strider-CD/strider/blob/master/lib/models/project.js">Strider Project Model</a></li>
+</ul>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../guides/notifications/github.html"><span class="title">GitHub Status</span></a></div>
+          <div class="right"><a href="../guides/create-plugin.html"><span class="label">Next: </span><span class="title">Create your own plugin</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

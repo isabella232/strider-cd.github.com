@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="../styles/main.css?t=995a1369">
+    <script src="../assets/script.js?t=42463e55"></script>
+    <title>Create your own plugin - Strider</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../guides/how-to-install.html">Installation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../guides/providers/github.html">Github</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../guides/providers/gitlab.html">Gitlab</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersmanual" href="../guides/providers/manual.html">Manual</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Continuous Deployment</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentheroku" href="../guides/continuous-deployment/heroku.html">Heroku</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentssh" href="../guides/continuous-deployment/ssh.html">SSH</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Notifications</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsemail" href="../guides/notifications/email.html">Email</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsslack" href="../guides/notifications/slack.html">Slack</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationshipchat" href="../guides/notifications/hipchat.html">HipChat</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="../guides/notifications/github.html">GitHub Status</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideswebhooks" href="../guides/webhooks.html">Webhooks</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title -active link-guidescreate-plugin" href="../guides/create-plugin.html">Create your own plugin</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-create-plugin-template" href="#create-plugin-template">Create Plugin Template</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-what-is-strider's-plugin-location" href="#what-is-strider's-plugin-location">What Is Strider’s Plugin Location?</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-plugin-template-from-command-line" href="#plugin-template-from-command-line">Plugin Template from Command Line</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-plugin-template-from-repository" href="#plugin-template-from-repository">Plugin Template from Repository</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-update-plugin-information-for-correct-strider-integration" href="#update-plugin-information-for-correct-strider-integration">Update Plugin Information for Correct Strider Integration</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-customize-plugin-functionality" href="#customize-plugin-functionality">Customize Plugin Functionality</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-add-plugin-options-in-the-webapp" href="#add-plugin-options-in-the-webapp">Add Plugin Options in the Webapp</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-add-plugin-specific-configuration-routes-and-listen-for-events" href="#add-plugin-specific-configuration-routes-and-listen-for-events">Add Plugin Specific Configuration, Routes and Listen for Events</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-add-plugin-functionality" href="#add-plugin-functionality">Add Plugin Functionality</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-guidescreate-plugin">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="strider-how-to-create-your-own-plugin">Strider &#x2014; How to Create Your Own Plugin</h1>
+<p>During the last weeks we&#x2019;ve looked at multiple topics like connecting Strider with GitHub, GitLab, Bitbucket and test projects automatically. Additionally, we set up notification services as email, Slack and HipChat. Now it&#x2019;s time to dig deep into Strider plugins and get a fundamental understanding how they work and how to create your own plugin.</p>
+<hr>
+<p>Outline</p>
+<hr>
+<h2 id="create-plugin-template">Create Plugin Template</h2>
+<p>Strider by default ships with a <a href="https://github.com/Strider-CD/strider-cli">command line tool</a> which creates a basic plugin template. You don&#x2019;t have to check documentation (which isn&#x2019;t existing to this date) how to structure your code and which interfaces to implement. Additionally, you can just clone the <a href="https://github.com/Strider-CD/strider-template.git">plugin template</a> repository and make your changes. We&#x2019;ll look at both options in the sections below.</p>
+<h2 id="what-is-strider&apos;s-plugin-location">What Is Strider&#x2019;s Plugin Location?</h2>
+<p>Strider is a Node.js application and composes of plugins. The plugins itself are node module as well. Just place your plugin into the `node_modules&#xB4; folder of your Strider installation directory and Strider will recognize it during its start up.</p>
+<h3 id="plugin-template-from-command-line">Plugin Template from Command Line</h3>
+<p>The Strider ecosystem offers the <a href="https://github.com/Strider-CD/strider-cli">strider-cli</a> plugin. It add several commands to your Strider deployment like add a new user, restart the server, list all available plugins, initialize a new plugin, etc.</p>
+<p>Creating a new plugin with command line can be done with the following command:</p>
+<pre><code>bin/strider init
+</code></pre>
+<p>The creation process will ask you for a plugin name, description and author.</p>
+<pre><code>plugin: name:  your-plugin-name
+plugin: description:  test
+plugin: author:  test
+
+A strider plugin template has been prepared for you in the following directory
+	/Users/marcuspoehls/Dev/JS/strider/node_modules/template
+Please view the README and begin editing the package.json.
+Make sure to change the git remote to wherever you&#x2019;re hosting your plugin source code
+When you&#x2019;re ready to publish, submit a pull request to https://github.com/Strider-CD/strider-plugins
+If you have any questions or need help, you can find us in irc.freenode.net #strider
+</code></pre>
+<aside class="&#x201E;aside-info&#x201C;">
+	The newly created plugin won&#x2019;t work out-of-the-box when using the command line. You have to adjust the name in `config.js` in case your plugin has different name than &#x201D;template&#x201C;.
+</aside>
+<p>Open your <code>config.js</code> file (located in the <code>config</code> directory) and search for these lines:</p>
+<pre><code>$scope.$watch(&#x201A;configs[branch.name].template.config&#x2018;, function (value) {
+    $scope.config = value || configDefaults;
+});
+</code></pre>
+<p>Adjust the first line and change <code>.template.</code> to your plugin name.</p>
+<pre><code>$scope.$watch(&#x201A;configs[branch.name].your-plugin-name.config&#x2018;, function (value) {
+    $scope.config = value || configDefaults;
+});
+</code></pre>
+<p>This will make your plugin work when activing for a project.</p>
+<h3 id="plugin-template-from-repository">Plugin Template from Repository</h3>
+<p>Besides Strider&#x2019;s command line, you can just clone the plugin template repository and make your changes from here. In comparison to the command line way, you don&#x2019;t have to adjust the  files to get the basic plugin working right away.</p>
+<pre><code>git clone https://github.com/Strider-CD/strider-template.git
+</code></pre>
+<p>Just clone this repository and adjust the code. The next paragraph describes the recommended changes you should perform for your new plugin.</p>
+<h3 id="update-plugin-information-for-correct-strider-integration">Update Plugin Information for Correct Strider Integration</h3>
+<p>Each plugin in the Strider ecosystem requires either a <code>strider.json</code> file in the plugin&#x2019;s root directory or a &#x201E;strider&#x201C; section within the <code>package.json</code>. The content needs to be defined as JSON. We&#x2019;ll explain each option in more detail.</p>
+<p><strong>Default plugin <code>package.json</code> file</strong></p>
+<pre><code>  &#x201E;strider&#x201C;: {
+    &#x201E;type&#x201C;: &#x201E;job&#x201C;,
+    &#x201E;id&#x201C;: &#x201E;futurestudio-plugin&#x201C;,
+    &#x201E;title&#x201C;: &#x201E;Future Studio Plugin&#x201C;,
+    &#x201E;worker&#x201C;: &#x201E;worker.js&#x201C;,
+    &#x201E;webapp&#x201C;: &#x201E;webapp.js&#x201C;,
+    &#x201E;icon&#x201C;: &#x201E;icon.png&#x201C;,
+    &#x201E;config&#x201C;: {
+      &#x201E;controller&#x201C;: &#x201E;FutureStudioPluginController&#x201C;
+    },
+  }
+</code></pre>
+<p>The definition above is the recommended one. You can add further options if you need them for your plugin.</p>
+<ul>
+<li>
+<p><strong>What plugin type to choose?</strong> This seems a tough question. Having a closer look, it isn&#x2019;t. <a href="https://github.com/Strider-CD/strider-extension-loader#strider-extensions">Strider&#x2019;s extension loader</a> offers four extension types to choose from. Depending on your plugin, define one in your <code>package.json&#xB4; as</code>type`.</p>
+<ul>
+<li><strong>runner:</strong> runner plugins run your integration jobs</li>
+<li><strong>provider:</strong> provider plugins get the source code for your project from GitHub, GitLab, Bitbucket or just a git reposority hosted on your server</li>
+<li><strong>job:</strong> job plugins create the test environment, run tests and deployments</li>
+<li><strong>basic:</strong> this is the &#x201D;do what you want&#x201C; plugin type. You can do powerful things without any helper methods provided by Strider&#x2019;s extension manager.</li>
+</ul>
+</li>
+<li>
+<p><strong>id:</strong> Every Strider plugin has its own <strong>id</strong>. This is the unique identifier for Strider&#x2019;s Extension Loader. The required format: lowercase, alphanumeric, no spaces.</p>
+</li>
+<li>
+<p><strong>title:</strong> this property is just the name of your plugin.</p>
+</li>
+<li>
+<p><strong>worker:</strong> the path to your <code>worker.js</code> file</p>
+</li>
+<li>
+<p><strong>webapp:</strong> the path to your <code>webapp.js</code> file</p>
+</li>
+<li>
+<p><strong>icon:</strong> the path to your custom plugin icon</p>
+</li>
+<li>
+<p><strong>config:</strong> a nested JSON object with further definitions</p>
+<ul>
+<li><strong>controller:</strong> the name of your AngularJS-Controler which is used to save your plugin configuration. Has to be the same name as defined in your <code>config.js</code>.</li>
+</ul>
+</li>
+</ul>
+<p>The readme of Strider&#x2019;s Extension Loader provides <a href="https://github.com/Strider-CD/strider-extension-loader#striderjson">additional comments for each plugin property</a>.</p>
+<h2 id="customize-plugin-functionality">Customize Plugin Functionality</h2>
+<p>Each plugin adds features to Strider and so will yours. We listed four plugin types. Strider executes different methods for each plugin type and requires them to be implemented.</p>
+<p>Find more information which methods you need to define for each plugin type: <a href="https://github.com/Strider-CD/strider-extension-loader#runner">runner</a>, <a href="https://github.com/Strider-CD/strider-extension-loader#provider">provider</a>, <a href="https://github.com/Strider-CD/strider-extension-loader#job">job</a>, <a href="https://github.com/Strider-CD/strider-extension-loader#basic">basic</a>.</p>
+<p>We use the <strong>job</strong> plugin type for further explanations. Generating a new plugin from command line or using the plugin template repository will have the <strong>job</strong> type, too.</p>
+<h3 id="add-plugin-options-in-the-webapp">Add Plugin Options in the Webapp</h3>
+<p>You&#x2019;ve noticed the options of other plugins. If your plugin requires the user to configure something, use (or create) the <code>config.html</code> template and the respective <code>config.js</code> to save your configuration values.</p>
+<p>The plugin template provides the basic structure and also adds the HTML template. By default, both files are located in the plugins <code>config</code> directory.</p>
+<h3 id="add-plugin-specific-configuration-routes-and-listen-for-events">Add Plugin Specific Configuration, Routes and Listen for Events</h3>
+<p>You can do all those within the <code>webapp.js</code>. This is the default file contents. The comments explain the important stuff. We&#x2019;ll elaborate the properties in more detail.</p>
+<pre><code>{
+   // mongoose schema, if you need project-specific
+   config: {},
+   // Define project-specific routes
+   //   all routes created here are namespaced within /:org/:repo/api/:pluginid
+   //   req.project is the current project
+   //   req.accessLevel is the current user&#x2019;s access level for the project
+   //      0 - anonymous, 1 - authed, 2 - admin / collaborator
+   //   req.user is the current user
+   //   req.pluginConfig() -&gt; get the config for this plugin
+   //   req.pluginConfig(config, cb(err)) -&gt; set the config for this plugin
+   routes: function (app, context) {},
+   // Define global routes
+   //   all routes namespaced within /ext/:pluginid
+   //   req.user is the current user
+   //   req.user.account_level can be used for authorization
+   //      0 - anonymous, 1 - authed, 2 - admin / collaborator
+   globalRoutes: function (app, context) {},
+   // Listen for global events
+   //   all job-local events that begin with `plugin.` are proxied to
+   //   the main strider eventemitter, so you can listen for them here.
+   //   Other events include `job.new`, `job.done` and `browser.update`.
+   listen: function (emitter, context) {}
+}
+</code></pre>
+<ul>
+<li><strong>config:</strong> use the <code>config</code> object to define plugin specific properties. E.g. Strider&#x2019;s GitHub plugin stores the repo url, owner, webhook secret, auth type (SSH or HTTPS), access token, and <a href="https://github.com/Strider-CD/strider-github/blob/master/lib/webapp.js">some more</a>.</li>
+<li><strong>routes:</strong> funtion to extend Strider&#x2019;s default routes with your plugin specific routes. Use the <code>app</code> object and declare your routes for e.g. handling incoming web hooks.</li>
+<li><strong>globalRoutes:</strong> use the global routes to setup authentication strategies like OAuth and request a valid access token.</li>
+<li><strong>listen:</strong> use this method to listen on global job events like <code>job.new</code>, <code>job.done</code>, <code>browser.update</code>. Additionally, you can use the provided <code>emitter</code> object and emit events into Strider&#x2019;s event loop.</li>
+</ul>
+<h3 id="add-plugin-functionality">Add Plugin Functionality</h3>
+<p>We&#x2019;ve touched the parts on how to add plugin specific configuration options and manipulate Strider&#x2019;s web UI with your new extension. Now let&#x2019;s have a deeper look on how to add your plugins functionality to Strider.</p>
+<p>The <code>worker.js</code> file should at least export a function <code>init(config, job, cb)</code>. Further, you can export a more complext object. The default <code>worker.js</code> contains the object with <code>init</code> and <code>autodetect</code> properties. The code snippet below illustrates the default file.</p>
+<pre><code>module.exports = {
+  // Initialize the plugin for a job
+  //   config: the config for this job, made by extending the DB config
+  //           with any flat-file config
+  //   job:    see strider-runner-core for a description of that object
+  //   context: currently only defines &#x201E;dataDir&#x201C;
+  //   cb(err, initializedPlugin)
+  init: function (config, job, context, cb) {
+    return cb(null, {
+      // string or list - to be added to the PATH
+      path: path.join(__dirname, &#x201A;bin&#x2018;),
+      // any extra env variables. Will be available during all phases
+      env: {},
+      // Listen for events on the internal job emitter.
+      //   Look at strider-runner-core for an
+      //   enumeration of the events. Emit plugin.[pluginid].myevent to
+      //   communicate things up to the browser or to the webapp.
+      listen: function (emitter, context) {
+      },
+      // For each phase that you want to deal with, provide either a
+      // shell command [string] for a fn(context, done(err, didrun))
+      environment: &#x201A;nvm install &#x201A; + (config.version || &#x201A;0.10&#x2018;),
+      prepare: &#x201A;npm install&#x2018;,
+      test: function (context, done) {
+        checkSomething(context, function (shouldDoThings) {
+          if (!shouldDoThings) {
+            // Send `false` to indicate that we didn&#x2019;t actually run
+            // anything. This is so we can warn users when no plugins
+            // actually do anything during a test run, and avoid false
+            // positives.
+            return done(null, false);
+          }
+          doThings(function (err) {
+            done(err, true);
+          });
+        });
+      },
+      cleanup: &#x201A;rm -rf node_modules&#x2018;
+    });
+  }
+  // this is only used if there is _no_ plugin configuration for a
+  // project. See gumshoe for documentation on detection rules.
+  autodetect: {
+    filename: &#x201A;package.json&#x2018;,
+    exists: true
+  }
+};
+</code></pre>
+<p>That&#x2019;s a lot of content for a fresh start. Let&#x2019;s review the code  parts step by step.</p>
+<p>The <strong><code>init</code></strong> function initializes the functionality of your plugin for a new job. The <code>init</code> function returns a data object containing various properties (<code>path</code>), configurations (<code>env</code>, <code>environment</code>, <code>prepare</code>, <code>cleanup</code>) and functions (<code>listen</code>, <code>test</code>).</p>
+<p>Strider uses the data object to set up the test environment and executes the defined test function during build phase.</p>
+<ul>
+<li><strong>path:</strong> a (list of) strings that get added to your PATH variable</li>
+<li><strong>env:</strong> use this object to define additional environment varialbes (e.g JAVA_HOME or environment specific tests via NODE_ENV)</li>
+<li><strong>listen:</strong> listen or emit global events back to the webapp</li>
+<li><strong>test phases:</strong> Strider&#x2019;s integrations have 4 phases. Each phase needs a <code>string</code> command or a <code>function(context, done(err, didrun))</code> function. You can skip any phase by setting it to undefined (= just remove the respective line from <code>worker.js</code>)
+<ul>
+<li><strong>environment:</strong> set up your build environment</li>
+<li><strong>prepare:</strong> prepare your test run and install required dependencies or modules</li>
+<li><strong>test:</strong> run your tests</li>
+<li><strong>cleanup:</strong> clean your room, bro!</li>
+</ul>
+</li>
+</ul>
+<p>We&#x2019;ve reviewed the <code>init</code> method within default <code>worker.js</code> file. The second part is an <code>autodetect</code> object. This object is used by Strider to automatically detect the plugin configuration. Strider uses the <a href="https://github.com/Strider-CD/strider-detection-rules">strider-detection-rules</a> plugin on top of <a href="https://github.com/niallo/gumshoe">gumshoe</a> to do the job.</p>
+<p>The autodetection process only starts, if there is no plugin configuration and Strider didn&#x2019;t know how to handle any job using the plugin.</p>
+<p>We glitched through the important details of Strider plugins. Remember that every Strider plugin is a also a Node.js app. You can (and should) write tests for your plugin as well. While starting the Strider server, the extension loader searches recursively the <code>node_modules</code> folder for any plugin and registers the plugin functionality to the platform.</p>
+<p>This post is kind of dry and creating new Strider plugins require some research within existing ones. Use the Strider organization on GitHub and dig into various plugins. Have a look at their files to get an impression how they structure files and use configuration options and methods.</p>
+<h2 id="what-comes-next">What Comes Next</h2>
+<p>This article guides you through the details of plugins and shows you how to create your own plugin from either Strider&#x2019;s command line tool or template repository. Additionally, we show you injection points to add your plugin functionality.</p>
+<p>While starting the Strider server, it detects and hooks your plugin into the system and offers the functionality to the any project.</p>
+<p>The next post will round up our extensive series on Strider. We&#x2019;ll recap the previously released articles in this series.</p>
+<p>Please leave any questions in the comments below, shoot us a tweet <a href="https://twitter.com/futurestud_io">@futurestud_io</a> or get in touch via email. We love to help you writing your own plugin and enrich Strider&#x2019;s ecosystem.</p>
+<hr>
+<h4 id="additional-ressources">Additional Ressources</h4>
+<ul>
+<li>Strider Wiki Page: <a href="https://github.com/Strider-CD/strider/wiki/Managing-Plugins#creating-new-plugins">Creating New Plugins</a></li>
+<li><a href="https://github.com/Strider-CD/strider-template">Strider Plugin Template</a></li>
+<li><a href="https://github.com/Strider-CD/strider-cli">Strider Command Line Interface</a></li>
+<li><a href="https://github.com/Strider-CD/strider-extension-loader">Strider Extension Loader</a></li>
+</ul>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../guides/webhooks.html"><span class="title">Webhooks</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

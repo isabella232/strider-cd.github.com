@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../../styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="../../styles/main.css?t=995a1369">
+    <script src="../../assets/script.js?t=42463e55"></script>
+    <title>Heroku - Strider</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../../index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../../guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../../guides/how-to-install.html">Installation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../../guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../../guides/providers/github.html">Github</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../../guides/providers/gitlab.html">Gitlab</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../../guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersmanual" href="../../guides/providers/manual.html">Manual</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Continuous Deployment</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title -active link-guidescontinuous-deploymentheroku" href="../../guides/continuous-deployment/heroku.html">Heroku</a>
+                      <ul class="headings heading-list">
+                        <li class="heading-item -depth-2"><a class="hlink link-create-heroku-api-client" href="#create-heroku-api-client">Create Heroku API Client</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-create-heroku-application" href="#create-heroku-application">Create Heroku Application</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-configure-strider-server" href="#configure-strider-server">Configure Strider Server</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-install-strider-heroku-plugin" href="#install-strider-heroku-plugin">Install Strider-Heroku Plugin</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-connect-strider-with-heroku" href="#connect-strider-with-heroku">Connect Strider with Heroku</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-continuous-deployment-to-heroku" href="#continuous-deployment-to-heroku">Continuous Deployment to Heroku</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-test-the-strider-heroku-deployment-pipeline" href="#test-the-strider-heroku-deployment-pipeline">Test the Strider-Heroku-Deployment Pipeline</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentssh" href="../../guides/continuous-deployment/ssh.html">SSH</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Notifications</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsemail" href="../../guides/notifications/email.html">Email</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsslack" href="../../guides/notifications/slack.html">Slack</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationshipchat" href="../../guides/notifications/hipchat.html">HipChat</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="../../guides/notifications/github.html">GitHub Status</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideswebhooks" href="../../guides/webhooks.html">Webhooks</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidescreate-plugin" href="../../guides/create-plugin.html">Create your own plugin</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-guidescontinuous-deploymentheroku">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="continuous-deployment-to-heroku">Continuous Deployment to Heroku</h1>
+<p>At Future Studio we use Strider in production to test our code and deploy it right away when all lights are green. The deployment from Strider to Heroku can be done easily using the plugin to connect both plattforms.</p>
+<p>Before we start, let&#x2019;s have a look at other articles in this series of Strider posts.</p>
+<p>&#x2014;
+<strong>TODO</strong>: add outline
+&#x2014;</p>
+<h2 id="create-heroku-api-client">Create Heroku API Client</h2>
+<p>Access and deploy projects to Heroku requires either the command line interface or an application. We use the second and deploy the projects code from Strider right after successful integration.</p>
+<p>First, go to your Heroku Profile settings and click the tab <a href="https://dashboard.heroku.com/account/applications"><strong>Applications</strong></a>. Create a new API Client by clicking the button <strong>Register New API Client</strong>.</p>
+<p><img src="" alt="Heroku Application Settings &#x2014; Register New API Client"></p>
+<p>Type your application name and callback url. The callback url is your Strider domain concatenated with <code>ext/heroku/oauth/callback</code>. Complete example</p>
+<pre><code>https://your.strider.url/ext/heroku/oauth/callback
+</code></pre>
+<p><img src="" alt="Heroku Create New API Client"></p>
+<p>Creating the API client provides a <strong>client id</strong> and <strong>client secret</strong>. Both information are needed in the server configuration part of this guide.</p>
+<h2 id="create-heroku-application">Create Heroku Application</h2>
+<p>The Heroku API client is the first step. Second, we need to create a new heroku application, the one that finally is available through the internet. Visit to the <a href="https://dashboard.heroku.com/apps">Heroku application overview</a> and click the <strong>+</strong> (plus) icon in the upper right corner.</p>
+<p><img src="" alt="Heroku &#x2014; Create Application"></p>
+<p>Type the application name and deployment region and click <strong>Create App</strong>.</p>
+<p>That&#x2019;s the Heroku part. We&#x2019;ve created an API client for later access of your applications. Additionally, we&#x2019;ve created a new application to deploy our code to the app.</p>
+<h2 id="configure-strider-server">Configure Strider Server</h2>
+<p>In our previous post about Strider&#x2019;s configuration options we showed you how to add new values to the platform and its plugins. If you read the integration guide for GitHub or BitBucket, you already know the steps to take for Heroku configuration. If not, don&#x2019;t worry, we&#x2019;ve got you covered.</p>
+<p>The <a href="https://github.com/Strider-CD/strider-heroku">strider-heroku</a> plugin doesn&#x2019;t recognize the configuration options from <code>.striderrc</code> file. You have to provide them via environment variables.</p>
+<p>The Heroku plugin uses variables <code>PLUGIN_HEROKU_CLIENT_ID</code> and <code>PLUGIN_HEROKU_CLIENT_SECRET</code> for configuration.</p>
+<p><img src="" alt="Heroku Application Details &#x2014; Client ID and Client Secret"></p>
+<p>Stop your Strider server, change your existing configuration and add both fields for Heroku:</p>
+<pre><code>&#x2026;
+export PLUGIN_HEROKU_CLIENT_ID=&#x201E;your-heroku-client-id
+export PLUGIN_HEROKU_CLIENT_SECRET=&#x201E;your-heroku-client-secret&#x201C;
+</code></pre>
+<p>Now start strider and the Heroku plugin will detect the newly set configuration values.</p>
+<p>Your Strider server is configured, now we head over to install the Heroku plugin and add your Heroku account.</p>
+<h2 id="install-strider-heroku-plugin">Install Strider-Heroku Plugin</h2>
+<p>To install the <a href="https://github.com/Strider-CD/strider-heroku">strider-heroku</a> plugin, head over to the plugin   section in Strider&#x2019;s admin panel.</p>
+<p><img src="" alt="Strider Plugin Overview"></p>
+<p>Search for <strong>Heroku</strong> and click <strong>Install</strong> if the plugin isn&#x2019;t already installed.</p>
+<h2 id="connect-strider-with-heroku">Connect Strider with Heroku</h2>
+<p>To enable Heroku deployments you have to allow Strider to access your Heroku applications. To do so, visit your account page and click the <strong>Heroku</strong> tab in the left sidebar. Now connect your Heroku account by clicking the <strong>Add a Heroku Account</strong> button.</p>
+<p><img src="" alt="Add Heroku Account to Strider"></p>
+<p>You&#x2019;ll be asked by Heroku to allow <strong>My Strider Client</strong> access for your Heroku applications. Strider will get full read and write access to your apps.</p>
+<p><img src="" alt="Heroku API Authorization for Strider"></p>
+<p>Click <strong>Allow</strong> and you&#x2019;ll be redirected to your Strider account and Heroku tab. The overview shows the SSH keys which got added to Heroku and are authorized for deployments.</p>
+<p><img src="" alt="Strider Account &#x2014; Heroku Overview"></p>
+<h2 id="continuous-deployment-to-heroku">Continuous Deployment to Heroku</h2>
+<p>We&#x2019;re almost done, just another configuration to finally enable Heroku deployments for your project.</p>
+<p>Visit the configuration page of the project you want to deploy to Heroku. Drag and drop the Heroku plugin from from <strong>Available Plugins</strong> to <strong>Active Plugins</strong>.</p>
+<p><img src="" alt="Active Heroku Plugin"></p>
+<p>Now click the new <strong>Heroku</strong> link in the left sidebar to show available options. We already connected Strider with Heroku so you&#x2019;ll see the email address of your connected account in the <strong>Linked Account</strong> dropdown. If you want to deploy to a Heroku application hosted with another account, you can add the account right away.</p>
+<p>Select the created app in the <strong>Apps</strong> dropdown. We previously created the <strong>futurestudio-strider</strong> app, which we use for demo purposes. The name is lame, we should have generated a name by Heroku. Now we&#x2019;re almost done, no way back and no naming fun &#x2026; Sorry.</p>
+<p><img src="" alt="Define Heroku Deployment Options"></p>
+<p>Click save and that&#x2019;s it. All the configuration is done and we can test if everything works fine.</p>
+<h2 id="test-the-strider-heroku-deployment-pipeline">Test the Strider-Heroku-Deployment Pipeline</h2>
+<p>We can manually start an integration and deployment process from Strider&#x2019;s dashboard. Click the arrow-up cloud <strong>Test and Deploy</strong> button to kickoff the loop.</p>
+<p><img src="" alt="Strider Dashboard &#x2014; Start Integration and Deployment"></p>
+<p>Strider walks through the integration steps and if tests pass successfully, the deployment starts right away.</p>
+<p><img src="" alt="Heroku Deployment from Strider"></p>
+<p>If everything went smooth, you can view your project right after the deployment finished. Visit your Heroku app domain to check the health state.</p>
+<p><img src="" alt="Deployed App on Heroku"></p>
+<h2 id="what-comes-next">What Comes Next</h2>
+<p>We did it! What a great feeling to have a complete continuous integration and deployment pipleline. With the previously published blog posts, you&#x2019;re able to connect Strider with your git repositories and this guide walks you through the process to setup Strider with Heroku.</p>
+<p>The next post shows you how to deploy your project via SSH to any server.</p>
+<p>Please keep in mind: use the comments or shoot us <a href="https://twitter.com/futurestud_io">@futurestud_io</a> if you run into problems.</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../../guides/providers/manual.html"><span class="title">Manual</span></a></div>
+          <div class="right"><a href="../../guides/continuous-deployment/ssh.html"><span class="label">Next: </span><span class="title">SSH</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

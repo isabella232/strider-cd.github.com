@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../../styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="../../styles/main.css?t=995a1369">
+    <script src="../../assets/script.js?t=42463e55"></script>
+    <title>Manual - Strider</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../../index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../../guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../../guides/how-to-install.html">Installation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../../guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../../guides/providers/github.html">Github</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../../guides/providers/gitlab.html">Gitlab</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../../guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title -active link-guidesprovidersmanual" href="../../guides/providers/manual.html">Manual</a>
+                      <ul class="headings heading-list">
+                        <li class="heading-item -depth-2"><a class="hlink link-installation-and-requirements" href="#installation-and-requirements">Installation &amp; Requirements</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-integration-with-services-via-plugins" href="#integration-with-services-via-plugins">Integration with Services via Plugins</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-how-to-manually-add-a-repository" href="#how-to-manually-add-a-repository">How to Manually Add a Repository</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-authentication-issues" href="#authentication-issues">Authentication Issues</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Continuous Deployment</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentheroku" href="../../guides/continuous-deployment/heroku.html">Heroku</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentssh" href="../../guides/continuous-deployment/ssh.html">SSH</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Notifications</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsemail" href="../../guides/notifications/email.html">Email</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsslack" href="../../guides/notifications/slack.html">Slack</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationshipchat" href="../../guides/notifications/hipchat.html">HipChat</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="../../guides/notifications/github.html">GitHub Status</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideswebhooks" href="../../guides/webhooks.html">Webhooks</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidescreate-plugin" href="../../guides/create-plugin.html">Create your own plugin</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-guidesprovidersmanual">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="strider-manually-add-repository">Strider &#x2014; Manually Add Repository</h1>
+<p>You&apos;re probably reading this article, because you want to keep ownership of your code, host and run your own continous integration and deployment tool. <a href="https://github.com/Strider-CD/strider">Strider</a> is an open source platform doing exactly this job. It&apos;s written in Node.JS and depends on MongoDB as data store.</p>
+<p><img src="" alt="Strider Open Source Continuous Integration &amp; Deployment Server"></p>
+<p>Strider is highly extensible and offers many plugins to enhance the platforms functionality. The platform integrates and composes of plugins. You can find more information about the <a href="https://github.com/Strider-CD/strider-extension-loader">Strider Extension Loader</a> GitHub repository.</p>
+<h2 id="installation-and-requirements">Installation &amp; Requirements</h2>
+<p>The <a href="https://github.com/Strider-CD/strider#general-requirements">Strider repository describes the platfor m setup</a> very well. If you&apos;re interested to install Strider, just head over to the repository and follow the steps.</p>
+<p>We&apos;re skipping the how to guide for initial Strider installation process and start with a ready-to-go platform.</p>
+<h2 id="integration-with-services-via-plugins">Integration with Services via Plugins</h2>
+<p>Strider integrates seamless with <strong>GitHub</strong>, <strong>GitHub Enterprise</strong>, <strong>Bitbucket</strong>, <strong>GitLab</strong>, <strong>Heroku</strong>, <strong>Slack</strong>, and many more. You can connect your GitHub and Bitbucket accounts to Strider and test your hosted repositories. Deploy you successfully tested code to Heroku and get notified in your Slack chat afterwards.</p>
+<p>All plugins are <a href="https://github.com/Strider-CD">available on GitHub</a> and you can, of course, add your own.</p>
+<h2 id="how-to-manually-add-a-repository">How to Manually Add a Repository</h2>
+<p>Even though Strider integrates code hosting platforms like GitHub, Bitbucket and GitLab, you might want to add a personal repository hosted on another platform or your own server. You find the add repository view when navigating to <code>Projects -&gt; Manuall Add</code> (the screenshot below shows the view). Strider asks for some information while adding your repository:</p>
+<ul>
+<li>URL to the repository (if available)</li>
+<li>Namespace (GitHub style like <code>username/repository-name</code>)</li>
+<li>Repository URL (SSH or HTTPS)</li>
+<li>Auth type: SSH or HTTPS</li>
+</ul>
+<p>In case you provide an SSH url to your repository, you can define private and public key. Strider automatically generates project specific keys if you leave the input fields empty.</p>
+<p>Adding a HTTP(S) url requires you to add username and password so Strider can authenticate correctly for the repository.</p>
+<p><img src="" alt="Strider Manual Add a Repository"></p>
+<h2 id="authentication-issues">Authentication Issues</h2>
+<p>Strider prints bash output for every job. Testing your repository with wrong credentials or missing SSH keys for the repository will end in an <code>Error: Git clone failed with code 500</code> error. The output will look like this</p>
+<pre><code>git clone --recursive git@url.to:your/repo.git . -b master
+
+Cloning into &apos;.&apos;...
+Permission denied, please try again.
+Permission denied, please try again.
+Permission denied (publickey,password).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre>
+<p>Solve this problem by either provide the correct user credentials or add the SSH public key to the user that has access to the git repository.</p>
+<p>A good way to run integrations is a <strong>buildbot</strong>. Concretely, add a <strong>buildbot</strong> user to your git server and add the given SSH public key for the repository you want to test.</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../../guides/providers/bitbucket.html"><span class="title">Bitbucket</span></a></div>
+          <div class="right"><a href="../../guides/continuous-deployment/heroku.html"><span class="label">Next: </span><span class="title">Heroku</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

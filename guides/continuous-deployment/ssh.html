@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../../styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="../../styles/main.css?t=995a1369">
+    <script src="../../assets/script.js?t=42463e55"></script>
+    <title>SSH - Strider</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../../index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../../guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../../guides/how-to-install.html">Installation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../../guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../../guides/providers/github.html">Github</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../../guides/providers/gitlab.html">Gitlab</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../../guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersmanual" href="../../guides/providers/manual.html">Manual</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Continuous Deployment</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentheroku" href="../../guides/continuous-deployment/heroku.html">Heroku</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title -active link-guidescontinuous-deploymentssh" href="../../guides/continuous-deployment/ssh.html">SSH</a>
+                      <ul class="headings heading-list">
+                        <li class="heading-item -depth-2"><a class="hlink link-install-strider-ssh-deploy-plugin" href="#install-strider-ssh-deploy-plugin">Install Strider-SSH-Deploy Plugin</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-continuous-deployment-via-ssh" href="#continuous-deployment-via-ssh">Continuous Deployment via SSH</a>
+                          <ul class="heading-list -depth-2">
+                            <li class="heading-item -depth-3"><a class="hlink link-ssh-deploy-plugin-configuration" href="#ssh-deploy-plugin-configuration">SSH Deploy Plugin Configuration</a>
+                            </li>
+                            <li class="heading-item -depth-3"><a class="hlink link-authorize-strider-ssh-public-key-for-deployment" href="#authorize-strider-ssh-public-key-for-deployment">Authorize Strider SSH Public Key for Deployment</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-test-the-deployment-pipeline-via-ssh" href="#test-the-deployment-pipeline-via-ssh">Test the Deployment Pipeline via SSH</a>
+                        </li>
+                        <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Notifications</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsemail" href="../../guides/notifications/email.html">Email</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsslack" href="../../guides/notifications/slack.html">Slack</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationshipchat" href="../../guides/notifications/hipchat.html">HipChat</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="../../guides/notifications/github.html">GitHub Status</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideswebhooks" href="../../guides/webhooks.html">Webhooks</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidescreate-plugin" href="../../guides/create-plugin.html">Create your own plugin</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-guidescontinuous-deploymentssh">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="strider-continuous-deployment-to-any-server-via-ssh">Strider &#x2014; Continuous Deployment to any Server via SSH</h1>
+<p>The Future Studio team uses Strider to automatically test and deploy the code for our homepage and blog theme. Even though we rely on Ghost for our blog, we keep our theme in a git repository and trigger the deployment right away after every push.</p>
+<p>Previously published articles in this series explain how to connect with git hosting services and trigger automatic tests in Strider.</p>
+<p>&#x2014;
+TODO outline
+&#x2014;</p>
+<h2 id="install-strider-ssh-deploy-plugin">Install Strider-SSH-Deploy Plugin</h2>
+<p>Strider offers the <a href="">strider-ssh-deploy</a> plugin for continuous deployment via SSH to any server. Install the plugin via Strider&#x2019;s admin panel if it isn&#x2019;t already installed.</p>
+<p><img src="" alt="Strider Admin Panel &#x2014; Plugin Overview"></p>
+<p>Search for <strong>SSH Deploy</strong> and and make sure the plugin is installed. If not, click the <strong>Install</strong> button.</p>
+<h2 id="continuous-deployment-via-ssh">Continuous Deployment via SSH</h2>
+<p>Head over to the settings page for the project you want to deploy via SSH. Click the <strong>Plugins</strong> option in the left sidebar. Now drag and drop <strong>SSH Deploy</strong> from <strong>Available Plugins</strong> into <strong>Active Plugins</strong>.</p>
+<p><img src="" alt="Strider Project&#x2019;s Plugin Settings"></p>
+<p>Pushing the <strong>SSH Deploy</strong> card into available plugins adds the plugin settings in Strider&#x2019;s left sidebar. Click the newly available <strong>SSH Deploy</strong> settings link to define necessary deployment settings.</p>
+<p><img src="" alt="SSH Deploy Settings"></p>
+<h3 id="ssh-deploy-plugin-configuration">SSH Deploy Plugin Configuration</h3>
+<p>First, type the username of the destination host user. This is the user we use to log in via SSH and execute the final deployment. The example above uses the boring <code>ssh-deploy-user</code>,  please use a more precise username on your host.</p>
+<p>Second, specifiy the destination host url with SSH port. The port is optionally if the SSH server on your destination host uses the default port 22. The SSH server on our examplary <code>yourhost.url</code> runs on port <code>1234</code>.</p>
+<p>Third, define the commands to be executed on destination host. You can check the <strong>Transfer bundle</strong> option to move a <code>.tar.gz</code> to the remote host. This bundle contains the repositories code as a compressed tarball.</p>
+<p>The screen above illustrates code to execute on the remote system. We <code>cd</code> into the transfered and uncompressed bundle folder, <code>pwd</code> the current working directory, install dependencies with <code>npm install</code> and start the node server with <code>pm2</code> node process monitor.</p>
+<h3 id="authorize-strider-ssh-public-key-for-deployment">Authorize Strider SSH Public Key for Deployment</h3>
+<p>In order to authorize the provided SSH user on destination host, we need to make our project&#x2019;s public key available in the <code>authorized_keys</code> file.</p>
+<p>Visit the projects settings. This will show you private and public SSH keys for the repository. Strider will use this keys for authorization to other hosts and services.</p>
+<p><img src="" alt="Strider Project Settings"></p>
+<p>Copy the public key.</p>
+<p>Now use your shell and SSH into your destination host, switch the the user to the specified one in Strider  for SSH deployment. From here, change the directory to the system users SSH folder (usually <code>~/.ssh</code>).</p>
+<p>Edit or create (if not existing) the <code>authorized_keys</code> file in the SSH folder. Paste the copied Strider SSH public key into the <code>authorized_keys</code> file. This allows Strider to connect to your destination host with the help of the corresponding private key.</p>
+<p>The configuration is done. Now we can test the deployment pipeline :)</p>
+<h2 id="test-the-deployment-pipeline-via-ssh">Test the Deployment Pipeline via SSH</h2>
+<p>If you currently don&#x2019;t have any code to push into the repository and trigger an automated build process, we can start the integration and deployment manuall from Strider&#x2019;s dashboard.</p>
+<p><img src="" alt="Strider Dashboard &#x2014; Trigger Test &amp; Deploy"></p>
+<p>Strider initiates the test process and performs the known integration. The difference to previous integrations: the <strong>deploy</strong> step performs your SSH deployment.</p>
+<p><img src="" alt="Strider Integration and Deployment"></p>
+<p>If everything went smooth, the deployment is available right after tests and deployment finish sucessfully. Visit the url of your server and check your deployed app.</p>
+<p><img src="" alt="Running App after Strider SSH Deployment"></p>
+<h2 id="what-comes-next">What Comes Next</h2>
+<p>This guide walks you through the process of SSH deployments with Strider to any server. With the previously published articles, you&#x2019;re able to connect Strider with your git repositories, test the code and start deployments right after successful integration. Your pipeline assumes shape, Booyah!</p>
+<p>Within the next blog post we show you how to integrate Slack and notify channels about build and deployment statuses.</p>
+<p>If you need help, don&#x2019;t hesitate to use the comments or contact us via <a href="https://twitter.com/futurestud_io">@futurestud_io</a>.</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../../guides/continuous-deployment/heroku.html"><span class="title">Heroku</span></a></div>
+          <div class="right"><a href="../../guides/notifications/email.html"><span class="label">Next: </span><span class="title">Email</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

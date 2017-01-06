@@ -342,6 +342,351 @@
                     "id": "conclusion"
                   }
                 ]
+              },
+              {
+                "title": "Manual",
+                "source": "docs/guides/providers/manual.md",
+                "url": "guides/providers/manual.html",
+                "slug": "guidesprovidersmanual",
+                "headings": [
+                  {
+                    "title": "Installation & Requirements",
+                    "depth": 2,
+                    "id": "installation-and-requirements"
+                  },
+                  {
+                    "title": "Integration with Services via Plugins",
+                    "depth": 2,
+                    "id": "integration-with-services-via-plugins"
+                  },
+                  {
+                    "title": "How to Manually Add a Repository",
+                    "depth": 2,
+                    "id": "how-to-manually-add-a-repository"
+                  },
+                  {
+                    "title": "Authentication Issues",
+                    "depth": 2,
+                    "id": "authentication-issues"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Continuous Deployment",
+            "sections": [
+              {
+                "title": "Heroku",
+                "source": "docs/guides/continuous-deployment/heroku.md",
+                "url": "guides/continuous-deployment/heroku.html",
+                "slug": "guidescontinuous-deploymentheroku",
+                "headings": [
+                  {
+                    "title": "Create Heroku API Client",
+                    "depth": 2,
+                    "id": "create-heroku-api-client"
+                  },
+                  {
+                    "title": "Create Heroku Application",
+                    "depth": 2,
+                    "id": "create-heroku-application"
+                  },
+                  {
+                    "title": "Configure Strider Server",
+                    "depth": 2,
+                    "id": "configure-strider-server"
+                  },
+                  {
+                    "title": "Install Strider-Heroku Plugin",
+                    "depth": 2,
+                    "id": "install-strider-heroku-plugin"
+                  },
+                  {
+                    "title": "Connect Strider with Heroku",
+                    "depth": 2,
+                    "id": "connect-strider-with-heroku"
+                  },
+                  {
+                    "title": "Continuous Deployment to Heroku",
+                    "depth": 2,
+                    "id": "continuous-deployment-to-heroku"
+                  },
+                  {
+                    "title": "Test the Strider-Heroku-Deployment Pipeline",
+                    "depth": 2,
+                    "id": "test-the-strider-heroku-deployment-pipeline"
+                  },
+                  {
+                    "title": "What Comes Next",
+                    "depth": 2,
+                    "id": "what-comes-next"
+                  }
+                ]
+              },
+              {
+                "title": "SSH",
+                "source": "docs/guides/continuous-deployment/ssh.md",
+                "url": "guides/continuous-deployment/ssh.html",
+                "slug": "guidescontinuous-deploymentssh",
+                "headings": [
+                  {
+                    "title": "Install Strider-SSH-Deploy Plugin",
+                    "depth": 2,
+                    "id": "install-strider-ssh-deploy-plugin"
+                  },
+                  {
+                    "title": "Continuous Deployment via SSH",
+                    "depth": 2,
+                    "id": "continuous-deployment-via-ssh",
+                    "headings": [
+                      {
+                        "title": "SSH Deploy Plugin Configuration",
+                        "depth": 3,
+                        "id": "ssh-deploy-plugin-configuration"
+                      },
+                      {
+                        "title": "Authorize Strider SSH Public Key for Deployment",
+                        "depth": 3,
+                        "id": "authorize-strider-ssh-public-key-for-deployment"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Test the Deployment Pipeline via SSH",
+                    "depth": 2,
+                    "id": "test-the-deployment-pipeline-via-ssh"
+                  },
+                  {
+                    "title": "What Comes Next",
+                    "depth": 2,
+                    "id": "what-comes-next"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Notifications",
+            "sections": [
+              {
+                "title": "Email",
+                "source": "docs/guides/notifications/email.md",
+                "url": "guides/notifications/email.html",
+                "slug": "guidesnotificationsemail",
+                "headings": [
+                  {
+                    "title": "Configure Strider Server for Email Notifications",
+                    "depth": 2,
+                    "id": "configure-strider-server-for-email-notifications"
+                  },
+                  {
+                    "title": "Add Strider Email Notifications to Your Project",
+                    "depth": 2,
+                    "id": "add-strider-email-notifications-to-your-project"
+                  },
+                  {
+                    "title": "Test Notifications",
+                    "depth": 2,
+                    "id": "test-notifications"
+                  }
+                ]
+              },
+              {
+                "title": "Slack",
+                "source": "docs/guides/notifications/slack.md",
+                "url": "guides/notifications/slack.html",
+                "slug": "guidesnotificationsslack",
+                "headings": [
+                  {
+                    "title": "Install Strider-Slack Plugin",
+                    "depth": 2,
+                    "id": "install-strider-slack-plugin"
+                  },
+                  {
+                    "title": "Create and Configure the Strider-Slack Plugin",
+                    "depth": 2,
+                    "id": "create-and-configure-the-strider-slack-plugin"
+                  },
+                  {
+                    "title": "Test Slack Notifications",
+                    "depth": 2,
+                    "id": "test-slack-notifications"
+                  },
+                  {
+                    "title": "What Comes Next",
+                    "depth": 2,
+                    "id": "what-comes-next"
+                  }
+                ]
+              },
+              {
+                "title": "HipChat",
+                "source": "docs/guides/notifications/hipchat.md",
+                "url": "guides/notifications/hipchat.html",
+                "slug": "guidesnotificationshipchat",
+                "headings": [
+                  {
+                    "title": "Install Strider-HipChat Plugin",
+                    "depth": 2,
+                    "id": "install-strider-hipchat-plugin"
+                  },
+                  {
+                    "title": "Create HipChat Authentication Token",
+                    "depth": 2,
+                    "id": "create-hipchat-authentication-token"
+                  },
+                  {
+                    "title": "Configure Notifications for Strider Project",
+                    "depth": 2,
+                    "id": "configure-notifications-for-strider-project"
+                  },
+                  {
+                    "title": "Test HipChat Notifications",
+                    "depth": 2,
+                    "id": "test-hipchat-notifications"
+                  },
+                  {
+                    "title": "What Comes Next",
+                    "depth": 2,
+                    "id": "what-comes-next"
+                  }
+                ]
+              },
+              {
+                "title": "GitHub Status",
+                "source": "docs/guides/notifications/github.md",
+                "url": "guides/notifications/github.html",
+                "slug": "guidesnotificationsgithub",
+                "headings": [
+                  {
+                    "title": "Install Strider-GitHub-Status Plugin",
+                    "depth": 2,
+                    "id": "install-strider-github-status-plugin"
+                  },
+                  {
+                    "title": "Configure GitHub-Status for Strider Project",
+                    "depth": 2,
+                    "id": "configure-github-status-for-strider-project"
+                  },
+                  {
+                    "title": "Test GitHub-Status Integration",
+                    "depth": 2,
+                    "id": "test-github-status-integration"
+                  },
+                  {
+                    "title": "What Comes Next",
+                    "depth": 2,
+                    "id": "what-comes-next"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Webhooks",
+            "source": "docs/guides/webhooks.md",
+            "url": "guides/webhooks.html",
+            "slug": "guideswebhooks",
+            "headings": [
+              {
+                "title": "Install Strider-Webhooks Plugin",
+                "depth": 2,
+                "id": "install-strider-webhooks-plugin"
+              },
+              {
+                "title": "Configure Strider-Webhooks for Strider Project",
+                "depth": 2,
+                "id": "configure-strider-webhooks-for-strider-project",
+                "headings": [
+                  {
+                    "title": "Payload Data",
+                    "depth": 3,
+                    "id": "payload-data"
+                  },
+                  {
+                    "title": "Default Request Payload",
+                    "depth": 3,
+                    "id": "default-request-payload"
+                  },
+                  {
+                    "title": "Custom Payload Format",
+                    "depth": 3,
+                    "id": "custom-payload-format"
+                  }
+                ]
+              },
+              {
+                "title": "Test Webhooks Integration",
+                "depth": 2,
+                "id": "test-webhooks-integration"
+              },
+              {
+                "title": "What Comes Next",
+                "depth": 2,
+                "id": "what-comes-next"
+              }
+            ]
+          },
+          {
+            "title": "Create your own plugin",
+            "source": "docs/guides/create-plugin.md",
+            "url": "guides/create-plugin.html",
+            "slug": "guidescreate-plugin",
+            "headings": [
+              {
+                "title": "Create Plugin Template",
+                "depth": 2,
+                "id": "create-plugin-template"
+              },
+              {
+                "title": "What Is Strider’s Plugin Location?",
+                "depth": 2,
+                "id": "what-is-strider's-plugin-location",
+                "headings": [
+                  {
+                    "title": "Plugin Template from Command Line",
+                    "depth": 3,
+                    "id": "plugin-template-from-command-line"
+                  },
+                  {
+                    "title": "Plugin Template from Repository",
+                    "depth": 3,
+                    "id": "plugin-template-from-repository"
+                  },
+                  {
+                    "title": "Update Plugin Information for Correct Strider Integration",
+                    "depth": 3,
+                    "id": "update-plugin-information-for-correct-strider-integration"
+                  }
+                ]
+              },
+              {
+                "title": "Customize Plugin Functionality",
+                "depth": 2,
+                "id": "customize-plugin-functionality",
+                "headings": [
+                  {
+                    "title": "Add Plugin Options in the Webapp",
+                    "depth": 3,
+                    "id": "add-plugin-options-in-the-webapp"
+                  },
+                  {
+                    "title": "Add Plugin Specific Configuration, Routes and Listen for Events",
+                    "depth": 3,
+                    "id": "add-plugin-specific-configuration-routes-and-listen-for-events"
+                  },
+                  {
+                    "title": "Add Plugin Functionality",
+                    "depth": 3,
+                    "id": "add-plugin-functionality"
+                  }
+                ]
+              },
+              {
+                "title": "What Comes Next",
+                "depth": 2,
+                "id": "what-comes-next"
               }
             ]
           }
@@ -685,6 +1030,341 @@
           "id": "conclusion"
         }
       ]
+    },
+    "guides/providers/manual.html": {
+      "source": "docs/guides/providers/manual.md",
+      "title": "Manual - Strider",
+      "pageTitle": "Manual",
+      "slug": "guidesprovidersmanual",
+      "headings": [
+        {
+          "title": "Installation & Requirements",
+          "depth": 2,
+          "id": "installation-and-requirements"
+        },
+        {
+          "title": "Integration with Services via Plugins",
+          "depth": 2,
+          "id": "integration-with-services-via-plugins"
+        },
+        {
+          "title": "How to Manually Add a Repository",
+          "depth": 2,
+          "id": "how-to-manually-add-a-repository"
+        },
+        {
+          "title": "Authentication Issues",
+          "depth": 2,
+          "id": "authentication-issues"
+        }
+      ]
+    },
+    "guides/continuous-deployment/heroku.html": {
+      "source": "docs/guides/continuous-deployment/heroku.md",
+      "title": "Heroku - Strider",
+      "pageTitle": "Heroku",
+      "slug": "guidescontinuous-deploymentheroku",
+      "headings": [
+        {
+          "title": "Create Heroku API Client",
+          "depth": 2,
+          "id": "create-heroku-api-client"
+        },
+        {
+          "title": "Create Heroku Application",
+          "depth": 2,
+          "id": "create-heroku-application"
+        },
+        {
+          "title": "Configure Strider Server",
+          "depth": 2,
+          "id": "configure-strider-server"
+        },
+        {
+          "title": "Install Strider-Heroku Plugin",
+          "depth": 2,
+          "id": "install-strider-heroku-plugin"
+        },
+        {
+          "title": "Connect Strider with Heroku",
+          "depth": 2,
+          "id": "connect-strider-with-heroku"
+        },
+        {
+          "title": "Continuous Deployment to Heroku",
+          "depth": 2,
+          "id": "continuous-deployment-to-heroku"
+        },
+        {
+          "title": "Test the Strider-Heroku-Deployment Pipeline",
+          "depth": 2,
+          "id": "test-the-strider-heroku-deployment-pipeline"
+        },
+        {
+          "title": "What Comes Next",
+          "depth": 2,
+          "id": "what-comes-next"
+        }
+      ]
+    },
+    "guides/continuous-deployment/ssh.html": {
+      "source": "docs/guides/continuous-deployment/ssh.md",
+      "title": "SSH - Strider",
+      "pageTitle": "SSH",
+      "slug": "guidescontinuous-deploymentssh",
+      "headings": [
+        {
+          "title": "Install Strider-SSH-Deploy Plugin",
+          "depth": 2,
+          "id": "install-strider-ssh-deploy-plugin"
+        },
+        {
+          "title": "Continuous Deployment via SSH",
+          "depth": 2,
+          "id": "continuous-deployment-via-ssh",
+          "headings": [
+            {
+              "title": "SSH Deploy Plugin Configuration",
+              "depth": 3,
+              "id": "ssh-deploy-plugin-configuration"
+            },
+            {
+              "title": "Authorize Strider SSH Public Key for Deployment",
+              "depth": 3,
+              "id": "authorize-strider-ssh-public-key-for-deployment"
+            }
+          ]
+        },
+        {
+          "title": "Test the Deployment Pipeline via SSH",
+          "depth": 2,
+          "id": "test-the-deployment-pipeline-via-ssh"
+        },
+        {
+          "title": "What Comes Next",
+          "depth": 2,
+          "id": "what-comes-next"
+        }
+      ]
+    },
+    "guides/notifications/email.html": {
+      "source": "docs/guides/notifications/email.md",
+      "title": "Email - Strider",
+      "pageTitle": "Email",
+      "slug": "guidesnotificationsemail",
+      "headings": [
+        {
+          "title": "Configure Strider Server for Email Notifications",
+          "depth": 2,
+          "id": "configure-strider-server-for-email-notifications"
+        },
+        {
+          "title": "Add Strider Email Notifications to Your Project",
+          "depth": 2,
+          "id": "add-strider-email-notifications-to-your-project"
+        },
+        {
+          "title": "Test Notifications",
+          "depth": 2,
+          "id": "test-notifications"
+        }
+      ]
+    },
+    "guides/notifications/slack.html": {
+      "source": "docs/guides/notifications/slack.md",
+      "title": "Slack - Strider",
+      "pageTitle": "Slack",
+      "slug": "guidesnotificationsslack",
+      "headings": [
+        {
+          "title": "Install Strider-Slack Plugin",
+          "depth": 2,
+          "id": "install-strider-slack-plugin"
+        },
+        {
+          "title": "Create and Configure the Strider-Slack Plugin",
+          "depth": 2,
+          "id": "create-and-configure-the-strider-slack-plugin"
+        },
+        {
+          "title": "Test Slack Notifications",
+          "depth": 2,
+          "id": "test-slack-notifications"
+        },
+        {
+          "title": "What Comes Next",
+          "depth": 2,
+          "id": "what-comes-next"
+        }
+      ]
+    },
+    "guides/notifications/hipchat.html": {
+      "source": "docs/guides/notifications/hipchat.md",
+      "title": "HipChat - Strider",
+      "pageTitle": "HipChat",
+      "slug": "guidesnotificationshipchat",
+      "headings": [
+        {
+          "title": "Install Strider-HipChat Plugin",
+          "depth": 2,
+          "id": "install-strider-hipchat-plugin"
+        },
+        {
+          "title": "Create HipChat Authentication Token",
+          "depth": 2,
+          "id": "create-hipchat-authentication-token"
+        },
+        {
+          "title": "Configure Notifications for Strider Project",
+          "depth": 2,
+          "id": "configure-notifications-for-strider-project"
+        },
+        {
+          "title": "Test HipChat Notifications",
+          "depth": 2,
+          "id": "test-hipchat-notifications"
+        },
+        {
+          "title": "What Comes Next",
+          "depth": 2,
+          "id": "what-comes-next"
+        }
+      ]
+    },
+    "guides/notifications/github.html": {
+      "source": "docs/guides/notifications/github.md",
+      "title": "GitHub Status - Strider",
+      "pageTitle": "GitHub Status",
+      "slug": "guidesnotificationsgithub",
+      "headings": [
+        {
+          "title": "Install Strider-GitHub-Status Plugin",
+          "depth": 2,
+          "id": "install-strider-github-status-plugin"
+        },
+        {
+          "title": "Configure GitHub-Status for Strider Project",
+          "depth": 2,
+          "id": "configure-github-status-for-strider-project"
+        },
+        {
+          "title": "Test GitHub-Status Integration",
+          "depth": 2,
+          "id": "test-github-status-integration"
+        },
+        {
+          "title": "What Comes Next",
+          "depth": 2,
+          "id": "what-comes-next"
+        }
+      ]
+    },
+    "guides/webhooks.html": {
+      "source": "docs/guides/webhooks.md",
+      "title": "Webhooks - Strider",
+      "pageTitle": "Webhooks",
+      "slug": "guideswebhooks",
+      "headings": [
+        {
+          "title": "Install Strider-Webhooks Plugin",
+          "depth": 2,
+          "id": "install-strider-webhooks-plugin"
+        },
+        {
+          "title": "Configure Strider-Webhooks for Strider Project",
+          "depth": 2,
+          "id": "configure-strider-webhooks-for-strider-project",
+          "headings": [
+            {
+              "title": "Payload Data",
+              "depth": 3,
+              "id": "payload-data"
+            },
+            {
+              "title": "Default Request Payload",
+              "depth": 3,
+              "id": "default-request-payload"
+            },
+            {
+              "title": "Custom Payload Format",
+              "depth": 3,
+              "id": "custom-payload-format"
+            }
+          ]
+        },
+        {
+          "title": "Test Webhooks Integration",
+          "depth": 2,
+          "id": "test-webhooks-integration"
+        },
+        {
+          "title": "What Comes Next",
+          "depth": 2,
+          "id": "what-comes-next"
+        }
+      ]
+    },
+    "guides/create-plugin.html": {
+      "source": "docs/guides/create-plugin.md",
+      "title": "Create your own plugin - Strider",
+      "pageTitle": "Create your own plugin",
+      "slug": "guidescreate-plugin",
+      "headings": [
+        {
+          "title": "Create Plugin Template",
+          "depth": 2,
+          "id": "create-plugin-template"
+        },
+        {
+          "title": "What Is Strider’s Plugin Location?",
+          "depth": 2,
+          "id": "what-is-strider's-plugin-location",
+          "headings": [
+            {
+              "title": "Plugin Template from Command Line",
+              "depth": 3,
+              "id": "plugin-template-from-command-line"
+            },
+            {
+              "title": "Plugin Template from Repository",
+              "depth": 3,
+              "id": "plugin-template-from-repository"
+            },
+            {
+              "title": "Update Plugin Information for Correct Strider Integration",
+              "depth": 3,
+              "id": "update-plugin-information-for-correct-strider-integration"
+            }
+          ]
+        },
+        {
+          "title": "Customize Plugin Functionality",
+          "depth": 2,
+          "id": "customize-plugin-functionality",
+          "headings": [
+            {
+              "title": "Add Plugin Options in the Webapp",
+              "depth": 3,
+              "id": "add-plugin-options-in-the-webapp"
+            },
+            {
+              "title": "Add Plugin Specific Configuration, Routes and Listen for Events",
+              "depth": 3,
+              "id": "add-plugin-specific-configuration-routes-and-listen-for-events"
+            },
+            {
+              "title": "Add Plugin Functionality",
+              "depth": 3,
+              "id": "add-plugin-functionality"
+            }
+          ]
+        },
+        {
+          "title": "What Comes Next",
+          "depth": 2,
+          "id": "what-comes-next"
+        }
+      ]
     }
   },
   "sources": {
@@ -695,84 +1375,93 @@
     "docs/guides/providers/github.md": "guides/providers/github.html",
     "docs/guides/providers/gitlab.md": "guides/providers/gitlab.html",
     "docs/guides/providers/bitbucket.md": "guides/providers/bitbucket.html",
-    "docs/styles/main.css": "styles/main.css",
-    "docs/styles/rsc.css": "styles/rsc.css",
+    "docs/guides/providers/manual.md": "guides/providers/manual.html",
+    "docs/guides/continuous-deployment/heroku.md": "guides/continuous-deployment/heroku.html",
+    "docs/guides/continuous-deployment/ssh.md": "guides/continuous-deployment/ssh.html",
+    "docs/guides/notifications/email.md": "guides/notifications/email.html",
+    "docs/guides/notifications/slack.md": "guides/notifications/slack.html",
+    "docs/guides/notifications/hipchat.md": "guides/notifications/hipchat.html",
+    "docs/guides/notifications/github.md": "guides/notifications/github.html",
+    "docs/guides/webhooks.md": "guides/webhooks.html",
+    "docs/guides/create-plugin.md": "guides/create-plugin.html",
     "docs/screenshots/build-page.jpg": "screenshots/build-page.jpg",
     "docs/screenshots/dashboard.jpg": "screenshots/dashboard.jpg",
     "docs/screenshots/phone-build.jpg": "screenshots/phone-build.jpg",
     "docs/screenshots/phone-dashboard.jpg": "screenshots/phone-dashboard.jpg",
     "docs/screenshots/tablet-dashboard.jpg": "screenshots/tablet-dashboard.jpg",
     "docs/screenshots/tty-colors.jpg": "screenshots/tty-colors.jpg",
-    "docs/guides/strider project email notifications settings.png": "guides/strider project email notifications settings.png",
+    "docs/styles/main.css": "styles/main.css",
+    "docs/styles/rsc.css": "styles/rsc.css",
     "docs/guides/strider-logo.png": "guides/strider-logo.png",
-    "docs/guides/strider-manual-add-repo-with-email-showing.png": "guides/strider-manual-add-repo-with-email-showing.png",
-    "docs/guides/strider-manual-add-repo.png": "guides/strider-manual-add-repo.png",
     "docs/guides/strider_admin_plugins.png": "guides/strider_admin_plugins.png",
-    "docs/guides/strider_email_notification.png": "guides/strider_email_notification.png",
     "docs/guides/strider_project_config_plugins.png": "guides/strider_project_config_plugins.png",
-    "docs/guides/heroku-deploy/Thumbs.db": "guides/heroku-deploy/Thumbs.db",
-    "docs/guides/heroku-deploy/heroku-1.png": "guides/heroku-deploy/heroku-1.png",
-    "docs/guides/heroku-deploy/heroku-10.png": "guides/heroku-deploy/heroku-10.png",
-    "docs/guides/heroku-deploy/heroku-11.png": "guides/heroku-deploy/heroku-11.png",
-    "docs/guides/heroku-deploy/heroku-12.png": "guides/heroku-deploy/heroku-12.png",
-    "docs/guides/heroku-deploy/heroku-13.png": "guides/heroku-deploy/heroku-13.png",
-    "docs/guides/heroku-deploy/heroku-2.png": "guides/heroku-deploy/heroku-2.png",
-    "docs/guides/heroku-deploy/heroku-3.png": "guides/heroku-deploy/heroku-3.png",
-    "docs/guides/heroku-deploy/heroku-4.png": "guides/heroku-deploy/heroku-4.png",
-    "docs/guides/heroku-deploy/heroku-5.png": "guides/heroku-deploy/heroku-5.png",
-    "docs/guides/heroku-deploy/heroku-6.png": "guides/heroku-deploy/heroku-6.png",
-    "docs/guides/heroku-deploy/heroku-7.png": "guides/heroku-deploy/heroku-7.png",
-    "docs/guides/heroku-deploy/heroku-8.png": "guides/heroku-deploy/heroku-8.png",
-    "docs/guides/heroku-deploy/heroku-9.png": "guides/heroku-deploy/heroku-9.png",
-    "docs/guides/notifications-email/Thumbs.db": "guides/notifications-email/Thumbs.db",
-    "docs/guides/notifications-email/email-1.png": "guides/notifications-email/email-1.png",
-    "docs/guides/notifications-email/email-2.png": "guides/notifications-email/email-2.png",
-    "docs/guides/notifications-email/email-3.png": "guides/notifications-email/email-3.png",
-    "docs/guides/notifications-email/email-4.png": "guides/notifications-email/email-4.png",
-    "docs/guides/notifications-github-status/Thumbs.db": "guides/notifications-github-status/Thumbs.db",
-    "docs/guides/notifications-github-status/github-status-1.png": "guides/notifications-github-status/github-status-1.png",
-    "docs/guides/notifications-github-status/github-status-2.png": "guides/notifications-github-status/github-status-2.png",
-    "docs/guides/notifications-github-status/github-status-3.png": "guides/notifications-github-status/github-status-3.png",
-    "docs/guides/notifications-github-status/github-status-4.png": "guides/notifications-github-status/github-status-4.png",
-    "docs/guides/notifications-github-status/github-status-5.png": "guides/notifications-github-status/github-status-5.png",
-    "docs/guides/notifications-hipchat/Thumbs.db": "guides/notifications-hipchat/Thumbs.db",
-    "docs/guides/notifications-hipchat/hipchat-1.png": "guides/notifications-hipchat/hipchat-1.png",
-    "docs/guides/notifications-hipchat/hipchat-2.png": "guides/notifications-hipchat/hipchat-2.png",
-    "docs/guides/notifications-hipchat/hipchat-3.png": "guides/notifications-hipchat/hipchat-3.png",
-    "docs/guides/notifications-hipchat/hipchat-4.png": "guides/notifications-hipchat/hipchat-4.png",
-    "docs/guides/notifications-hipchat/hipchat-5.png": "guides/notifications-hipchat/hipchat-5.png",
-    "docs/guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.44.47.png": "guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.44.47.png",
-    "docs/guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png": "guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png",
-    "docs/guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.45.23.png": "guides/notifications-slack/Bildschirmfoto 2015-05-02 um 10.45.23.png",
-    "docs/guides/notifications-slack/slack-1.png": "guides/notifications-slack/slack-1.png",
-    "docs/guides/notifications-slack/slack-2.png": "guides/notifications-slack/slack-2.png",
-    "docs/guides/notifications-slack/slack-3.png": "guides/notifications-slack/slack-3.png",
-    "docs/guides/notifications-slack/slack-4.png": "guides/notifications-slack/slack-4.png",
-    "docs/guides/notifications-slack/slack-5.png": "guides/notifications-slack/slack-5.png",
-    "docs/guides/notifications-slack/slack-6.png": "guides/notifications-slack/slack-6.png",
-    "docs/guides/notifications-slack/slack-7.png": "guides/notifications-slack/slack-7.png",
-    "docs/guides/ssh-deploy/ssh-1.png": "guides/ssh-deploy/ssh-1.png",
-    "docs/guides/ssh-deploy/ssh-2.png": "guides/ssh-deploy/ssh-2.png",
-    "docs/guides/ssh-deploy/ssh-3.png": "guides/ssh-deploy/ssh-3.png",
-    "docs/guides/ssh-deploy/ssh-4.png": "guides/ssh-deploy/ssh-4.png",
-    "docs/guides/ssh-deploy/ssh-5.png": "guides/ssh-deploy/ssh-5.png",
-    "docs/guides/ssh-deploy/ssh-6.png": "guides/ssh-deploy/ssh-6.png",
-    "docs/guides/ssh-deploy/ssh-7.png": "guides/ssh-deploy/ssh-7.png",
     "docs/guides/strider-git-gogs/git-gogs-1.png": "guides/strider-git-gogs/git-gogs-1.png",
     "docs/guides/strider-git-gogs/git-gogs-2.png": "guides/strider-git-gogs/git-gogs-2.png",
     "docs/guides/strider-git-gogs/git-gogs-3.png": "guides/strider-git-gogs/git-gogs-3.png",
     "docs/guides/strider-git-gogs/git-gogs-4.png": "guides/strider-git-gogs/git-gogs-4.png",
     "docs/guides/strider-git-gogs/git-gogs-5.png": "guides/strider-git-gogs/git-gogs-5.png",
+    "docs/guides/strider-write-own-plugin/strider-plugin-1.png": "guides/strider-write-own-plugin/strider-plugin-1.png",
+    "docs/guides/strider-write-own-plugin/strider-plugin-2.png": "guides/strider-write-own-plugin/strider-plugin-2.png",
+    "docs/guides/strider-write-own-plugin/strider-plugin-3.png": "guides/strider-write-own-plugin/strider-plugin-3.png",
     "docs/guides/strider-webhooks/strider-webhooks-1.png": "guides/strider-webhooks/strider-webhooks-1.png",
     "docs/guides/strider-webhooks/strider-webhooks-2.png": "guides/strider-webhooks/strider-webhooks-2.png",
     "docs/guides/strider-webhooks/strider-webhooks-3.png": "guides/strider-webhooks/strider-webhooks-3.png",
     "docs/guides/strider-webhooks/strider-webhooks-4.png": "guides/strider-webhooks/strider-webhooks-4.png",
-    "docs/guides/strider-write-own-plugin/strider-plugin-1.png": "guides/strider-write-own-plugin/strider-plugin-1.png",
-    "docs/guides/strider-write-own-plugin/strider-plugin-2.png": "guides/strider-write-own-plugin/strider-plugin-2.png",
-    "docs/guides/strider-write-own-plugin/strider-plugin-3.png": "guides/strider-write-own-plugin/strider-plugin-3.png",
+    "docs/guides/continuous-deployment/heroku-deploy/Thumbs.db": "guides/continuous-deployment/heroku-deploy/Thumbs.db",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-1.png": "guides/continuous-deployment/heroku-deploy/heroku-1.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-10.png": "guides/continuous-deployment/heroku-deploy/heroku-10.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-12.png": "guides/continuous-deployment/heroku-deploy/heroku-12.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-11.png": "guides/continuous-deployment/heroku-deploy/heroku-11.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-13.png": "guides/continuous-deployment/heroku-deploy/heroku-13.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-2.png": "guides/continuous-deployment/heroku-deploy/heroku-2.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-3.png": "guides/continuous-deployment/heroku-deploy/heroku-3.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-6.png": "guides/continuous-deployment/heroku-deploy/heroku-6.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-4.png": "guides/continuous-deployment/heroku-deploy/heroku-4.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-5.png": "guides/continuous-deployment/heroku-deploy/heroku-5.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-7.png": "guides/continuous-deployment/heroku-deploy/heroku-7.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-8.png": "guides/continuous-deployment/heroku-deploy/heroku-8.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-9.png": "guides/continuous-deployment/heroku-deploy/heroku-9.png",
+    "docs/guides/continuous-deployment/ssh-deploy/ssh-1.png": "guides/continuous-deployment/ssh-deploy/ssh-1.png",
+    "docs/guides/continuous-deployment/ssh-deploy/ssh-4.png": "guides/continuous-deployment/ssh-deploy/ssh-4.png",
+    "docs/guides/continuous-deployment/ssh-deploy/ssh-2.png": "guides/continuous-deployment/ssh-deploy/ssh-2.png",
+    "docs/guides/continuous-deployment/ssh-deploy/ssh-3.png": "guides/continuous-deployment/ssh-deploy/ssh-3.png",
+    "docs/guides/continuous-deployment/ssh-deploy/ssh-5.png": "guides/continuous-deployment/ssh-deploy/ssh-5.png",
+    "docs/guides/continuous-deployment/ssh-deploy/ssh-6.png": "guides/continuous-deployment/ssh-deploy/ssh-6.png",
+    "docs/guides/continuous-deployment/ssh-deploy/ssh-7.png": "guides/continuous-deployment/ssh-deploy/ssh-7.png",
+    "docs/guides/notifications/strider project email notifications settings.png": "guides/notifications/strider project email notifications settings.png",
+    "docs/guides/notifications/strider_email_notification.png": "guides/notifications/strider_email_notification.png",
+    "docs/guides/notifications/notifications-email/Thumbs.db": "guides/notifications/notifications-email/Thumbs.db",
+    "docs/guides/notifications/notifications-email/email-1.png": "guides/notifications/notifications-email/email-1.png",
+    "docs/guides/notifications/notifications-email/email-2.png": "guides/notifications/notifications-email/email-2.png",
+    "docs/guides/notifications/notifications-email/email-3.png": "guides/notifications/notifications-email/email-3.png",
+    "docs/guides/notifications/notifications-email/email-4.png": "guides/notifications/notifications-email/email-4.png",
+    "docs/guides/notifications/notifications-github-status/Thumbs.db": "guides/notifications/notifications-github-status/Thumbs.db",
+    "docs/guides/notifications/notifications-github-status/github-status-1.png": "guides/notifications/notifications-github-status/github-status-1.png",
+    "docs/guides/notifications/notifications-github-status/github-status-2.png": "guides/notifications/notifications-github-status/github-status-2.png",
+    "docs/guides/notifications/notifications-github-status/github-status-3.png": "guides/notifications/notifications-github-status/github-status-3.png",
+    "docs/guides/notifications/notifications-github-status/github-status-4.png": "guides/notifications/notifications-github-status/github-status-4.png",
+    "docs/guides/notifications/notifications-github-status/github-status-5.png": "guides/notifications/notifications-github-status/github-status-5.png",
+    "docs/guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png": "guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png",
+    "docs/guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.44.47.png": "guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.44.47.png",
+    "docs/guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.45.23.png": "guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.45.23.png",
+    "docs/guides/notifications/notifications-slack/slack-1.png": "guides/notifications/notifications-slack/slack-1.png",
+    "docs/guides/notifications/notifications-slack/slack-2.png": "guides/notifications/notifications-slack/slack-2.png",
+    "docs/guides/notifications/notifications-slack/slack-3.png": "guides/notifications/notifications-slack/slack-3.png",
+    "docs/guides/notifications/notifications-slack/slack-4.png": "guides/notifications/notifications-slack/slack-4.png",
+    "docs/guides/notifications/notifications-slack/slack-5.png": "guides/notifications/notifications-slack/slack-5.png",
+    "docs/guides/notifications/notifications-slack/slack-7.png": "guides/notifications/notifications-slack/slack-7.png",
+    "docs/guides/notifications/notifications-slack/slack-6.png": "guides/notifications/notifications-slack/slack-6.png",
+    "docs/guides/notifications/notifications-hipchat/Thumbs.db": "guides/notifications/notifications-hipchat/Thumbs.db",
+    "docs/guides/notifications/notifications-hipchat/hipchat-1.png": "guides/notifications/notifications-hipchat/hipchat-1.png",
+    "docs/guides/notifications/notifications-hipchat/hipchat-2.png": "guides/notifications/notifications-hipchat/hipchat-2.png",
+    "docs/guides/notifications/notifications-hipchat/hipchat-3.png": "guides/notifications/notifications-hipchat/hipchat-3.png",
+    "docs/guides/notifications/notifications-hipchat/hipchat-4.png": "guides/notifications/notifications-hipchat/hipchat-4.png",
+    "docs/guides/notifications/notifications-hipchat/hipchat-5.png": "guides/notifications/notifications-hipchat/hipchat-5.png",
+    "docs/guides/providers/strider-manual-add-repo-with-email-showing.png": "guides/providers/strider-manual-add-repo-with-email-showing.png",
+    "docs/guides/providers/strider-manual-add-repo.png": "guides/providers/strider-manual-add-repo.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-1.png": "guides/providers/strider-bitbucket/strider-bitbucket-1.png",
-    "docs/guides/providers/strider-bitbucket/strider-bitbucket-2-1.png": "guides/providers/strider-bitbucket/strider-bitbucket-2-1.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-2.png": "guides/providers/strider-bitbucket/strider-bitbucket-2.png",
+    "docs/guides/providers/strider-bitbucket/strider-bitbucket-2-1.png": "guides/providers/strider-bitbucket/strider-bitbucket-2-1.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-3.png": "guides/providers/strider-bitbucket/strider-bitbucket-3.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-4.png": "guides/providers/strider-bitbucket/strider-bitbucket-4.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-5-org.png": "guides/providers/strider-bitbucket/strider-bitbucket-5-org.png",
@@ -784,13 +1473,13 @@
     "docs/guides/providers/strider-github/strider-github-5.png": "guides/providers/strider-github/strider-github-5.png",
     "docs/guides/providers/strider-github/strider-github-6.png": "guides/providers/strider-github/strider-github-6.png",
     "docs/guides/providers/strider-github/strider-github-7.png": "guides/providers/strider-github/strider-github-7.png",
-    "docs/guides/providers/strider-github/strider-github-authorize-application.png": "guides/providers/strider-github/strider-github-authorize-application.png",
     "docs/guides/providers/strider-github/strider-github-8.png": "guides/providers/strider-github/strider-github-8.png",
+    "docs/guides/providers/strider-github/strider-github-authorize-application.png": "guides/providers/strider-github/strider-github-authorize-application.png",
     "docs/guides/providers/strider-github/strider-github-register-app.png": "guides/providers/strider-github/strider-github-register-app.png",
     "docs/guides/providers/strider-gitlab/strider-gitlab-1-old.png": "guides/providers/strider-gitlab/strider-gitlab-1-old.png",
     "docs/guides/providers/strider-gitlab/strider-gitlab-1.png": "guides/providers/strider-gitlab/strider-gitlab-1.png",
-    "docs/guides/providers/strider-gitlab/strider-gitlab-2.png": "guides/providers/strider-gitlab/strider-gitlab-2.png",
     "docs/guides/providers/strider-gitlab/strider-gitlab-3.png": "guides/providers/strider-gitlab/strider-gitlab-3.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-2.png": "guides/providers/strider-gitlab/strider-gitlab-2.png",
     "docs/guides/providers/strider-gitlab/strider-gitlab-4.png": "guides/providers/strider-gitlab/strider-gitlab-4.png",
     "docs/guides/providers/strider-gitlab/strider-gitlab-5.png": "guides/providers/strider-gitlab/strider-gitlab-5.png"
   }
