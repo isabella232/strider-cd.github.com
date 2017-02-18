@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="styles/rsc.css?t=b3b3e441">
+    <link rel="stylesheet" href="styles/main.css?t=995a1369">
+    <script src="assets/script.js?t=42463e55"></script>
+    <title>Internal API - Strider</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="index.html">Strider</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="guides/platform-overview.html">Overview</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="guides/how-to-install.html">Installation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="guides/configuration.html">Configuration</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="guides/providers/github.html">Github</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="guides/providers/gitlab.html">Gitlab</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="guides/providers/bitbucket.html">Bitbucket</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersmanual" href="guides/providers/manual.html">Manual</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Continuous Deployment</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentheroku" href="guides/continuous-deployment/heroku.html">Heroku</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentssh" href="guides/continuous-deployment/ssh.html">SSH</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Notifications</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsemail" href="guides/notifications/email.html">Email</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsslack" href="guides/notifications/slack.html">Slack</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationshipchat" href="guides/notifications/hipchat.html">HipChat</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="guides/notifications/github.html">GitHub Status</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guideswebhooks" href="guides/webhooks.html">Webhooks</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-guidescreate-plugin" href="guides/create-plugin.html">Create your own plugin</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title -active link-api" href="api.html">Internal API</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-change-email" href="#change-email">Change Email</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-change-password" href="#change-password">Change Password</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-delete-provider-account" href="#delete-provider-account">Delete Provider Account</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-parameter-parameters" href="#parameter-parameters">Parameter Parameters</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-update-provider-account" href="#update-provider-account">Update Provider Account</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-parameter-parameters" href="#parameter-parameters">Parameter Parameters</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-get-all-users" href="#get-all-users">Get All Users</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-revoke-invite" href="#revoke-invite">Revoke Invite</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-send-invite" href="#send-invite">Send Invite</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-add-branch" href="#add-branch">Add Branch</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-delete-branch" href="#delete-branch">Delete Branch</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-reorder-branches" href="#reorder-branches">Reorder Branches</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-add-collaborator" href="#add-collaborator">Add Collaborator</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-delete-collaborator" href="#delete-collaborator">Delete Collaborator</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-get-collaborators" href="#get-collaborators">Get Collaborators</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-get-latest-jobs" href="#get-latest-jobs">Get Latest Jobs</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-start-job" href="#start-job">Start Job</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-get-project-provider" href="#get-project-provider">Get Project Provider</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-update-project-provider" href="#update-project-provider">Update Project Provider</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-clear-cache" href="#clear-cache">Clear Cache</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-create-repo" href="#create-repo">Create Repo</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-delete-repo" href="#delete-repo">Delete Repo</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-url-parameters-parameters" href="#request-url-parameters-parameters">Request URL Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-create-new-session" href="#create-new-session">Create New Session</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-request-body-parameters-parameters" href="#request-body-parameters-parameters">Request Body Parameters Parameters</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-get-session" href="#get-session">Get Session</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-examples" href="#examples">Examples</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-api">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/Strider-CD/strider" data-title="Strider-CD/strider">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><p><a name="top"></a></p>
+<h1 id="strider-v1.0.0">strider v1.0.0</h1>
+<p>Strider API</p>
+<ul>
+<li>
+<p><a href="#account">Account</a></p>
+<ul>
+<li><a href="#change-email">Change Email</a></li>
+<li><a href="#change-password">Change Password</a></li>
+<li><a href="#delete-provider-account">Delete Provider Account</a></li>
+<li><a href="#update-provider-account">Update Provider Account</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#admin">Admin</a></p>
+<ul>
+<li><a href="#get-all-users">Get All Users</a></li>
+<li><a href="#revoke-invite">Revoke Invite</a></li>
+<li><a href="#send-invite">Send Invite</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#branch">Branch</a></p>
+<ul>
+<li><a href="#add-branch">Add Branch</a></li>
+<li><a href="#delete-branch">Delete Branch</a></li>
+<li><a href="#reorder-branches">Reorder Branches</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#collaborators">Collaborators</a></p>
+<ul>
+<li><a href="#add-collaborator">Add Collaborator</a></li>
+<li><a href="#delete-collaborator">Delete Collaborator</a></li>
+<li><a href="#get-collaborators">Get Collaborators</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#job">Job</a></p>
+<ul>
+<li><a href="#get-latest-jobs">Get Latest Jobs</a></li>
+<li><a href="#start-job">Start Job</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#provider">Provider</a></p>
+<ul>
+<li><a href="#get-project-provider">Get Project Provider</a></li>
+<li><a href="#update-project-provider">Update Project Provider</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#repo">Repo</a></p>
+<ul>
+<li><a href="#clear-cache">Clear Cache</a></li>
+<li><a href="#create-repo">Create Repo</a></li>
+<li><a href="#delete-repo">Delete Repo</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#session">Session</a></p>
+<ul>
+<li><a href="#create-new-session">Create New Session</a></li>
+<li><a href="#get-session">Get Session</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="account">Account</h1>
+<h2 id="change-email">Change Email</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Changes the email address for the <em>active</em> user (the API user).</p>
+<pre><code>POST /account/email
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">email</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The new email address. This must be a VALID email address.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="change-password">Change Password</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Changes the password for the <em>active</em> user (the API user).</p>
+<pre><code>POST /account/password
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The new password, which must be at least 6 characters long.</p><em>Size range: 6..</em><br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="delete-provider-account">Delete Provider Account</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Deletes a provider account for the <em>active</em> user (the API user).</p>
+<pre><code>DELETE /account/:provider/:id
+</code></pre>
+<h3 id="parameter-parameters">Parameter Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">provider</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>Type of provider, e.g. github</p></td>
+</tr>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"><p>Unique provider identification</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="update-provider-account">Update Provider Account</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Updates a provider account for the <em>active</em> user (the API user).</p>
+<pre><code>PUT /account/:provider/:id
+</code></pre>
+<h3 id="parameter-parameters">Parameter Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">provider</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>Type of provider, e.g. github</p></td>
+</tr>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"><p>Unique provider identification</p></td>
+</tr>
+</tbody>
+</table>
+<h1 id="admin">Admin</h1>
+<h2 id="get-all-users">Get All Users</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Retrieves a list of all Strider users.</p>
+<pre><code>GET /admin/users
+</code></pre>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X GET http://localhost/admin/users
+</code></pre>
+<h2 id="revoke-invite">Revoke Invite</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Revokes a previously sent Strider invitation.</p>
+<pre><code>POST /admin/invite/revoke
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">invite_code</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The invite code/token of the invite being revoked.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X POST -d invite_code=xoxox http://localhost/invite/revoke
+</code></pre>
+<h2 id="send-invite">Send Invite</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Create &amp; email a new Strider invite.</p>
+<pre><code>POST /admin/invite/new
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">invite_code</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The invite code/token to use in the invitation</p></td>
+</tr>
+<tr>
+<td style="text-align:left">email</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The email address of the new user being invited</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X POST -d invite_code=xoxox -d email=new_guy@strider-cd.com http://localhost/invite/new
+</code></pre>
+<h1 id="branch">Branch</h1>
+<h2 id="add-branch">Add Branch</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Add a new branch for a project.</p>
+<pre><code>POST /:org/:repo/branches
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The name of the new branch</p></td>
+</tr>
+<tr>
+<td style="text-align:left">cloneName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The name of the cloned branch</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X POST -d name=newbranch http://localhost/api/strider-cd/strider/branches
+</code></pre>
+<h2 id="delete-branch">Delete Branch</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Deletes a branch from a project</p>
+<pre><code>DELETE /:org/:repo/branches
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The name of the branch to delete</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X DELETE -d name=mybranch http://localhost/api/strider-cd/strider/branches
+</code></pre>
+<h2 id="reorder-branches">Reorder Branches</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Updates the branch order for a project.</p>
+<pre><code>PUT /:org/:repo/branches
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">branches</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The new branch order, comma delimited</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X PUT -d branches=master,testing http://localhost/api/strider-cd/strider/branches
+</code></pre>
+<h1 id="collaborators">Collaborators</h1>
+<h2 id="add-collaborator">Add Collaborator</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Add a new collaborator to a repository/project.</p>
+<pre><code>POST /:org/:repo/collaborators
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">email</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>Email address to add. If the user is not registered with Strider, we will send them an invite. If they are already registered, they will receive a notification of access.</p></td>
+</tr>
+<tr>
+<td style="text-align:left">access</td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"><p>Access level to grant to the new collaborator. This can be <code>0</code>, for read only access, or <code>2</code> for admin access.</p><em>Default value: 0</em><br></td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X GET -d &apos;{&quot;email&quot;:&quot;new_guy@strider-cd.com&quot;, &quot;access&quot;:2}&apos; http://localhost/api/strider-cd/strider/collaborators
+</code></pre>
+<h2 id="delete-collaborator">Delete Collaborator</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Remove a collaborator from a repository/project.</p>
+<pre><code>DELETE /:org/:repo/collaborators
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">email</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>Email address to remove from the repo/project.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X DELETE -d &apos;{&quot;email&quot;:&quot;old_guy@strider-cd.com&quot;}&apos; http://localhost/api/strider-cd/strider/collaborators
+</code></pre>
+<h2 id="get-collaborators">Get Collaborators</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Gets a list of collaborators for a project</p>
+<pre><code>GET /:org/:repo/collaborators
+</code></pre>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X GET http://localhost/api/strider-cd/strider/collaborators
+</code></pre>
+<h1 id="job">Job</h1>
+<h2 id="get-latest-jobs">Get Latest Jobs</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Return JSON object containing the most recent build status for each configured repo This function is used to build the main dashboard status page. The result is separated into <code>{public: [], yours: []}</code>.</p> <p>Note: the private ones are just ones that the current user is a collaborator on and are not necessarily private</p>
+<pre><code>GET /api/jobs
+</code></pre>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X GET http://localhost/api/jobs
+</code></pre>
+<h2 id="start-job">Start Job</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Executes a strider test and, optionally, deployment.</p>
+<pre><code>POST /:org/:repo/start
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>Denotes the type of job to run. This can be &quot;TEST_ONLY&quot;, which indicates that only the test stages of the job should be executed or &quot;TEST_AND_DEPLOY&quot;, which indicates that all stages should be executed.</p><em>Default value: TEST_ONLY</em><br></td>
+</tr>
+<tr>
+<td style="text-align:left">branch</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>Indicates which branch configuration should be executed.</p><em>Default value: master</em><br></td>
+</tr>
+<tr>
+<td style="text-align:left">message</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>An optional message to include as the title of the execution.</p><em>Default value: Manually Retesting/Redeploying</em><br></td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X POST http://localhost/api/strider-cd/strider/start
+</code></pre>
+<h1 id="provider">Provider</h1>
+<h2 id="get-project-provider">Get Project Provider</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Get the provider config for the specified project</p>
+<pre><code>GET /:org/:repo/provider
+</code></pre>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X GET http://localhost:3000/strider-cd/strider/provider
+</code></pre>
+<h2 id="update-project-provider">Update Project Provider</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Update a project&apos;s provider</p>
+<pre><code>POST /:org/:repo/provider
+</code></pre>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X POST http://localhost:3000/strider-cd/strider/provider
+</code></pre>
+<h1 id="repo">Repo</h1>
+<h2 id="clear-cache">Clear Cache</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Clears/invalidates the cache for a project.</p>
+<pre><code>DELETE /:org/:repo/cache
+</code></pre>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X DELETE http://localhost/api/strider-cd/strider/cache
+</code></pre>
+<h2 id="create-repo">Create Repo</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Create a new project for a repo.</p>
+<pre><code>PUT /:org
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The name of the new branch</p></td>
+</tr>
+<tr>
+<td style="text-align:left">display_name</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>Human-readable project name</p></td>
+</tr>
+<tr>
+<td style="text-align:left">display_url</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The URL for the repo (e.g. Github homepage)</p></td>
+</tr>
+<tr>
+<td style="text-align:left">public</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left"><p>Whether this project is public or not.</p><em>Default value: false</em><br></td>
+</tr>
+<tr>
+<td style="text-align:left">prefetch_config</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left"><p>Whether the strider.json should be fetched in advance.</p><em>Default value: true</em><br></td>
+</tr>
+<tr>
+<td style="text-align:left">account</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The ID of provider account</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo_id</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The ID of the repo</p></td>
+</tr>
+<tr>
+<td style="text-align:left">provider</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left"><p>A json object with &apos;id&apos; and &apos;config&apos; properties.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="delete-repo">Delete Repo</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Deletes a repository/project. Also archives all jobs (marks as archived in DB which makes them hidden).</p>
+<pre><code>DELETE /:org/:repo
+</code></pre>
+<h3 id="request-url-parameters-parameters">Request URL Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">org</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The organization name for the project.  This is usually a GitHub user or organization name (e.g. &quot;strider&quot; in &quot;strider-cd/strider&quot;) but may vary from one project provider to another. (as another example, in GitLab this refers to the repository&apos;s &quot;group&quot;).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">repo</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The project&apos;s repository name.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X DELETE http://localhost/api/strider-cd/strider
+</code></pre>
+<h1 id="session">Session</h1>
+<h2 id="create-new-session">Create New Session</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Creates a new user session after validating an email address and password pair.</p>
+<pre><code>POST /api/session
+</code></pre>
+<h3 id="request-body-parameters-parameters">Request Body Parameters Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">email</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The email address to login as (which is used as the username).</p></td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><p>The user&apos;s password.</p></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X POST -d email=me@me.com -d password=mypass http://localhost/api/session
+</code></pre>
+<h2 id="get-session">Get Session</h2>
+<p><a href="#top">Back to top</a></p>
+<p>Gets the current session information</p>
+<pre><code>GET /api/session
+</code></pre>
+<h3 id="examples">Examples</h3>
+<p>CURL Example:</p>
+<pre><code>curl -X GET http://localhost/api/session
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="guides/create-plugin.html"><span class="title">Create your own plugin</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
