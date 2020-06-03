@@ -88,24 +88,24 @@
 <p>Slack seems to be the team messaging tool of the moment. And also Strider provides a plugin to connect with Slack and send notifications for either successful or failed test runs and deployments.</p>
 <h2 id="install-strider-slack-plugin">Install Strider-Slack Plugin</h2>
 <p>The Strider ecosystem contains the <a href="https://github.com/Strider-CD/strider-slack">strider-slack-plugin</a> to integrate both services: Slack and Strider. Visit Strider&#x2019;s admin plugin overview and install the Slack plugin if not already done.</p>
-<p><img src alt="Strider Plugin Overview"></p>
+<p><img src="notifications-slack/slack-1.png" alt="Strider Plugin Overview"></p>
 <p>Search for <strong>Slack</strong> and make sure the plugin is installed. If not, click the <strong>Install</strong> button.</p>
 <h2 id="create-and-configure-the-strider-slack-plugin">Create and Configure the Strider-Slack Plugin</h2>
 <p>Now head over to the project&#x2019;s settings page you want to automatically send notifications for build and deployment statuses. Click the <strong>Plugins</strong> link in the left sidebar. Drag and drop the Slack plugin from <strong>Available Plugins</strong> into <strong>Active Plugins</strong>.</p>
-<p><img src alt="Strider Project Plugin Overview"></p>
+<p><img src="notifications-slack/slack-2.png" alt="Strider Project Plugin Overview"></p>
 <p>Moving the <strong>Slack</strong> card into active plugins will add the plugins name as a link in the left sidebar. Click the newly added <strong>Slack</strong> link to show the plugin options.</p>
-<p><img src alt="Strider Slack Plugin Settings"></p>
+<p><img src="notifications-slack/slack-3.png" alt="Strider Slack Plugin Settings"></p>
 <p>By default, all fields are empty. Don&#x2019;t worry, it&#x2019;s just one click to fill most of the fields. Clicking the button <strong>Fill Empty Fields</strong> will do the job for you. The autgenerated text include the metadata information for your Strider server, the project name and tested/deployed branch. Of course you can customize the message texts to fit your needs.</p>
 <p>The only thing missing is a Slack webhook to notify your channel with the defined message. You can follow the <a href="https://my.slack.com/services/new/incoming-webhook">Create an Incoming Webhook</a> link in the plugin settings. This will redirect you to Slack and let&#x2019;s you directly create the hook for a selected channel.</p>
-<p>![Slack &#x2014; Create Incoming Webhook]</p>
+<p><img src="notifications-slack/slack-4.png" alt="Slack &#x2014; Create Incoming Webhook"></p>
 <p>Choose your desired channel from the dropdown list or create a new one. Afterwards, click <strong>Add Incoming Webhook Integration</strong> and your hook is ready to use.</p>
-<p><img src alt="Slack &#x2014; Webhook Overview"></p>
+<p><img src="notifications-slack/slack-5.png" alt="Slack &#x2014; Webhook Overview"></p>
 <p>You can customize the webhook settings. The important part is the <strong>Webhook URL</strong>. Copy the highlighted link and return to the Strider-Slack settings. Paste the webhook link in the corresponding field and save your settings.</p>
 <h2 id="test-slack-notifications">Test Slack Notifications</h2>
 <p>Finishing Straight! Configuration is done, now let&#x2019;s check if everything works like a charm. You can manually trigger an integration run for your project from Strider&#x2019;s dashboard.</p>
-<p><img src alt="Strider Dashboard"></p>
+<p><img src="notifications-slack/slack-6.png" alt="Strider Dashboard"></p>
 <p>Regardless of whether the project tests are successful or fail, the plugin will notifiy the channel with a corresponding message.</p>
-<p><img src alt="Slack Notifications from Strider"></p>
+<p><img src="notifications-slack/slack-7.png" alt="Slack Notifications from Strider"></p>
 <p>&#x2014;</p>
 <h4 id="additional-ressources">Additional Ressources</h4>
 <ul>
