@@ -74,16 +74,6 @@
                     "id": "strider.json"
                   }
                 ]
-              },
-              {
-                "title": "What Comes Next",
-                "depth": 2,
-                "id": "what-comes-next"
-              },
-              {
-                "title": "In the next weeks, we’re going to walk through major capabilities and integrations of Strider.",
-                "depth": 2,
-                "id": "in-the-next-weeks-we're-going-to-walk-through-major-capabilities-and-integrations-of-strider."
               }
             ]
           },
@@ -173,11 +163,6 @@
             "slug": "guidesconfiguration",
             "headings": [
               {
-                "title": "Strider Series Overview",
-                "depth": 2,
-                "id": "strider-series-overview"
-              },
-              {
                 "title": "Configuration Options",
                 "depth": 2,
                 "id": "configuration-options"
@@ -203,11 +188,6 @@
                     "id": "multiple-configuration-options-defined:-what-happens"
                   }
                 ]
-              },
-              {
-                "title": "What Comes Next",
-                "depth": 2,
-                "id": "what-comes-next"
               }
             ]
           },
@@ -765,11 +745,6 @@
                     "title": "Request Body Parameters Parameters",
                     "depth": 3,
                     "id": "request-body-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -782,11 +757,6 @@
                     "title": "Request Body Parameters Parameters",
                     "depth": 3,
                     "id": "request-body-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -804,11 +774,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -826,11 +791,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -848,11 +808,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -870,11 +825,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -892,11 +842,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -909,11 +854,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -943,11 +883,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -960,11 +895,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -977,11 +907,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -994,11 +919,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -1023,11 +943,6 @@
                     "title": "Request URL Parameters Parameters",
                     "depth": 3,
                     "id": "request-url-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -1040,11 +955,6 @@
                     "title": "Request Body Parameters Parameters",
                     "depth": 3,
                     "id": "request-body-parameters-parameters"
-                  },
-                  {
-                    "title": "Examples",
-                    "depth": 3,
-                    "id": "examples"
                   }
                 ]
               },
@@ -1137,16 +1047,6 @@
               "id": "strider.json"
             }
           ]
-        },
-        {
-          "title": "What Comes Next",
-          "depth": 2,
-          "id": "what-comes-next"
-        },
-        {
-          "title": "In the next weeks, we’re going to walk through major capabilities and integrations of Strider.",
-          "depth": 2,
-          "id": "in-the-next-weeks-we're-going-to-walk-through-major-capabilities-and-integrations-of-strider."
         }
       ]
     },
@@ -1236,11 +1136,6 @@
       "slug": "guidesconfiguration",
       "headings": [
         {
-          "title": "Strider Series Overview",
-          "depth": 2,
-          "id": "strider-series-overview"
-        },
-        {
           "title": "Configuration Options",
           "depth": 2,
           "id": "configuration-options"
@@ -1266,11 +1161,6 @@
               "id": "multiple-configuration-options-defined:-what-happens"
             }
           ]
-        },
-        {
-          "title": "What Comes Next",
-          "depth": 2,
-          "id": "what-comes-next"
         }
       ]
     },
@@ -1813,11 +1703,6 @@
               "title": "Request Body Parameters Parameters",
               "depth": 3,
               "id": "request-body-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -1830,11 +1715,6 @@
               "title": "Request Body Parameters Parameters",
               "depth": 3,
               "id": "request-body-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -1852,11 +1732,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -1874,11 +1749,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -1896,11 +1766,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -1918,11 +1783,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -1940,11 +1800,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -1957,11 +1812,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -1991,11 +1841,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -2008,11 +1853,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -2025,11 +1865,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -2042,11 +1877,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -2071,11 +1901,6 @@
               "title": "Request URL Parameters Parameters",
               "depth": 3,
               "id": "request-url-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -2088,11 +1913,6 @@
               "title": "Request Body Parameters Parameters",
               "depth": 3,
               "id": "request-body-parameters-parameters"
-            },
-            {
-              "title": "Examples",
-              "depth": 3,
-              "id": "examples"
             }
           ]
         },
@@ -2129,8 +1949,8 @@
     "docs/guides/webhooks.md": "guides/webhooks.html",
     "docs/guides/create-plugin.md": "guides/create-plugin.html",
     "docs/api.md": "api.html",
-    "docs/screenshots/dashboard.jpg": "screenshots/dashboard.jpg",
     "docs/screenshots/build-page.jpg": "screenshots/build-page.jpg",
+    "docs/screenshots/dashboard.jpg": "screenshots/dashboard.jpg",
     "docs/screenshots/phone-build.jpg": "screenshots/phone-build.jpg",
     "docs/screenshots/tablet-dashboard.jpg": "screenshots/tablet-dashboard.jpg",
     "docs/screenshots/phone-dashboard.jpg": "screenshots/phone-dashboard.jpg",
@@ -2142,25 +1962,25 @@
     "docs/guides/strider_project_config_plugins.png": "guides/strider_project_config_plugins.png",
     "docs/guides/strider-git-gogs/git-gogs-1.png": "guides/strider-git-gogs/git-gogs-1.png",
     "docs/guides/strider-git-gogs/git-gogs-2.png": "guides/strider-git-gogs/git-gogs-2.png",
-    "docs/guides/strider-git-gogs/git-gogs-3.png": "guides/strider-git-gogs/git-gogs-3.png",
     "docs/guides/strider-git-gogs/git-gogs-4.png": "guides/strider-git-gogs/git-gogs-4.png",
+    "docs/guides/strider-git-gogs/git-gogs-3.png": "guides/strider-git-gogs/git-gogs-3.png",
     "docs/guides/strider-git-gogs/git-gogs-5.png": "guides/strider-git-gogs/git-gogs-5.png",
-    "docs/guides/strider-webhooks/strider-webhooks-2.png": "guides/strider-webhooks/strider-webhooks-2.png",
     "docs/guides/strider-webhooks/strider-webhooks-1.png": "guides/strider-webhooks/strider-webhooks-1.png",
+    "docs/guides/strider-webhooks/strider-webhooks-2.png": "guides/strider-webhooks/strider-webhooks-2.png",
     "docs/guides/strider-webhooks/strider-webhooks-3.png": "guides/strider-webhooks/strider-webhooks-3.png",
     "docs/guides/strider-webhooks/strider-webhooks-4.png": "guides/strider-webhooks/strider-webhooks-4.png",
     "docs/guides/strider-write-own-plugin/strider-plugin-1.png": "guides/strider-write-own-plugin/strider-plugin-1.png",
     "docs/guides/strider-write-own-plugin/strider-plugin-2.png": "guides/strider-write-own-plugin/strider-plugin-2.png",
     "docs/guides/strider-write-own-plugin/strider-plugin-3.png": "guides/strider-write-own-plugin/strider-plugin-3.png",
     "docs/guides/continuous-deployment/heroku-deploy/Thumbs.db": "guides/continuous-deployment/heroku-deploy/Thumbs.db",
-    "docs/guides/continuous-deployment/heroku-deploy/heroku-1.png": "guides/continuous-deployment/heroku-deploy/heroku-1.png",
     "docs/guides/continuous-deployment/heroku-deploy/heroku-10.png": "guides/continuous-deployment/heroku-deploy/heroku-10.png",
     "docs/guides/continuous-deployment/heroku-deploy/heroku-11.png": "guides/continuous-deployment/heroku-deploy/heroku-11.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-1.png": "guides/continuous-deployment/heroku-deploy/heroku-1.png",
     "docs/guides/continuous-deployment/heroku-deploy/heroku-12.png": "guides/continuous-deployment/heroku-deploy/heroku-12.png",
     "docs/guides/continuous-deployment/heroku-deploy/heroku-13.png": "guides/continuous-deployment/heroku-deploy/heroku-13.png",
     "docs/guides/continuous-deployment/heroku-deploy/heroku-2.png": "guides/continuous-deployment/heroku-deploy/heroku-2.png",
-    "docs/guides/continuous-deployment/heroku-deploy/heroku-3.png": "guides/continuous-deployment/heroku-deploy/heroku-3.png",
     "docs/guides/continuous-deployment/heroku-deploy/heroku-4.png": "guides/continuous-deployment/heroku-deploy/heroku-4.png",
+    "docs/guides/continuous-deployment/heroku-deploy/heroku-3.png": "guides/continuous-deployment/heroku-deploy/heroku-3.png",
     "docs/guides/continuous-deployment/heroku-deploy/heroku-5.png": "guides/continuous-deployment/heroku-deploy/heroku-5.png",
     "docs/guides/continuous-deployment/heroku-deploy/heroku-6.png": "guides/continuous-deployment/heroku-deploy/heroku-6.png",
     "docs/guides/continuous-deployment/heroku-deploy/heroku-7.png": "guides/continuous-deployment/heroku-deploy/heroku-7.png",
@@ -2182,50 +2002,50 @@
     "docs/guides/notifications/notifications-email/email-4.png": "guides/notifications/notifications-email/email-4.png",
     "docs/guides/notifications/notifications-github-status/Thumbs.db": "guides/notifications/notifications-github-status/Thumbs.db",
     "docs/guides/notifications/notifications-github-status/github-status-1.png": "guides/notifications/notifications-github-status/github-status-1.png",
-    "docs/guides/notifications/notifications-github-status/github-status-2.png": "guides/notifications/notifications-github-status/github-status-2.png",
     "docs/guides/notifications/notifications-github-status/github-status-3.png": "guides/notifications/notifications-github-status/github-status-3.png",
     "docs/guides/notifications/notifications-github-status/github-status-4.png": "guides/notifications/notifications-github-status/github-status-4.png",
     "docs/guides/notifications/notifications-github-status/github-status-5.png": "guides/notifications/notifications-github-status/github-status-5.png",
-    "docs/guides/notifications/notifications-hipchat/Thumbs.db": "guides/notifications/notifications-hipchat/Thumbs.db",
+    "docs/guides/notifications/notifications-github-status/github-status-2.png": "guides/notifications/notifications-github-status/github-status-2.png",
     "docs/guides/notifications/notifications-hipchat/hipchat-1.png": "guides/notifications/notifications-hipchat/hipchat-1.png",
-    "docs/guides/notifications/notifications-hipchat/hipchat-2.png": "guides/notifications/notifications-hipchat/hipchat-2.png",
+    "docs/guides/notifications/notifications-hipchat/Thumbs.db": "guides/notifications/notifications-hipchat/Thumbs.db",
     "docs/guides/notifications/notifications-hipchat/hipchat-3.png": "guides/notifications/notifications-hipchat/hipchat-3.png",
     "docs/guides/notifications/notifications-hipchat/hipchat-4.png": "guides/notifications/notifications-hipchat/hipchat-4.png",
     "docs/guides/notifications/notifications-hipchat/hipchat-5.png": "guides/notifications/notifications-hipchat/hipchat-5.png",
+    "docs/guides/notifications/notifications-hipchat/hipchat-2.png": "guides/notifications/notifications-hipchat/hipchat-2.png",
     "docs/guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png": "guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.40.51.png",
     "docs/guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.44.47.png": "guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.44.47.png",
     "docs/guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.45.23.png": "guides/notifications/notifications-slack/Bildschirmfoto 2015-05-02 um 10.45.23.png",
     "docs/guides/notifications/notifications-slack/slack-1.png": "guides/notifications/notifications-slack/slack-1.png",
-    "docs/guides/notifications/notifications-slack/slack-2.png": "guides/notifications/notifications-slack/slack-2.png",
-    "docs/guides/notifications/notifications-slack/slack-3.png": "guides/notifications/notifications-slack/slack-3.png",
     "docs/guides/notifications/notifications-slack/slack-4.png": "guides/notifications/notifications-slack/slack-4.png",
+    "docs/guides/notifications/notifications-slack/slack-3.png": "guides/notifications/notifications-slack/slack-3.png",
+    "docs/guides/notifications/notifications-slack/slack-2.png": "guides/notifications/notifications-slack/slack-2.png",
     "docs/guides/notifications/notifications-slack/slack-5.png": "guides/notifications/notifications-slack/slack-5.png",
     "docs/guides/notifications/notifications-slack/slack-6.png": "guides/notifications/notifications-slack/slack-6.png",
     "docs/guides/notifications/notifications-slack/slack-7.png": "guides/notifications/notifications-slack/slack-7.png",
     "docs/guides/providers/strider-manual-add-repo-with-email-showing.png": "guides/providers/strider-manual-add-repo-with-email-showing.png",
     "docs/guides/providers/strider-manual-add-repo.png": "guides/providers/strider-manual-add-repo.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-1.png": "guides/providers/strider-bitbucket/strider-bitbucket-1.png",
-    "docs/guides/providers/strider-bitbucket/strider-bitbucket-2-1.png": "guides/providers/strider-bitbucket/strider-bitbucket-2-1.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-2.png": "guides/providers/strider-bitbucket/strider-bitbucket-2.png",
+    "docs/guides/providers/strider-bitbucket/strider-bitbucket-2-1.png": "guides/providers/strider-bitbucket/strider-bitbucket-2-1.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-3.png": "guides/providers/strider-bitbucket/strider-bitbucket-3.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-4.png": "guides/providers/strider-bitbucket/strider-bitbucket-4.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-5-org.png": "guides/providers/strider-bitbucket/strider-bitbucket-5-org.png",
     "docs/guides/providers/strider-bitbucket/strider-bitbucket-5.png": "guides/providers/strider-bitbucket/strider-bitbucket-5.png",
-    "docs/guides/providers/strider-gitlab/strider-gitlab-1.png": "guides/providers/strider-gitlab/strider-gitlab-1.png",
-    "docs/guides/providers/strider-gitlab/strider-gitlab-1-old.png": "guides/providers/strider-gitlab/strider-gitlab-1-old.png",
-    "docs/guides/providers/strider-gitlab/strider-gitlab-2.png": "guides/providers/strider-gitlab/strider-gitlab-2.png",
-    "docs/guides/providers/strider-gitlab/strider-gitlab-3.png": "guides/providers/strider-gitlab/strider-gitlab-3.png",
-    "docs/guides/providers/strider-gitlab/strider-gitlab-4.png": "guides/providers/strider-gitlab/strider-gitlab-4.png",
-    "docs/guides/providers/strider-gitlab/strider-gitlab-5.png": "guides/providers/strider-gitlab/strider-gitlab-5.png",
     "docs/guides/providers/strider-github/github-webhook.png": "guides/providers/strider-github/github-webhook.png",
-    "docs/guides/providers/strider-github/strider-github-3.png": "guides/providers/strider-github/strider-github-3.png",
     "docs/guides/providers/strider-github/strider-github-1.png": "guides/providers/strider-github/strider-github-1.png",
+    "docs/guides/providers/strider-github/strider-github-3.png": "guides/providers/strider-github/strider-github-3.png",
     "docs/guides/providers/strider-github/strider-github-4.png": "guides/providers/strider-github/strider-github-4.png",
     "docs/guides/providers/strider-github/strider-github-5.png": "guides/providers/strider-github/strider-github-5.png",
     "docs/guides/providers/strider-github/strider-github-6.png": "guides/providers/strider-github/strider-github-6.png",
     "docs/guides/providers/strider-github/strider-github-7.png": "guides/providers/strider-github/strider-github-7.png",
     "docs/guides/providers/strider-github/strider-github-8.png": "guides/providers/strider-github/strider-github-8.png",
     "docs/guides/providers/strider-github/strider-github-authorize-application.png": "guides/providers/strider-github/strider-github-authorize-application.png",
-    "docs/guides/providers/strider-github/strider-github-register-app.png": "guides/providers/strider-github/strider-github-register-app.png"
+    "docs/guides/providers/strider-github/strider-github-register-app.png": "guides/providers/strider-github/strider-github-register-app.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-1-old.png": "guides/providers/strider-gitlab/strider-gitlab-1-old.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-1.png": "guides/providers/strider-gitlab/strider-gitlab-1.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-2.png": "guides/providers/strider-gitlab/strider-gitlab-2.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-3.png": "guides/providers/strider-gitlab/strider-gitlab-3.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-4.png": "guides/providers/strider-gitlab/strider-gitlab-4.png",
+    "docs/guides/providers/strider-gitlab/strider-gitlab-5.png": "guides/providers/strider-gitlab/strider-gitlab-5.png"
   }
 }

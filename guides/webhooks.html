@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../assets/style.css?t=90051322">
     <link rel="stylesheet" href="../styles/rsc.css?t=b3b3e441">
     <link rel="stylesheet" href="../styles/main.css?t=995a1369">
-    <script src="../assets/script.js?t=42463e55"></script>
+    <script src="../assets/script.js?t=93f1a66c"></script>
     <title>Webhooks - Strider</title>
     <meta name="viewport" content="width=device-width">
   </head>
@@ -13,78 +13,80 @@
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
       <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1"><a class="link title  link-index" href="../index.html">Strider</a>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../guides/platform-overview.html">Overview</a>
-                </li>
-                <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../guides/how-to-install.html">Installation</a>
-                </li>
-                <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../guides/configuration.html">Configuration</a>
-                </li>
-                <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
-                  <ul class="submenu">
-                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../guides/providers/github.html">Github</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../guides/providers/gitlab.html">Gitlab</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../guides/providers/bitbucket.html">Bitbucket</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-guidesprovidersmanual" href="../guides/providers/manual.html">Manual</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item -level-2 -parent"><span class="title">Continuous Deployment</span>
-                  <ul class="submenu">
-                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentheroku" href="../guides/continuous-deployment/heroku.html">Heroku</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentssh" href="../guides/continuous-deployment/ssh.html">SSH</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item -level-2 -parent"><span class="title">Notifications</span>
-                  <ul class="submenu">
-                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsemail" href="../guides/notifications/email.html">Email</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsslack" href="../guides/notifications/slack.html">Slack</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationshipchat" href="../guides/notifications/hipchat.html">HipChat</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="../guides/notifications/github.html">GitHub Status</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item -level-2"><a class="link title -active link-guideswebhooks" href="../guides/webhooks.html">Webhooks</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a class="hlink link-install-strider-webhooks-plugin" href="#install-strider-webhooks-plugin">Install Strider-Webhooks Plugin</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a class="hlink link-configure-strider-webhooks-for-strider-project" href="#configure-strider-webhooks-for-strider-project">Configure Strider-Webhooks for Strider Project</a>
-                      <ul class="heading-list -depth-2">
-                        <li class="heading-item -depth-3"><a class="hlink link-payload-data" href="#payload-data">Payload Data</a>
-                        </li>
-                        <li class="heading-item -depth-3"><a class="hlink link-default-request-payload" href="#default-request-payload">Default Request Payload</a>
-                        </li>
-                        <li class="heading-item -depth-3"><a class="hlink link-custom-payload-format" href="#custom-payload-format">Custom Payload Format</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="heading-item -depth-2"><a class="hlink link-test-webhooks-integration" href="#test-webhooks-integration">Test Webhooks Integration</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item -level-2"><a class="link title  link-guidescreate-plugin" href="../guides/create-plugin.html">Create your own plugin</a>
-                </li>
-                <li class="menu-item -level-2"><a class="link title  link-api" href="../api.html">Internal API</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+        <ul>
+          <li class="menu-item -level-0 -parent">
+            <ul class="submenu">
+              <li class="menu-item -level-1"><a class="link title  link-index" href="../index.html">Strider</a>
+              </li>
+              <li class="menu-item -level-1 -parent"><span class="title">Guides</span>
+                <ul class="submenu">
+                  <li class="menu-item -level-2"><a class="link title  link-guidesplatform-overview" href="../guides/platform-overview.html">Overview</a>
+                  </li>
+                  <li class="menu-item -level-2"><a class="link title  link-guideshow-to-install" href="../guides/how-to-install.html">Installation</a>
+                  </li>
+                  <li class="menu-item -level-2"><a class="link title  link-guidesconfiguration" href="../guides/configuration.html">Configuration</a>
+                  </li>
+                  <li class="menu-item -level-2 -parent"><span class="title">Providers</span>
+                    <ul class="submenu">
+                      <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgithub" href="../guides/providers/github.html">Github</a>
+                      </li>
+                      <li class="menu-item -level-3"><a class="link title  link-guidesprovidersgitlab" href="../guides/providers/gitlab.html">Gitlab</a>
+                      </li>
+                      <li class="menu-item -level-3"><a class="link title  link-guidesprovidersbitbucket" href="../guides/providers/bitbucket.html">Bitbucket</a>
+                      </li>
+                      <li class="menu-item -level-3"><a class="link title  link-guidesprovidersmanual" href="../guides/providers/manual.html">Manual</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item -level-2 -parent"><span class="title">Continuous Deployment</span>
+                    <ul class="submenu">
+                      <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentheroku" href="../guides/continuous-deployment/heroku.html">Heroku</a>
+                      </li>
+                      <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentssh" href="../guides/continuous-deployment/ssh.html">SSH</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item -level-2 -parent"><span class="title">Notifications</span>
+                    <ul class="submenu">
+                      <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsemail" href="../guides/notifications/email.html">Email</a>
+                      </li>
+                      <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsslack" href="../guides/notifications/slack.html">Slack</a>
+                      </li>
+                      <li class="menu-item -level-3"><a class="link title  link-guidesnotificationshipchat" href="../guides/notifications/hipchat.html">HipChat</a>
+                      </li>
+                      <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="../guides/notifications/github.html">GitHub Status</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item -level-2"><a class="link title -active link-guideswebhooks" href="../guides/webhooks.html">Webhooks</a>
+                    <ul class="headings heading-list">
+                      <li class="heading-item -depth-2"><a class="hlink link-install-strider-webhooks-plugin" href="#install-strider-webhooks-plugin">Install Strider-Webhooks Plugin</a>
+                      </li>
+                      <li class="heading-item -depth-2"><a class="hlink link-configure-strider-webhooks-for-strider-project" href="#configure-strider-webhooks-for-strider-project">Configure Strider-Webhooks for Strider Project</a>
+                        <ul class="heading-list -depth-2">
+                          <li class="heading-item -depth-3"><a class="hlink link-payload-data" href="#payload-data">Payload Data</a>
+                          </li>
+                          <li class="heading-item -depth-3"><a class="hlink link-default-request-payload" href="#default-request-payload">Default Request Payload</a>
+                          </li>
+                          <li class="heading-item -depth-3"><a class="hlink link-custom-payload-format" href="#custom-payload-format">Custom Payload Format</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="heading-item -depth-2"><a class="hlink link-test-webhooks-integration" href="#test-webhooks-integration">Test Webhooks Integration</a>
+                      </li>
+                      <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item -level-2"><a class="link title  link-guidescreate-plugin" href="../guides/create-plugin.html">Create your own plugin</a>
+                  </li>
+                  <li class="menu-item -level-2"><a class="link title  link-api" href="../api.html">Internal API</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
       <div class="body page-guideswebhooks">
         <div class="header-nav">
@@ -100,14 +102,14 @@
 <hr>
 <h2 id="install-strider-webhooks-plugin">Install Strider-Webhooks Plugin</h2>
 <p>Strider provides the <a href="https://github.com/Strider-CD/strider-webhooks">strider-webhooks</a> plugin within its ecosystem index. You can install the plugin straight from the admin panel&#x2019;s plugin overview.</p>
-<p><img src="" alt="Strider Admin Panel &#x2014; Plugin Overview"></p>
+<p><img src alt="Strider Admin Panel &#x2014; Plugin Overview"></p>
 <p>Search for <strong>Web Hooks</strong> and make sure the plugin is installed. If not, click the <strong>Install</strong> button.</p>
 <h2 id="configure-strider-webhooks-for-strider-project">Configure Strider-Webhooks for Strider Project</h2>
 <p>Head over to the project&#x2019;s settings page. Click the plugin link in the left sidebar. Now drag &amp; drop the <strong>Webhooks</strong> card from <strong>Available Plugins</strong> to <strong>Active Plugins</strong>. A new link called <strong>Webhooks</strong> will appear within the left sidebar once you dropped the card into the available plugins list.</p>
-<p><img src="" alt="Project Settings &#x2014; Plugin Overview"></p>
+<p><img src alt="Project Settings &#x2014; Plugin Overview"></p>
 <p>Click the newly created Webhooks link in the sidebar to open the detailed settings page for webhooks on this project.</p>
 <p>You need to fill at least the value for <strong>TargetURL for HTTP Post</strong> to make the plugin work. It will send a HTTP POST request to your defined url and by default add a request body in a given format.</p>
-<p><img src="" alt="Strider Webhooks &#x2014; Plugin Settings"></p>
+<p><img src alt="Strider Webhooks &#x2014; Plugin Settings"></p>
 <p>Configuration options:</p>
 <ul>
 <li>Hook Title: identifier to distinct differnt web hooks</li>
@@ -149,7 +151,7 @@
 <p><strong>Remember: the current version 0.1.2 doesn&#x2019;t support the definition of any custom payload format.</strong> This will be fixed in future versions.</p>
 <h2 id="test-webhooks-integration">Test Webhooks Integration</h2>
 <p>That&#x2019;s it. The configuration is done and we can use the webhook right away. Hit the Retest button and start the build run. Once the integration finishes, the webhook gets fired.</p>
-<p><img src="" alt="Strider Build Details &#x2014; Webhook Fired"></p>
+<p><img src alt="Strider Build Details &#x2014; Webhook Fired"></p>
 <p>The webhook plugin prints a line (colored purple) at the bottom of the <strong>test</strong> phase. It uses the provided hook title as and identifier.</p>
 <pre><code># Firing webhook &lt;hook-title&gt;
 </code></pre>
