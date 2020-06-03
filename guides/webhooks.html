@@ -74,8 +74,6 @@
                       </li>
                       <li class="heading-item -depth-2"><a class="hlink link-test-webhooks-integration" href="#test-webhooks-integration">Test Webhooks Integration</a>
                       </li>
-                      <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
-                      </li>
                     </ul>
                   </li>
                   <li class="menu-item -level-2"><a class="link title  link-guidescreate-plugin" href="../guides/create-plugin.html">Create your own plugin</a>
@@ -97,9 +95,6 @@
         <div class="markdown-body"><h1 id="strider-configure-and-use-webhooks">Strider &#x2014; Configure and Use Webhooks</h1>
 <p>This series about Strider guides you through the setup process of various use cases to connect Strider and other software platforms like GitHub, GitLab, BitBucket, Slack, Heroku, HipChat, and so on.</p>
 <p>Besides the defined data flow between Strider and those apps, you can use webhooks to request a specific url once the build process finished. Additionally, you can define the data and format of your request&#x2019;s payload.</p>
-<hr>
-<p>Outline</p>
-<hr>
 <h2 id="install-strider-webhooks-plugin">Install Strider-Webhooks Plugin</h2>
 <p>Strider provides the <a href="https://github.com/Strider-CD/strider-webhooks">strider-webhooks</a> plugin within its ecosystem index. You can install the plugin straight from the admin panel&#x2019;s plugin overview.</p>
 <p><img src alt="Strider Admin Panel &#x2014; Plugin Overview"></p>
@@ -142,7 +137,7 @@
     &quot;repo_url&quot;:&quot;git://github.com/fs-opensource/hapi-rethinkdb-dash.git&quot;,
     &quot;test_exitcode&quot;:0,
     &quot;finish_time&quot;:&quot;2015-05-18T08:06:04.824Z&quot;
-  }&apos; 
+  }&apos;
 }
 </code></pre>
 <p>The payload data is sent as query parameters with the POST request. You may need to parse it for further operations.</p>
@@ -155,10 +150,6 @@
 <p>The webhook plugin prints a line (colored purple) at the bottom of the <strong>test</strong> phase. It uses the provided hook title as and identifier.</p>
 <pre><code># Firing webhook &lt;hook-title&gt;
 </code></pre>
-<h2 id="what-comes-next">What Comes Next</h2>
-<p>We&#x2019;re heading towards the finish line for this Strider series. Within this post, we show you how to configure a webhook for Strider which is executed after the integration runs finshed (success or fail).</p>
-<p>The next post illustrates how to create your own plugin for Strider.</p>
-<p>Having problems creating your own webhook? Please don&#x2019;t hesitate to use the comments below or reach out <a href="https://twitter.com/futurestud_io">@futurestud_io</a>.</p>
 <hr>
 <h4 id="additional-ressources">Additional Ressources</h4>
 <ul>

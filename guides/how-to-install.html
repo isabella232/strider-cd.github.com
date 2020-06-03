@@ -143,7 +143,7 @@ npm start
 # or
 bin/strider
 </code></pre>
-<p>This way requires you run a local MongoDB instance without authentication. If you use a MongoDB  instance with authentication turned on (we recommend that!), the start up command will print out connection errors with MongoDB. You can follow the steps below to set up Strider correctly for MongoDB with activated authentication.</p>
+<p>This way requires you run a local MongoDB instance without authentication. If you use a MongoDB instance with authentication turned on (we recommend that!), the start up command will print out connection errors with MongoDB. You can follow the steps below to set up Strider correctly for MongoDB with activated authentication.</p>
 <h2 id="running-strider-with-activated-mongodb-authentication">Running Strider with Activated MongoDB Authentication</h2>
 <p>We totally recommend to run MongoDB with authentication. You need to create a MongoDB user, a database and grant the user access to the database.</p>
 <h3 id="create-strider-user-in-mongodb">Create Strider User in MongoDB</h3>
@@ -165,7 +165,7 @@ db.createUser({user: &quot;strider&quot;, pwd: &quot;striderpw&quot;, roles: [{r
 <p>Change the MongoDB port if you run MongoDB on another port than the default <code>27017</code>.</p>
 <pre><code>DB_URI=&quot;mongodb://strider:striderpw@localhost:27017/strider&quot; npm start
 </code></pre>
-<p>We&apos;ll cover more configuration options in the next post. For now it&apos;s important to know that <code>DB_URI</code> configures a custom MongoDB connection string.</p>
+<p>For now it&apos;s important to know that <code>DB_URI</code> configures a custom MongoDB connection string.</p>
 <h2 id="start-strider-in-production">Start Strider in Production</h2>
 <p>For production environments, please use the <code>NODE_ENV</code> environment variable to set Strider into production mode. By default, Strider starts into development mode and you need to make the switch</p>
 <pre><code>NODE_ENV=production npm start

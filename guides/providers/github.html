@@ -110,9 +110,7 @@
 <p><img src="strider-github/strider-github-3.png" alt="GitHub Application Details"></p>
 <p>That&#x2019;s the GitHub configuration part. Now we go back to Strider and configure the server.</p>
 <h2 id="configure-strider-server">Configure Strider Server</h2>
-<p>The previous post illustrates the options to configure Strider and how to pass your option values to the Strider deployment.</p>
-<p>Ok, the bad news first: the <a href="https://github.com/Strider-CD/strider-github">strider-github</a> plugin doesn&#x2019;t recognize configuration values passed through the <code>.striderrc</code> file. You have to pass config values via environment variables.</p>
-<p>The GitHub plugin for Strider requires at least 3 configuration options defined: <code>SERVER_NAME</code>, <code>PLUGIN_GITHUB_APP_ID</code> and <code>PLUGIN_GITHUB_APP_SECRET </code>.</p>
+<p>The GitHub plugin for Strider requires at least 3 configuration options defined: <code>SERVER_NAME</code>, <code>PLUGIN_GITHUB_APP_ID</code> and <code>PLUGIN_GITHUB_APP_SECRET</code>.</p>
 <p>Stop your Strider server if currently running. Define the environment variables either system-wide via `export KEY=VALUE&#xB4; or just pass the variable values to the process.</p>
 <pre><code># export the values and start Strider afterwards
 export SERVER_NAME=&quot;https://your.strider.url&quot;

@@ -56,8 +56,6 @@
                           </li>
                           <li class="heading-item -depth-2"><a class="hlink link-test-the-strider-heroku-deployment-pipeline" href="#test-the-strider-heroku-deployment-pipeline">Test the Strider-Heroku-Deployment Pipeline</a>
                           </li>
-                          <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
-                          </li>
                         </ul>
                       </li>
                       <li class="menu-item -level-3"><a class="link title  link-guidescontinuous-deploymentssh" href="../../guides/continuous-deployment/ssh.html">SSH</a>
@@ -95,11 +93,7 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="continuous-deployment-to-heroku">Continuous Deployment to Heroku</h1>
-<p>At Future Studio we use Strider in production to test our code and deploy it right away when all lights are green. The deployment from Strider to Heroku can be done easily using the plugin to connect both plattforms.</p>
-<p>Before we start, let&#x2019;s have a look at other articles in this series of Strider posts.</p>
-<p>&#x2014;
-<strong>TODO</strong>: add outline
-&#x2014;</p>
+<p>The deployment from Strider to Heroku can be done easily using the plugin to connect both platforms.</p>
 <h2 id="create-heroku-api-client">Create Heroku API Client</h2>
 <p>Access and deploy projects to Heroku requires either the command line interface or an application. We use the second and deploy the projects code from Strider right after successful integration.</p>
 <p>First, go to your Heroku Profile settings and click the tab <a href="https://dashboard.heroku.com/account/applications"><strong>Applications</strong></a>. Create a new API Client by clicking the button <strong>Register New API Client</strong>.</p>
@@ -127,7 +121,7 @@ export PLUGIN_HEROKU_CLIENT_SECRET=&#x201E;your-heroku-client-secret&#x201C;
 <p>Now start strider and the Heroku plugin will detect the newly set configuration values.</p>
 <p>Your Strider server is configured, now we head over to install the Heroku plugin and add your Heroku account.</p>
 <h2 id="install-strider-heroku-plugin">Install Strider-Heroku Plugin</h2>
-<p>To install the <a href="https://github.com/Strider-CD/strider-heroku">strider-heroku</a> plugin, head over to the plugin   section in Strider&#x2019;s admin panel.</p>
+<p>To install the <a href="https://github.com/Strider-CD/strider-heroku">strider-heroku</a> plugin, head over to the plugin section in Strider&#x2019;s admin panel.</p>
 <p><img src alt="Strider Plugin Overview"></p>
 <p>Search for <strong>Heroku</strong> and click <strong>Install</strong> if the plugin isn&#x2019;t already installed.</p>
 <h2 id="connect-strider-with-heroku">Connect Strider with Heroku</h2>
@@ -152,10 +146,6 @@ export PLUGIN_HEROKU_CLIENT_SECRET=&#x201E;your-heroku-client-secret&#x201C;
 <p><img src alt="Heroku Deployment from Strider"></p>
 <p>If everything went smooth, you can view your project right after the deployment finished. Visit your Heroku app domain to check the health state.</p>
 <p><img src alt="Deployed App on Heroku"></p>
-<h2 id="what-comes-next">What Comes Next</h2>
-<p>We did it! What a great feeling to have a complete continuous integration and deployment pipleline. With the previously published blog posts, you&#x2019;re able to connect Strider with your git repositories and this guide walks you through the process to setup Strider with Heroku.</p>
-<p>The next post shows you how to deploy your project via SSH to any server.</p>
-<p>Please keep in mind: use the comments or shoot us <a href="https://twitter.com/futurestud_io">@futurestud_io</a> if you run into problems.</p>
 
         </div>
         <div class="footer-nav">

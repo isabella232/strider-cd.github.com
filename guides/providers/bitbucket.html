@@ -105,9 +105,7 @@
 <p><img src alt="Bitbucket Application Information"></p>
 <p>We need both values (client key and secret) to configure the Strider server for correct access to your Bitbucket repositories.</p>
 <h2 id="configure-strider-server">Configure Strider Server</h2>
-<p>A previous post about configuring Strider depicts the abilities to set the system configuration via environment variables or a config file.</p>
-<p>The bad news: <a href="https://github.com/Strider-CD/strider-bitbucket">strider-bitbucket</a> ignores the configuration defined in <code>.striderrc</code> config file and requires you to configure the plugin key and secret via environment variables.</p>
-<p>Stop the currently running Strider server and use the configuration option of your choice to set the environtment.</p>
+<p>Stop the currently running Strider server and use the configuration option of your choice to set the environment.</p>
 <pre><code># add this configuration to the previously defined Strider config
 export PLUGIN_BITBUCKET_APP_KEY=&quot;appkey&quot;
 export PLUGIN_BITBUCKET_APP_SECRET=&quot;appsecret&quot;

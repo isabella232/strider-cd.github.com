@@ -62,8 +62,6 @@
                           </li>
                           <li class="heading-item -depth-2"><a class="hlink link-test-hipchat-notifications" href="#test-hipchat-notifications">Test HipChat Notifications</a>
                           </li>
-                          <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
-                          </li>
                         </ul>
                       </li>
                       <li class="menu-item -level-3"><a class="link title  link-guidesnotificationsgithub" href="../../guides/notifications/github.html">GitHub Status</a>
@@ -108,7 +106,7 @@ npm install strider-hipchat
 <p><img src alt="HipChat &#x2014; Create Authentication Token"></p>
 <p><strong>Hint:</strong> Lately, HipChat released a new version of their API (v2). We still use <strong>version 1</strong> to send notifications.</p>
 <h2 id="configure-notifications-for-strider-project">Configure Notifications for Strider Project</h2>
-<p>Go back to Strider and navigate to the settings of the project you want to enable HipChat notifications for. Head over to the <strong>Plugins</strong> view. Drag and drop the now available <em>Hipchat</em>  plugin from <strong>Available Plugins</strong> to <strong>Active Plugins</strong>. This will add a new link in the left sidebar.</p>
+<p>Go back to Strider and navigate to the settings of the project you want to enable HipChat notifications for. Head over to the <strong>Plugins</strong> view. Drag and drop the now available <em>Hipchat</em> plugin from <strong>Available Plugins</strong> to <strong>Active Plugins</strong>. This will add a new link in the left sidebar.</p>
 <p><img src alt="Strider Project Plugin Settings"></p>
 <p>Now click the <strong>Hipchat</strong> link in the left sidebar to open the plugin settings. We need the previously created authentication token and the room id.</p>
 <p><img src alt="Strider-HipChat Plugin Settings"></p>
@@ -118,7 +116,7 @@ npm install strider-hipchat
 <pre><code>${name} has started a &lt;a href=&quot;${job}&quot;&gt;${type}&lt;/a&gt; run
 </code></pre>
 <p><strong>Success</strong></p>
-<pre><code>${name} has finished a &lt;a href=&quot;${job}&quot;&gt;${type}&lt;/a&gt; run
+<pre><code>${name} has finished a &lt;a href=&quot;${job}&quot;&gt;\${type}&lt;/a&gt; run
 </code></pre>
 <p><strong>Failure</strong></p>
 <pre><code>${name} has &lt;a href=&quot;${job}&quot;&gt;failed&lt;/a&gt;
@@ -131,10 +129,6 @@ npm install strider-hipchat
 <p><img src alt="HipChat Notifications from Strider"></p>
 <p>That&#x2019;s it. If everything is correctly configured you&#x2019;ll see the notification messages in your HipChat room.</p>
 <p><strong>Hint:</strong> there won&#x2019;t be any message in the build process that the notification was sent to HipChat. The plugins needs some enhancements to integrate properly into the build process. If you don&#x2019;t receive any notifications, have a look at your Strider logs or add manually debug messages to the plugin.</p>
-<h2 id="what-comes-next">What Comes Next</h2>
-<p>Being informed about successful or failed builds and deployments may be an important part of your development process. This guides helps you to set up Strider with HipChat and automatically send notifications about build processes.</p>
-<p>The next post shows you how to use the GitHub Status API and send build statuses for pull requests from Strider back to GitHub.</p>
-<p>In case you need help getting Strider to notifiy HipChat correctly, use the comments below or shoot us <a href="https://twitter.com/futurestud_io">@futurestud_io</a>.</p>
 <hr>
 <h4 id="additional-ressources">Additional Ressources</h4>
 <ul>

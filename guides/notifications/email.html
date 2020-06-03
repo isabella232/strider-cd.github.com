@@ -85,16 +85,7 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="strider-enable-email-notifications">Strider &#x2014; Enable Email Notifications</h1>
-<p>The previous blogpost was about the inital add of a git repository. This article illustrates the steps to configure Strider for Email Notifications. First, let&apos;s start with an overview of related Strider blogposts.</p>
-<hr>
-<p>Strider Post Overview</p>
-<ol>
-<li>Manual Add Repository</li>
-<li>Enable Email Notifications</li>
-<li>Configure Webhooks</li>
-<li>Test any Git Repository with SSH</li>
-</ol>
-<hr>
+<p>This article illustrates the steps to configure Strider for Email Notifications. First, let&apos;s start with an overview of related Strider blogposts.</p>
 <h2 id="configure-strider-server-for-email-notifications">Configure Strider Server for Email Notifications</h2>
 <p>Strider email notifications require a proper server setup with SMTP configuration. You can use services like <a href="http://www.mailgun.com/">Mailgun</a>, <a href="https://mandrill.com/">Mandrill</a>, <a href="https://postmarkapp.com/">Postmark</a> or whatever you want sending email notifications.</p>
 <p>You have to configure the Strider server and pass the SMTP credentials as environment variables to the server process. You can pass the SMTP configuration as parameters for the start command like <code>SMTP_PORT=587 SMTP_HOST=&quot;smtp.mailgun.org ./bin/strider</code> or set the environment variables using <code>export SMTP_HOST=&quot;my.smtp.server&quot;</code>.</p>

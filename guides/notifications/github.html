@@ -62,8 +62,6 @@
                           </li>
                           <li class="heading-item -depth-2"><a class="hlink link-test-github-status-integration" href="#test-github-status-integration">Test GitHub-Status Integration</a>
                           </li>
-                          <li class="heading-item -depth-2"><a class="hlink link-what-comes-next" href="#what-comes-next">What Comes Next</a>
-                          </li>
                         </ul>
                       </li>
                     </ul>
@@ -88,15 +86,11 @@
         </div>
         <div class="markdown-body"><h1 id="strider-report-build-status-to-github">Strider &#x2014; Report Build Status to GitHub</h1>
 <p>GitHub provides a powerful status API indicating if builds succeed or fail. Strider offers the ability to use the status API with the help of a plugin and attach build statuses to pull requests.</p>
-<p>We&#x2019;re heading towards the end of this Strider series and want to show you an overview of previously published articles before moving on and report build statuses to GitHub.</p>
-<hr>
-<p>Outline</p>
-<hr>
 <h2 id="install-strider-github-status-plugin">Install Strider-GitHub-Status Plugin</h2>
-<p>If you read other articles in this series you know that Strider composes of plugins. Of course there is a plugin to report build status  to GitHub, too. The <a href="https://github.com/Strider-CD/strider-github-status">strider-github-status</a> plugin requires the <strong><a href="https://github.com/Strider-CD/strider-github">strider-github</a></strong> plugin to be already installed. In case you don&#x2019;t have <a href>Strider connected with GitHub</a> already, you can follow our guide first and resume later.</p>
+<p>If you read other articles in this series you know that Strider composes of plugins. Of course there is a plugin to report build status to GitHub, too. The <a href="https://github.com/Strider-CD/strider-github-status">strider-github-status</a> plugin requires the <strong><a href="https://github.com/Strider-CD/strider-github">strider-github</a></strong> plugin to be already installed. In case you don&#x2019;t have <a href>Strider connected with GitHub</a> already, you can follow our guide first and resume later.</p>
 <p>Installed strider-github plugin? Awesome, let&#x2019;s get our hands dirty and install the plugin to send statuses back to commits.</p>
 <p>First, SSH into your server and change to Strider&#x2019;s installation directory. We use <code>npm</code> to install the strider-github-status plugin, since it&#x2019;s not integrated in the Strider ecosystem yet.</p>
-<pre><code>cd /path/to/your/strider        
+<pre><code>cd /path/to/your/strider
 npm install strider-github-status
 </code></pre>
 <p>Restart your Strider server and it will load the plugin during startup.</p>
@@ -115,10 +109,6 @@ npm install strider-github-status
 <p>Completing the build either successful or failing, Strider reports the build status back to GitHub and changes the previously defined from <strong>pending</strong> to <strong>success</strong> or <strong>failure</strong>. GitHub will then adjust the UI respectively.</p>
 <p><img src alt="GitHub Pull Request &#x2014; Build Status Finished"></p>
 <p>That&#x2019;s it. Strider automatically reports the build status for pull requests to GitHub.</p>
-<h2 id="what-comes-next">What Comes Next</h2>
-<p>This guide walks you through the configuration process of how to report build statuses for commits in pull requests back to GitHub.</p>
-<p>Within the next post we&#x2019;ll show you how to use Strider&#x2019;s web hooks to send POST requests on each test run.</p>
-<p>Let us know if you run into trouble. Use the comments below or reach us <a href="https://twitter.com/futurestud_io">@futurestud_io</a></p>
 <hr>
 <h4 id="additional-ressources">Additional Ressources</h4>
 <ul>
