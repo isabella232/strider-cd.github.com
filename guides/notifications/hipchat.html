@@ -88,10 +88,6 @@
         </div>
         <div class="markdown-body"><h1 id="strider-integrate-and-notify-with-hipchat">Strider &#x2014; Integrate and Notify with HipChat</h1>
 <p>HipChat is used by many development teams due to its integration with other Atlassian products. If you still want to use Strider to run your builds and deployments, you can notify rooms about the statuses.</p>
-<p>Let&#x2019;s look at the other posts in this extensive series about Strider.</p>
-<hr>
-<p>Outline</p>
-<hr>
 <h2 id="install-strider-hipchat-plugin">Install Strider-HipChat Plugin</h2>
 <p>The Strider ecosystem provides plugins to integrate with many services and also for HipChat. Sending notifications about build and deployment statuses requires you to install the <a href="https://github.com/jfromaniello/strider-hipchat">strider-hipchat</a> plugin first.</p>
 <p>This time, we can&#x2019;t use the Strider plugin admin panel to seamlessly install additional functionality. We have to get our hands dirty right from the beginning and use the command line to add the hipchat plugin to the Strider platform.</p>
@@ -103,13 +99,13 @@ npm install strider-hipchat
 <h2 id="create-hipchat-authentication-token">Create HipChat Authentication Token</h2>
 <p>Third-party integrations to hipchat require an authentication token to access a specific hipchat room. Generate a <a href="https://futurestudio.hipchat.com/admin/api">new HipChat authentication token</a> for Strider.</p>
 <p>Select the token type <strong>Admin</strong> and provide a label for identification. Even though we want to send Notifications to HipChat, the plugin requires an Admin token.</p>
-<p><img src alt="HipChat &#x2014; Create Authentication Token"></p>
+<p><img src="notifications-hipchat/hipchat-1.png" alt="HipChat &#x2014; Create Authentication Token"></p>
 <p><strong>Hint:</strong> Lately, HipChat released a new version of their API (v2). We still use <strong>version 1</strong> to send notifications.</p>
 <h2 id="configure-notifications-for-strider-project">Configure Notifications for Strider Project</h2>
 <p>Go back to Strider and navigate to the settings of the project you want to enable HipChat notifications for. Head over to the <strong>Plugins</strong> view. Drag and drop the now available <em>Hipchat</em> plugin from <strong>Available Plugins</strong> to <strong>Active Plugins</strong>. This will add a new link in the left sidebar.</p>
-<p><img src alt="Strider Project Plugin Settings"></p>
+<p><img src="notifications-hipchat/hipchat-2.png" alt="Strider Project Plugin Settings"></p>
 <p>Now click the <strong>Hipchat</strong> link in the left sidebar to open the plugin settings. We need the previously created authentication token and the room id.</p>
-<p><img src alt="Strider-HipChat Plugin Settings"></p>
+<p><img src="notifications-hipchat/hipchat-3.png" alt="Strider-HipChat Plugin Settings"></p>
 <p>First, fill the field for your server url. Afterwards, provide the auth token and room id values. The <strong>Send From</strong> field schon be only a single name! No spaces, no dashes, just a single name. We weren&#x2019;t be able to send notifications when typing &#x201E;Future-Studio-Strider&#x201C; and any variant without dashes, but spaces etc. So make sure this value is in correct format: just a single word &#x2026;</p>
 <p>Another thing you can specify are the highlight colors for test and deployment starts, successes and failures. You can use the following messages for your notifications. Of course you can adjust them to your needs and preferences.</p>
 <p><strong>Start</strong></p>
@@ -124,11 +120,11 @@ npm install strider-hipchat
 <p>Save. Provided all values? Great! Then let&#x2019;s go on an test notifications.</p>
 <h2 id="test-hipchat-notifications">Test HipChat Notifications</h2>
 <p>The configuration part is done. We can jump right into the testing and manually start a build for the project we configured a second ago. You can use either the <strong>Deploy</strong> or <strong>Test</strong> buttons in the project settings or visit the project overview and start the build from there.</p>
-<p><img src alt="Strider Project Overview &#x2014; Start Retest and Deploy"></p>
+<p><img src="notifications-hipchat/hipchat-4.png" alt="Strider Project Overview &#x2014; Start Retest and Deploy"></p>
 <p>If everything works fine, you should see the notifications for started tests (and deployments) in your HipChat room.</p>
-<p><img src alt="HipChat Notifications from Strider"></p>
+<p><img src="notifications-hipchat/hipchat-5.png" alt="HipChat Notifications from Strider"></p>
 <p>That&#x2019;s it. If everything is correctly configured you&#x2019;ll see the notification messages in your HipChat room.</p>
-<p><strong>Hint:</strong> there won&#x2019;t be any message in the build process that the notification was sent to HipChat. The plugins needs some enhancements to integrate properly into the build process. If you don&#x2019;t receive any notifications, have a look at your Strider logs or add manually debug messages to the plugin.</p>
+<p><strong>Hint:</strong> there won&#x2019;t be any message in the build process that the notification was sent to HipChat.</p>
 <hr>
 <h4 id="additional-ressources">Additional Ressources</h4>
 <ul>
