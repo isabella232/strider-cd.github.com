@@ -96,18 +96,18 @@ npm install strider-github-status
 <p>Restart your Strider server and it will load the plugin during startup.</p>
 <h2 id="configure-github-status-for-strider-project">Configure GitHub-Status for Strider Project</h2>
 <p>Visit the Strider web interface and head over to the plugin settings of your project. Here, you can drag and drop the <strong>GitHub Status</strong> plugin from <strong>Available Plugins</strong> to <strong>Active Plugins</strong>.</p>
-<p><img src alt="Strider Project&#x2019;s Plugin Settings"></p>
+<p><img src="notifications-github-status/github-status-1.png" alt="Strider Project&#x2019;s Plugin Settings"></p>
 <p>That&#x2019;s it. The plugin is activated and doesn&#x2019;t need any further configuration. Easy, going!</p>
 <p>Activating the GitHub-Status plugin for your project adds a new link in the left sidebar. Click the new <strong>GitHub Status</strong> link and you&#x2019;ll just see the headline <strong>no configuration required</strong>.</p>
-<p><img src alt="Strider GitHub-Status Plugin Configuration"></p>
+<p><img src="notifications-github-status/github-status-2.png" alt="Strider GitHub-Status Plugin Configuration"></p>
 <p>The default web hook configuration on GitHub triggers builds on Strider for your project. Just verify that the checkbox for <strong>Pull Request</strong> is checked. If not, do so and update the GitHub web hook to notify Strider even for pull requests.</p>
-<p><img src alt="GitHub Webhook Settings"></p>
+<p><img src="notifications-github-status/github-status-3.png" alt="GitHub Webhook Settings"></p>
 <h2 id="test-github-status-integration">Test GitHub-Status Integration</h2>
 <p>Testing the GitHub-Status plugin requires you to have a GitHub repository added to Strider.</p>
 <p>Make changes to your repository code on a separate branch or fork and push them to GitHub. Now create a pull request with your changes. The configured web hook for your GitHub repository triggers a Strider build. Strider starts the integration process and in parallel changes the build status on GitHub to <strong>pending</strong>. The pull request overview indicates the pending build.</p>
-<p><img src alt="GitHub Pull Request &#x2014; Build Status Pending"></p>
+<p><img src="notifications-github-status/github-status-4.png" alt="GitHub Pull Request &#x2014; Build Status Pending"></p>
 <p>Completing the build either successful or failing, Strider reports the build status back to GitHub and changes the previously defined from <strong>pending</strong> to <strong>success</strong> or <strong>failure</strong>. GitHub will then adjust the UI respectively.</p>
-<p><img src alt="GitHub Pull Request &#x2014; Build Status Finished"></p>
+<p><img src="notifications-github-status/github-status-5.png" alt="GitHub Pull Request &#x2014; Build Status Finished"></p>
 <p>That&#x2019;s it. Strider automatically reports the build status for pull requests to GitHub.</p>
 <hr>
 <h4 id="additional-ressources">Additional Ressources</h4>
