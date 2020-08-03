@@ -42,7 +42,7 @@
                         <ul class="heading-list -depth-2">
                           <li class="heading-item -depth-3"><a class="hlink link-create-strider-user-in-mongodb" href="#create-strider-user-in-mongodb">Create Strider User in MongoDB</a>
                           </li>
-                          <li class="heading-item -depth-3"><a class="hlink link-pass-database-uri-to-strider" href="#pass-database-uri-to-strider">Pass Database Uri to Strider</a>
+                          <li class="heading-item -depth-3"><a class="hlink link-pass-database-uri-to-strider" href="#pass-database-uri-to-strider">Pass Database URI to Strider</a>
                           </li>
                         </ul>
                       </li>
@@ -118,6 +118,7 @@
 <ul>
 <li><a href="https://nodejs.org/">Node.js</a></li>
 <li><a href="https://docs.npmjs.com/getting-started/installing-node">NPM</a> (ships with Node.js and requires an update)</li>
+<li><a href="https://rushjs.io/pages/intro/get_started/">RushJS</a></li>
 <li><a href="http://www.mongodb.org/downloads">MongoDB</a></li>
 <li><a href="http://git-scm.com/">Git</a></li>
 <li><a href="https://github.com/TooTallNate/node-gyp#installation">node-gyp</a></li>
@@ -133,14 +134,16 @@
 <p>Go to the folder of your choice and clone the Strider code to your machine.</p>
 <h3 id="install-strider">Install Strider</h3>
 <p>Verify all requirements are installed on your machine. From here it&apos;s just one command to get Strider installed.</p>
-<pre><code>npm install
+<pre><code class="lang-sh">rush install
 </code></pre>
 <p>Strider uses the Node Package Manager to install required dependencies and set up a default platform. If there went something wrong during the installation, NPM will output the errors. Strider points to an error where issues with permissions occur installing global modules. In case you have those troubles, set the global modules directory to <code>~/npm</code> by <code>npm config set prefix ~/npm</code>. Additionally, you have to add <code>~/npm/bin</code> to your <code>PATH</code> environment variable.</p>
 <p>The default configuration should be fine to test if everything was installed correctly. Start Strider</p>
-<pre><code># either
+<pre><code class="lang-sh"><span class="pl-c1">cd</span> aps/strider
+
+<span class="pl-c"># either</span>
 npm start
 
-# or
+<span class="pl-c"># or</span>
 bin/strider
 </code></pre>
 <p>This way requires you run a local MongoDB instance without authentication. If you use a MongoDB instance with authentication turned on (we recommend that!), the start up command will print out connection errors with MongoDB. You can follow the steps below to set up Strider correctly for MongoDB with activated authentication.</p>
@@ -148,27 +151,27 @@ bin/strider
 <p>We totally recommend to run MongoDB with authentication. You need to create a MongoDB user, a database and grant the user access to the database.</p>
 <h3 id="create-strider-user-in-mongodb">Create Strider User in MongoDB</h3>
 <p>Connect to MongoDB as an Mongo admin. Authenticate against your <strong>admin</strong> database (or what authentication source you use). Now switch to the database you want to use for Strider. The example snippet below uses <code>strider</code> for user and database name.</p>
-<pre><code># if not running on default port 27017, pass the MongoDB port number
+<pre><code class="lang-sh"><span class="pl-c"># if not running on default port 27017, pass the MongoDB port number</span>
 mongo --port &lt;port&gt;
 
-## Mongo CLI
+<span class="pl-c">## Mongo CLI</span>
 &gt; use admin
-&gt; db.auth(&apos;admin&apos;, &apos;adminpassword&apos;)
+&gt; db.auth(<span class="pl-s">&apos;admin&apos;</span>, <span class="pl-s">&apos;adminpassword&apos;</span>)
 1
 
 use strider
-db.createUser({user: &quot;strider&quot;, pwd: &quot;striderpw&quot;, roles: [{role: &quot;dbOwner&quot;}]})
+db.createUser({user: <span class="pl-s">&quot;strider&quot;</span>, <span class="pl-c1">pwd</span>: <span class="pl-s">&quot;striderpw&quot;</span>, roles: [{role: <span class="pl-s">&quot;dbOwner&quot;</span>}]})
 </code></pre>
 <p>The snippet above creates a new user called <code>strider</code> within the database called <code>strider</code> as well. Futher we assign our <code>strider</code> user the <code>dbOwner</code> role to have correct access rights to modifiy the database.</p>
-<h3 id="pass-database-uri-to-strider">Pass Database Uri to Strider</h3>
+<h3 id="pass-database-uri-to-strider">Pass Database URI to Strider</h3>
 <p>Strider uses <a href="http://mongoosejs.com/">Mongoose</a> for database connection and operations. We need to pass a <a href="http://docs.mongodb.org/manual/reference/connection-string/">connection string</a> to Strider when running MongoDB with authentication. You can use the <code>DB_URI</code> environment variable to pass it to Strider.</p>
 <p>Change the MongoDB port if you run MongoDB on another port than the default <code>27017</code>.</p>
-<pre><code>DB_URI=&quot;mongodb://strider:striderpw@localhost:27017/strider&quot; npm start
+<pre><code class="lang-sh">DB_URI=<span class="pl-s">&quot;mongodb://strider:striderpw@localhost:27017/strider&quot;</span> npm start
 </code></pre>
 <p>For now it&apos;s important to know that <code>DB_URI</code> configures a custom MongoDB connection string.</p>
 <h2 id="start-strider-in-production">Start Strider in Production</h2>
 <p>For production environments, please use the <code>NODE_ENV</code> environment variable to set Strider into production mode. By default, Strider starts into development mode and you need to make the switch</p>
-<pre><code>NODE_ENV=production npm start
+<pre><code class="lang-sh">NODE_ENV=production npm start
 </code></pre>
 <h2 id="how-to-install-plugins">How to Install Plugins</h2>
 <p>Strider provides a command line wrapper to install plugins from the <a href="https://github.com/Strider-CD/ecosystem-index">ecosystem index</a>. If you don&apos;t want to crawl through the command line, you can use the web UI and install new plugins via Strider&apos;s admin panel.</p>
@@ -178,12 +181,12 @@ db.createUser({user: &quot;strider&quot;, pwd: &quot;striderpw&quot;, roles: [{r
 <p>The plugin overview also prints out the currently installed and latest plugin version. In case you&apos;ve installed outdated plugin, you can update them directly from web as well.</p>
 <h3 id="install-plugins-via-command-line">Install Plugins via Command Line</h3>
 <p>You love the command line? Don&apos;t worry, you&apos;re covered and can install the plugins listed in the ecosystem index right away.</p>
-<pre><code>bin/strider install &lt;plugin-name&gt;
+<pre><code class="lang-sh">bin/strider install &lt;plugin-name&gt;
 </code></pre>
 <p>Strider first checks if the plugin is already installed. If not, it looks in the index to find the pluins GitHub repository. Afterwards, it clones the plugin repository and installs via npm.</p>
 <p>Another way to install new plugins is to do so directly with npm. Just navigate to Strider&apos;s base repository and install the desired plugin. This way you rely on third party addons which may not work correctly with Strider and isn&apos;t approved by the Strider team.</p>
 <p>There are some Strider addons not listed in the ecosystem index and you still want to install them? Don&apos;t worry, go ahead an install using npm. In case you recognize any misfunction just remove the trouble causing plugin.</p>
-<pre><code>npm install &lt;plugin-name&gt;
+<pre><code class="lang-sh">npm install &lt;plugin-name&gt;
 </code></pre>
 <p>You need to restart your Strider server to activate newly installed plugins.</p>
 <hr>
